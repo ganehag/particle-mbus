@@ -7,14 +7,14 @@
 
 class MBusDataInformationBlock {
 public:
-    unsigned char dif;
-    unsigned char dife[10];
-    size_t ndife;
+  unsigned char dif;
+  unsigned char dife[10];
+  size_t ndife;
 
-    MBusDataInformationBlock();
-    ~MBusDataInformationBlock();
+  MBusDataInformationBlock();
+  ~MBusDataInformationBlock();
 
-    unsigned char getDataLength();
+  unsigned char getDataLength();
 };
 
 #endif /* MBusDataInformationBlock.h */

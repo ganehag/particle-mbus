@@ -5,27 +5,24 @@
 
 #include "MBusFrame.h"
 
-#include "MBusDataVariable.h"
 #include "MBusDataFixed.h"
+#include "MBusDataVariable.h"
 
-
-class MBusFrameData
-{
+class MBusFrameData {
 public:
-    MBusDataVariable *data_var;
-    MBusDataFixed *data_fix;
+  MBusDataVariable *data_var;
+  MBusDataFixed *data_fix;
 
-    int type;
-    int error;
+  int type;
+  int error;
 
+  MBusFrameData();
+  ~MBusFrameData();
 
-    MBusFrameData();
-    ~MBusFrameData();
+  // DEBUG
+  int print();
 
-    // DEBUG
-    int print();
-
-    int parse(MBusFrame *frame);
+  int parse(MBusFrame *frame);
 };
 
 #endif /* MBusFrameData.h */
