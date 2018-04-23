@@ -1,0 +1,31 @@
+#ifndef __MBUS_FRAME_DATA_H__
+#define __MBUS_FRAME_DATA_H__
+
+#include "MBusDefines.h"
+
+#include "MBusFrame.h"
+
+#include "MBusDataVariable.h"
+#include "MBusDataFixed.h"
+
+
+class MBusFrameData
+{
+public:
+    MBusDataVariable *data_var;
+    MBusDataFixed *data_fix;
+
+    int type;
+    int error;
+
+
+    MBusFrameData();
+    ~MBusFrameData();
+
+    // DEBUG
+    int print();
+
+    int parse(MBusFrame *frame);
+};
+
+#endif /* MBusFrameData.h */
