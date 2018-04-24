@@ -1,10 +1,10 @@
 #ifndef __MBUS_FRAME_H__
 #define __MBUS_FRAME_H__
 
-#include <stdlib.h>
-
 #include "MBusDefines.h"
 #include "MBusFrameData.h"
+
+#include <stdlib.h>
 
 class MBusFrame {
 public:

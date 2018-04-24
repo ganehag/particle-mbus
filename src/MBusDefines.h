@@ -254,16 +254,4 @@ class MBusFrame;
 class MBusFrameData;
 class MBusValueInformationBlock;
 
-#ifdef LINUX
-#define MBUS_ERROR(...) fprintf(stderr, __VA_ARGS__)
-#define MBUS_DEBUG(...) fprintf(stderr, __VA_ARGS__)
-#elif PLATFORM_ID
-#include "Particle.h"
-#define MBUS_ERROR(...) // Serial.printlnf (__VA_ARGS__)
-#define MBUS_DEBUG(...) // Serial.printlnf (__VA_ARGS__)
-#else
-#define MBUS_ERROR(...)
-#define MBUS_DEBUG(...)
-#endif
-
 #endif /* MBusDefines.h */

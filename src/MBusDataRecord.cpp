@@ -1,4 +1,5 @@
 #include "MBusDataRecord.h"
+#include "MBus.h"
 #include <stdint.h>
 #include <string.h>
 #include <time.h>
@@ -309,11 +310,11 @@ MBusRecord *MBusDataRecord::getRecord() {
     }
 
     if (value_out_str != NULL) {
-      record->is_numeric = 0;
+      record->isNumeric = false;
       (record->value)->str_val->value = value_out_str;
       (record->value)->str_val->size = value_out_str_size;
     } else {
-      record->is_numeric = 1;
+      record->isNumeric = true;
       (record->value)->real_val = real_val;
     }
   } else {
@@ -343,11 +344,11 @@ MBusRecord *MBusDataRecord::getRecord() {
     }
 
     if (value_out_str != NULL) {
-      record->is_numeric = 0;
+      record->isNumeric = false;
       (record->value)->str_val->value = value_out_str;
       (record->value)->str_val->size = value_out_str_size;
     } else {
-      record->is_numeric = 1;
+      record->isNumeric = true;
       (record->value)->real_val = real_val;
     }
   }

@@ -42,7 +42,7 @@ MBusValue::~MBusValue() {
 
 MBusRecord::MBusRecord() {
   this->value = new MBusValue();
-  this->is_numeric = false;
+  this->isNumeric = false;
   this->unit = NULL;
   this->function_medium = NULL;
   this->quantity = NULL;

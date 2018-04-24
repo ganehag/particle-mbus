@@ -137,7 +137,6 @@ int MBusFrame::parse(unsigned char *data, size_t data_size) {
 
     MBUS_DEBUG("%s: Attempting to parse binary data [size = %zu]\n",
                __PRETTY_FUNCTION__, data_size);
-    MBUS_DEBUG("%s: ", __PRETTY_FUNCTION__);
 
     for (i = 0; i < data_size; i++) {
       MBUS_DEBUG("%.2X ", data[i] & 0xFF);
@@ -259,15 +258,13 @@ int MBusFrame::parse(unsigned char *data, size_t data_size) {
 
       return 0;
     default:
-      // snprintf(error_str, sizeof(error_str), "Invalid M-Bus frame start.");
-
+      MBUS_ERROR("Invalid M-Bus frame start.");
       // not a valid M-Bus frame header (start byte)
       return -4;
     }
   }
 
-  // snprintf(error_str, sizeof(error_str), "Got null pointer to frame, data or
-  // zero data_size.");
+  MBUS_ERROR("Got null pointer to frame, data or zero data_size.");
 
   return -1;
 }
@@ -282,8 +279,7 @@ char *MBusFrame::get_secondary_address() {
   }
 
   if (this->control_information != MBUS_CONTROL_INFO_RESP_VARIABLE) {
-    // snprintf(error_str, sizeof(error_str), "Non-variable data response (can't
-    // get secondary address from response).");
+    MBUS_ERROR("Non-variable data response (can't get secondary address from response).");
     return NULL;
   }
 
@@ -298,7 +294,6 @@ char *MBusFrame::get_secondary_address() {
            data->data_var->header->manufacturer[1],
            data->data_var->header->version, data->data_var->header->medium);
 
-  // Free
   delete data;
 
   return addr;
@@ -314,8 +309,7 @@ MBusDataVariable *MBusFrame::getVariableData() {
 
   // FIXME
   if (this->control_information != MBUS_CONTROL_INFO_RESP_VARIABLE) {
-    // snprintf(error_str, sizeof(error_str), "Non-variable data response (has
-    // no records?).");
+    MBUS_ERROR("Non-variable data response (has no records?).");
     return NULL;
   }
 
@@ -353,9 +347,7 @@ int MBusFrame::verify() {
         (this->control != MBUS_CONTROL_MASK_REQ_UD2) &&
         (this->control !=
          (MBUS_CONTROL_MASK_REQ_UD2 | MBUS_CONTROL_MASK_FCB))) {
-      // snprintf(error_str, sizeof(error_str), "Unknown Control Code 0x%.2x",
-      // this->control);
-
+      MBUS_ERROR("Unknown Control Code 0x%.2x", this->control);
       return -1;
     }
 
@@ -365,8 +357,7 @@ int MBusFrame::verify() {
   case MBUS_FRAME_TYPE_LONG:
     if (this->start1 != MBUS_FRAME_CONTROL_START ||
         this->start2 != MBUS_FRAME_CONTROL_START) {
-      // snprintf(error_str, sizeof(error_str), "No frame start");
-
+      MBUS_ERROR("No frame start");
       return -1;
     }
 
@@ -377,46 +368,36 @@ int MBusFrame::verify() {
         (this->control != (MBUS_CONTROL_MASK_RSP_UD | MBUS_CONTROL_MASK_ACD)) &&
         (this->control != (MBUS_CONTROL_MASK_RSP_UD | MBUS_CONTROL_MASK_DFC |
                            MBUS_CONTROL_MASK_ACD))) {
-      // snprintf(error_str, sizeof(error_str), "Unknown Control Code 0x%.2x",
-      // this->control);
-
+      MBUS_ERROR("Unknown Control Code 0x%.2x", this->control);
       return -1;
     }
 
     if (this->length1 != this->length2) {
-      // snprintf(error_str, sizeof(error_str), "Frame length 1 != 2");
-
+      MBUS_ERROR("Frame length 1 != 2");
       return -1;
     }
 
     if (this->length1 != this->get_length()) {
-      // snprintf(error_str, sizeof(error_str), "Frame length 1 != calc
-      // length");
-
+      MBUS_ERROR("Frame length 1 != calc");
       return -1;
     }
 
     break;
 
   default:
-    // snprintf(error_str, sizeof(error_str), "Unknown frame type 0x%.2x",
-    // frame->type);
-
+    MBUS_ERROR("Unknown frame type 0x%.2x", this->type);
     return -1;
   }
 
   if (this->stop != MBUS_FRAME_STOP) {
-    // snprintf(error_str, sizeof(error_str), "No frame stop");
-
+    
     return -1;
   }
 
   checksum = this->get_checksum();
 
   if (this->checksum != checksum) {
-    // snprintf(error_str, sizeof(error_str), "Invalid checksum (0x%.2x !=
-    // 0x%.2x)", frame->checksum, checksum);
-
+    MBUS_ERROR("Invalid checksum (0x%.2x != 0x%.2x", this->checksum, checksum);
     return -1;
   }
 

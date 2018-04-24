@@ -1,5 +1,6 @@
 #include "MBusValueInformationBlock.h"
 #include "MBusVifTable.h"
+#include "MBus.h"
 
 #include <math.h>
 #include <string.h>
@@ -22,7 +23,7 @@ int MBusValueInformationBlock::vif_normalize(int vif, double value,
   double exponent = 1.0;
   unsigned newVif = vif & 0xF7F; /* clear extension bit */
 
-  // MBUS_DEBUG("vif_unit_normalize = 0x%03X \n", vif);
+  MBUS_DEBUG("vif_unit_normalize = 0x%03X \n", vif);
 
   if (unit_out == NULL || value_out == NULL || quantity_out == NULL) {
     MBUS_ERROR("%s: Invalid parameter.\n", __PRETTY_FUNCTION__);
@@ -56,11 +57,10 @@ int MBusValueInformationBlock::normalize(double value, char **unit_out,
     return -1;
   }
 
-  // MBUS_DEBUG("%s: vib_unit_normalize - VIF=0x%02X\n", __PRETTY_FUNCTION__,
-  // this->vif);
+  MBUS_DEBUG("%s: vib_unit_normalize - VIF=0x%02X\n", __PRETTY_FUNCTION__, this->vif);
 
-  if (this->vif == 0xFD) /* first type of VIF extention: see table 8.4.4 a */
-  {
+  /* first type of VIF extention: see table 8.4.4 a */
+  if (this->vif == 0xFD) {
     if (this->nvife == 0) {
       MBUS_ERROR("%s: Missing VIF extension\n", __PRETTY_FUNCTION__);
       return -1;
@@ -73,8 +73,8 @@ int MBusValueInformationBlock::normalize(double value, char **unit_out,
       return -1;
     }
   } else {
-    if (this->vif == 0xFB) /* second type of VIF extention: see table 8.4.4 b */
-    {
+    /* second type of VIF extention: see table 8.4.4 b */
+    if (this->vif == 0xFB) {
       if (this->nvife == 0) {
         MBUS_ERROR("%s: Missing VIF extension\n", __PRETTY_FUNCTION__);
         return -1;
@@ -88,7 +88,7 @@ int MBusValueInformationBlock::normalize(double value, char **unit_out,
     } else if ((this->vif == 0x7C) || (this->vif == 0xFC)) {
       // custom VIF
       *unit_out = "-";
-      *quantity_out = "FixME"; // strdup((const char *)this->custom_vif);
+      *quantity_out = "FixME"; // FIXME strdup((const char *)this->custom_vif);
       *value_out = value;
     } else {
       code = (this->vif) & MBUS_DIB_VIF_WITHOUT_EXTENSION;
@@ -129,4 +129,4 @@ int MBusValueInformationBlock::normalize(double value, char **unit_out,
   }
 
   return 0;
-}
+};

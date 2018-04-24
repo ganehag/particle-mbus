@@ -5,6 +5,34 @@
 #include "MBusFrame.h"
 #include "MBusRecord.h"
 
+#define _DEBUG 1
+
+#ifdef LINUX
+#define MBUS_INFO(...) fprintf(stderr, __VA_ARGS__)
+#define MBUS_WARN(...) fprintf(stderr, __VA_ARGS__)
+#define MBUS_ERROR(...) fprintf(stderr, __VA_ARGS__)
+#define MBUS_DEBUG(...) fprintf(stderr, __VA_ARGS__)
+#elif PLATFORM_ID
+#include "Particle.h"
+  #ifdef _DEBUG
+  #define MBUS_INFO(...) Log.info(__VA_ARGS__)
+  #define MBUS_WARN(...) Log.warn(__VA_ARGS__)
+  #define MBUS_ERROR(...) Log.error(__VA_ARGS__)
+  #define MBUS_DEBUG(...) Log.trace(__VA_ARGS__)
+  #else
+  #define MBUS_INFO(...)
+  #define MBUS_WARN(...)
+  #define MBUS_ERROR(...)
+  #define MBUS_DEBUG(...)
+  #endif
+#else 
+#define MBUS_INFO(...)
+#define MBUS_WARN(...)
+#define MBUS_ERROR(...)
+#define MBUS_DEBUG(...)
+#endif
+
+
 #define MBUS_PROBE_NOTHING 0
 #define MBUS_PROBE_SINGLE 1
 #define MBUS_PROBE_COLLISION 2
@@ -34,8 +62,13 @@ public:
   virtual int close();
   virtual int send(MBusFrame *frame);
   virtual int recv(MBusFrame *frame);
-  virtual int sendPingFrame(int address, bool purge_response);
-  virtual int purgeFrames();
+
+  int purgeFrames();
+  int sendRequestFrame(int address);
+  int sendPingFrame(int address, bool purge_response);
+  int requestSendRecv(int address, MBusFrame *reply, int max_frames);
+  int probeSecondaryAddress(const char *mask, char *matching_addr);
+  int selectSecondaryAddress(const char *mask);
 };
 
 class MBusSerialHandle : public MBusHandle {
@@ -47,11 +80,8 @@ public:
   int close();
   int send(MBusFrame *frame);
   int recv(MBusFrame *frame);
-  int sendPingFrame(int address, bool purge_response);
-  int purgeFrames();
 
   int setBaudrate(long baudrate);
-  int requestSendRecv(int address, MBusFrame *reply, int max_frames);
 
   USARTSerial *handle;
 };
@@ -74,6 +104,7 @@ public:
 
   static int isPrimaryAddress(int value);
   static int isSecondaryAddress(const char *value);
+
 };
 
 #endif /* __MBUS_H__ */

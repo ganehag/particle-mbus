@@ -25,7 +25,7 @@ public:
 class MBusRecord {
 public:
   MBusValue *value; /**< Quantity value */
-  bool is_numeric;
+  bool isNumeric;
   char *unit; /**< Quantity unit (e.g. Wh) */
   const char
       *function_medium; /**< Quantity medium or function (e.g. Electricity) */
