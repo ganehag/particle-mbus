@@ -13,7 +13,7 @@ memory constraints.
 Before you start, it is highly recommended to learn as much about <a href="http://www.m-bus.com/" target="_blank">M-Bus</a>
 as possible before you begin.
 
-```
+```cpp
 #include "MBus.h"
 
 MBusSerialHandle mbusSerial(&Serial1); // Or other serial port
