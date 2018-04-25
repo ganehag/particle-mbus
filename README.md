@@ -107,6 +107,16 @@ void loop() {
 
 See the [examples](examples) folder for more details.
 
+## Testing
+
+The subfolder `tests` contains a program you can flash to a device using:
+
+```shell
+$ particle flash MyDevice src/ tests/unittest
+```
+
+The tests are generated from a set of binary M-Bus frames.
+
 
 ## Documentation
 
