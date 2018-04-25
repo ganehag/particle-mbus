@@ -309,7 +309,7 @@ MBusDataVariable *MBusFrame::getVariableData() {
 
   // FIXME
   if (this->control_information != MBUS_CONTROL_INFO_RESP_VARIABLE) {
-    MBUS_ERROR("Non-variable data response (has no records?).");
+    MBUS_ERROR("Non-variable data response (has no records?).\n");
     return NULL;
   }
 

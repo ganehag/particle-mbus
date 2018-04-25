@@ -1,5 +1,6 @@
 #include "MBus.h"
 #include <string.h>
+#include <ctype.h>
 
 MBus::MBus() {};
 
@@ -44,6 +45,9 @@ int MBus::initSlaves(MBusHandle *handle) {
   return 1;
 };
 
+// Can't compile on linux:  undefined reference to `vtable for MBusHandle'
+#ifdef PLATFORM_ID
+
 MBusHandle::MBusHandle() {
   max_data_retry = 3;
   max_search_retry = 1;
@@ -53,6 +57,8 @@ MBusHandle::MBusHandle() {
 MBusHandle::~MBusHandle(){
 
 };
+
+#endif
 
 int
 MBusHandle::sendRequestFrame(int address) {
@@ -346,6 +352,8 @@ MBusHandle::selectSecondaryAddress(const char *mask) {
 };
 
 
+#ifdef PLATFORM_ID
+
 MBusSerialHandle::MBusSerialHandle(USARTSerial *handle) {
   this->handle = handle;
 };
@@ -482,4 +490,4 @@ int MBusSerialHandle::recv(MBusFrame *frame) {
   return MBUS_RECV_RESULT_OK;
 };
 
-
+#endif

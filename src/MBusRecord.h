@@ -16,7 +16,7 @@ public:
 class MBusValue {
 public:
   double real_val;
-  MBusString *str_val;
+  MBusString str_val;
 
   MBusValue();
   ~MBusValue();

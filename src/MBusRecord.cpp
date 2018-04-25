@@ -13,14 +13,14 @@ MBusString::MBusString(char *str, unsigned int size) {
 };
 
 MBusString::~MBusString() {
-  if (this->value != NULL) {
-    delete this->value;
+  if (this->value) {
+    delete [] this->value;
   };
 };
 
 void MBusString::set(char *str, unsigned int size) {
-  if (this->value != NULL) {
-    delete this->value;
+  if (this->value) {
+    delete [] this->value;
   };
 
   this->value = new char[size + 1]; // +1 for NULL termination
@@ -31,13 +31,10 @@ void MBusString::set(char *str, unsigned int size) {
 
 MBusValue::MBusValue() {
   this->real_val = 0;
-  this->str_val = new MBusString();
 };
 
 MBusValue::~MBusValue() {
-  if (this->str_val != NULL) {
-    delete this->str_val;
-  }
+
 };
 
 MBusRecord::MBusRecord() {

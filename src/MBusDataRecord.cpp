@@ -261,6 +261,7 @@ void MBusDataRecord::decodeTM(struct tm *t, size_t t_data_size) {
       }
     } else if (t_data_size == 2) // Type G: Compound CP16: Date
     {
+
       t->tm_mday = this->data[0] & 0x1F;
       t->tm_mon = (this->data[1] & 0x0F) - 1;
       t->tm_year =
@@ -311,8 +312,7 @@ MBusRecord *MBusDataRecord::getRecord() {
 
     if (value_out_str != NULL) {
       record->isNumeric = false;
-      (record->value)->str_val->value = value_out_str;
-      (record->value)->str_val->size = value_out_str_size;
+      (record->value)->str_val.set(value_out_str, value_out_str_size);
     } else {
       record->isNumeric = true;
       (record->value)->real_val = real_val;
@@ -345,8 +345,7 @@ MBusRecord *MBusDataRecord::getRecord() {
 
     if (value_out_str != NULL) {
       record->isNumeric = false;
-      (record->value)->str_val->value = value_out_str;
-      (record->value)->str_val->size = value_out_str_size;
+      (record->value)->str_val.set(value_out_str, value_out_str_size);
     } else {
       record->isNumeric = true;
       (record->value)->real_val = real_val;
@@ -466,7 +465,7 @@ int MBusDataRecord::decodeValue(double *value_out_real, char **value_out_str,
   case 0x02: /* 2 byte integer (16 bit) */
     // E110 1100  Time Point (date)
     if (vif == 0x6C) {
-      this->decodeTM(&time, 3);
+      this->decodeTM(&time, 2);
 
       *value_out_str = new char[11];
       *value_out_str_size =

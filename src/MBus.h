@@ -71,6 +71,8 @@ public:
   int selectSecondaryAddress(const char *mask);
 };
 
+#ifdef PLATFORM_ID
+
 class MBusSerialHandle : public MBusHandle {
 public:
   MBusSerialHandle(USARTSerial *handle);
@@ -85,6 +87,8 @@ public:
 
   USARTSerial *handle;
 };
+
+#endif
 
 /*
 class MBusNetHandle : public MBusHandle {
