@@ -239,7 +239,7 @@ MBusHandle::requestSendRecv(int address, MBusFrame *reply,
 
 int
 MBusHandle::probeSecondaryAddress(const char *mask, char *matching_addr) {
-    int ret;
+    int ret = 0;
     MBusFrame reply;
 
     if (mask == NULL || matching_addr == NULL || strlen(mask) != 16) {
