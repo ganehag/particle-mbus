@@ -53,7 +53,7 @@ int requestData(String extra) {
             record->unit, record->value->real_val, i, record->function_medium, record->quantity);
         }
 
-        Particle.publish(reply.get_secondary_address(), msg, 3600, PRIVATE);
+        Particle.publish(reply.getSecondaryAddress(), msg, 3600, PRIVATE);
 
         Particle.process();
         // Wait one second, so not to overwhelm "publish"

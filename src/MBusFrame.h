@@ -32,32 +32,32 @@ public:
   MBusFrame() : MBusFrame(0){};
   ~MBusFrame();
 
-  int calc_checksum();
-  int calc_length();
+  int calcChecksum();
+  int calcLength();
 
-  unsigned char get_checksum();
-  size_t get_length();
+  unsigned char getChecksum();
+  size_t getLength();
 
   int parse(unsigned char *data, size_t data_size);
   int pack(unsigned char *data, size_t data_size);
 
   int verify();
-  int internal_pack(MBusFrameData *frame_data);
+  int internalPack(MBusFrameData *frame_data);
 
   int selectSecondaryPack(const char *address);
 
   //
   // M-Bus frame data struct access/write functions
   //
-  int get_type();
-  int get_direction();
+  int getType();
+  int getDirection();
 
   MBusDataVariable *getVariableData();
 
   // DEBUG
   int print();
 
-  char *get_secondary_address();
+  char *getSecondaryAddress();
   int select_secondary_pack(char *address);
 };
 

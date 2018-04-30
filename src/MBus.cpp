@@ -273,7 +273,7 @@ MBusHandle::probeSecondaryAddress(const char *mask, char *matching_addr) {
             }
 
             if (reply.type == MBUS_FRAME_TYPE_LONG) {
-                char *addr = reply.get_secondary_address();
+                char *addr = reply.getSecondaryAddress();
 
                 if (addr == NULL) {
                     // show error message, but procede with scan

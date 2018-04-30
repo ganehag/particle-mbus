@@ -56,7 +56,7 @@ MBusFrame::~MBusFrame(){
 
 };
 
-unsigned char MBusFrame::get_checksum() {
+unsigned char MBusFrame::getChecksum() {
   size_t i;
   unsigned char cksum;
 
@@ -96,13 +96,13 @@ unsigned char MBusFrame::get_checksum() {
   return cksum;
 };
 
-int MBusFrame::calc_checksum() {
+int MBusFrame::calcChecksum() {
   switch (this->type) {
   case MBUS_FRAME_TYPE_ACK:
   case MBUS_FRAME_TYPE_SHORT:
   case MBUS_FRAME_TYPE_CONTROL:
   case MBUS_FRAME_TYPE_LONG:
-    this->checksum = this->get_checksum();
+    this->checksum = this->getChecksum();
 
     break;
 
@@ -113,12 +113,12 @@ int MBusFrame::calc_checksum() {
   return 0;
 };
 
-int MBusFrame::calc_length() {
-  this->length1 = this->length2 = this->get_length();
+int MBusFrame::calcLength() {
+  this->length1 = this->length2 = this->getLength();
   return 0;
 };
 
-size_t MBusFrame::get_length() {
+size_t MBusFrame::getLength() {
   switch (this->type) {
   case MBUS_FRAME_TYPE_CONTROL:
     return 3;
@@ -269,7 +269,7 @@ int MBusFrame::parse(unsigned char *data, size_t data_size) {
   return -1;
 }
 
-char *MBusFrame::get_secondary_address() {
+char *MBusFrame::getSecondaryAddress() {
   static char addr[32];
   MBusFrameData *data = NULL;
   unsigned long id = 0;
@@ -377,7 +377,7 @@ int MBusFrame::verify() {
       return -1;
     }
 
-    if (this->length1 != this->get_length()) {
+    if (this->length1 != this->getLength()) {
       MBUS_ERROR("Frame length 1 != calc");
       return -1;
     }
@@ -394,7 +394,7 @@ int MBusFrame::verify() {
     return -1;
   }
 
-  checksum = this->get_checksum();
+  checksum = this->getChecksum();
 
   if (this->checksum != checksum) {
     MBUS_ERROR("Invalid checksum (0x%.2x != 0x%.2x", this->checksum, checksum);
@@ -408,11 +408,11 @@ int MBusFrame::pack(unsigned char *data, size_t data_size) {
   size_t i, offset = 0;
 
   if (data) {
-    if (this->calc_length() == -1) {
+    if (this->calcLength() == -1) {
       return -2;
     }
 
-    if (this->calc_checksum() == -1) {
+    if (this->calcChecksum() == -1) {
       return -3;
     }
 
