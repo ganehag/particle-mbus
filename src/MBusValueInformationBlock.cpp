@@ -20,7 +20,7 @@ int MBusValueInformationBlock::vif_normalize(int vif, double value,
                                              char **unit_out, double *value_out,
                                              char **quantity_out) {
   int i;
-  double exponent = 1.0;
+  // double exponent = 1.0;
   unsigned newVif = vif & 0xF7F; /* clear extension bit */
 
   MBUS_DEBUG("vif_unit_normalize = 0x%03X \n", vif);
@@ -40,9 +40,9 @@ int MBusValueInformationBlock::vif_normalize(int vif, double value,
   }
 
   MBUS_ERROR("%s: Unknown VIF 0x%03X\n", __PRETTY_FUNCTION__, newVif);
-  *unit_out = "Unknown (VIF=0x%.02X)";
-  *quantity_out = "Unknown";
-  exponent = 0.0;
+  *unit_out = (char *)"Unknown (VIF=0x%.02X)";
+  *quantity_out = (char *)"Unknown";
+  // exponent = 0.0;
   *value_out = 0.0;
   return -1;
 }
@@ -87,8 +87,8 @@ int MBusValueInformationBlock::normalize(double value, char **unit_out,
       }
     } else if ((this->vif == 0x7C) || (this->vif == 0xFC)) {
       // custom VIF
-      *unit_out = "-";
-      *quantity_out = "FixME"; // FIXME strdup((const char *)this->custom_vif);
+      *unit_out = (char *)"-";
+      *quantity_out = (char *)"FixME"; // FIXME strdup((const char *)this->custom_vif);
       *value_out = value;
     } else {
       code = (this->vif) & MBUS_DIB_VIF_WITHOUT_EXTENSION;
