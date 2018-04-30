@@ -1,4 +1,5 @@
 # M-Bus (Meter-Bus) for Photon, Electron
+[![Build Status](https://travis-ci.org/ganehag/particle-mbus.svg?branch=master)](https://travis-ci.org/ganehag/particle-mbus) [![codecov](https://codecov.io/gh/ganehag/particle-mbus/branch/master/graph/badge.svg)](https://codecov.io/gh/ganehag/particle-mbus)
 
 M-Bus master-mode library for Photon and Electron.
 
