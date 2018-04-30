@@ -66,7 +66,6 @@ MBusHandle::sendRequestFrame(int address) {
     MBusFrame *frame;
 
     if (MBus::isPrimaryAddress(address) == 0) {
-        MBUS_ERROR("%s: invalid address %d\n", __PRETTY_FUNCTION__, address);
         return -1;
     }
 
@@ -75,7 +74,6 @@ MBusHandle::sendRequestFrame(int address) {
     frame->address = address;
 
     if (this->send(frame) == -1) {
-        MBUS_ERROR("%s: failed to send mbus frame.\n", __PRETTY_FUNCTION__);
         retval = -1;
     }
 
@@ -117,7 +115,6 @@ MBusHandle::purgeFrames() {
   received = 0;
   while (1) {
     err = this->recv(&reply);
-    MBUS_DEBUG("%s", __PRETTY_FUNCTION__);
     if (err != MBUS_RECV_RESULT_OK && err != MBUS_RECV_RESULT_INVALID) {
       break;
     }
@@ -246,7 +243,6 @@ MBusHandle::probeSecondaryAddress(const char *mask, char *matching_addr) {
     MBusFrame reply;
 
     if (mask == NULL || matching_addr == NULL || strlen(mask) != 16) {
-        MBUS_ERROR("%s: Invalid address masks.\n", __PRETTY_FUNCTION__);
         return MBUS_PROBE_ERROR;
     }
 
@@ -256,9 +252,6 @@ MBusHandle::probeSecondaryAddress(const char *mask, char *matching_addr) {
         if (ret == MBUS_PROBE_SINGLE) {
             // send a data request command to find out the full address
             if (this->sendRequestFrame(MBUS_ADDRESS_NETWORK_LAYER) == -1) {
-                MBUS_ERROR("%s: Failed to send request to selected secondary device [mask %s]\n",
-                           __PRETTY_FUNCTION__,
-                           mask);
                 return MBUS_PROBE_ERROR;
             }
 
@@ -284,7 +277,6 @@ MBusHandle::probeSecondaryAddress(const char *mask, char *matching_addr) {
 
                 if (addr == NULL) {
                     // show error message, but procede with scan
-                    MBUS_ERROR("Failed to generate secondary address from M-Bus reply frame.\n");
                     return MBUS_PROBE_NOTHING;
                 }
 
@@ -296,8 +288,6 @@ MBusHandle::probeSecondaryAddress(const char *mask, char *matching_addr) {
 
                 return MBUS_PROBE_SINGLE;
             } else {
-                MBUS_ERROR("%s: Unexpected reply for address [mask %s]. Expected long frame.\n",
-                           __PRETTY_FUNCTION__, mask);
                 return MBUS_PROBE_NOTHING;
             }
         } else if ((ret == MBUS_PROBE_ERROR) ||
@@ -391,7 +381,6 @@ int MBusSerialHandle::send(MBusFrame *frame) {
   }
 
   if ((len = frame->pack(buff, sizeof(buff))) == -1) {
-    MBUS_ERROR("%s: mbus_frame_pack failed\n", __PRETTY_FUNCTION__);
     return -1;
   }
 
@@ -405,8 +394,6 @@ int MBusSerialHandle::send(MBusFrame *frame) {
     }
     */
   } else {
-    MBUS_ERROR("%s: Failed to write frame to socket (ret = %d: %s)\n",
-        __PRETTY_FUNCTION__, ret, strerror(errno));
     return -1;
   }
 
@@ -443,8 +430,6 @@ int MBusSerialHandle::recv(MBusFrame *frame) {
     }
 
     nread = this->handle->readBytes(&buff[len], remaining);
-
-    MBUS_DEBUG("nread %i", nread);
 
     if (nread == 0) {
       timeouts++;
@@ -483,7 +468,6 @@ int MBusSerialHandle::recv(MBusFrame *frame) {
   }
 
   if (len == -1) {
-    MBUS_ERROR("%s: M-Bus layer failed to parse data.\n", __PRETTY_FUNCTION__);
     return MBUS_RECV_RESULT_ERROR;
   }
 
