@@ -89,19 +89,39 @@ int MBusDataVariable::parse(MBusFrame *frame) {
       return -1;
     }
 
-    // first copy the variable data fixed header bytewise
-    this->header->id_bcd[0] = frame->data[0];
-    this->header->id_bcd[1] = frame->data[1];
-    this->header->id_bcd[2] = frame->data[2];
-    this->header->id_bcd[3] = frame->data[3];
-    this->header->manufacturer[0] = frame->data[4];
-    this->header->manufacturer[1] = frame->data[5];
-    this->header->version = frame->data[6];
-    this->header->medium = frame->data[7];
-    this->header->access_no = frame->data[8];
-    this->header->status = frame->data[9];
-    this->header->signature[0] = frame->data[10];
-    this->header->signature[1] = frame->data[11];
+    // Before copying, is the data in MSB or LSB order?
+    if (frame->control_information == MBUS_CONTROL_INFO_RESP_VARIABLE_MSB) {
+      j = 0;
+      for (size_t k = sizeof(this->header->id_bcd); k > 0; k--) {
+        this->header->id_bcd[k-1] = frame->data[j++];          
+      }
+
+      for (size_t k = sizeof(this->header->manufacturer); k > 0; k--) {
+        this->header->manufacturer[k-1] = frame->data[j++];
+      }
+            
+      this->header->version = frame->data[j++];
+      this->header->medium = frame->data[j++];
+      this->header->access_no = frame->data[j++];
+      this->header->status = frame->data[j++];
+
+      for (size_t k = sizeof(this->header->signature); k > 0; k--) {
+        this->header->manufacturer[k-1] = frame->data[j++];
+      }
+    } else {
+      this->header->id_bcd[0] = frame->data[0];
+      this->header->id_bcd[1] = frame->data[1];
+      this->header->id_bcd[2] = frame->data[2];
+      this->header->id_bcd[3] = frame->data[3];
+      this->header->manufacturer[0] = frame->data[4];
+      this->header->manufacturer[1] = frame->data[5];
+      this->header->version = frame->data[6];
+      this->header->medium = frame->data[7];
+      this->header->access_no = frame->data[8];
+      this->header->status = frame->data[9];
+      this->header->signature[0] = frame->data[10];
+      this->header->signature[1] = frame->data[11];
+    }
 
     this->record = NULL;
 
@@ -271,8 +291,14 @@ int MBusDataVariable::parse(MBusFrame *frame) {
       }
 
       // copy data
-      for (j = 0; j < record->data_len; j++) {
-        record->data[j] = frame->data[i++];
+      if (frame->control_information == MBUS_CONTROL_INFO_RESP_VARIABLE_MSB) {
+          for (j = record->data_len; j > 0 ; j--) {
+              record->data[j-1] = frame->data[i++];
+          }
+      } else {
+          for (j = 0; j < record->data_len; j++) {
+              record->data[j] = frame->data[i++];
+          }
       }
 
       // append the record and move on to next one

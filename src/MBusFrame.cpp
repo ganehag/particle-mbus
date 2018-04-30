@@ -278,7 +278,8 @@ char *MBusFrame::getSecondaryAddress() {
     return NULL;
   }
 
-  if (this->control_information != MBUS_CONTROL_INFO_RESP_VARIABLE) {
+  if (this->control_information != MBUS_CONTROL_INFO_RESP_VARIABLE && 
+      this->control_information != MBUS_CONTROL_INFO_RESP_VARIABLE_MSB) {
     MBUS_ERROR("Non-variable data response (can't get secondary address from response).");
     return NULL;
   }
@@ -308,7 +309,8 @@ MBusDataVariable *MBusFrame::getVariableData() {
   }
 
   // FIXME
-  if (this->control_information != MBUS_CONTROL_INFO_RESP_VARIABLE) {
+  if (this->control_information != MBUS_CONTROL_INFO_RESP_VARIABLE && 
+    this->control_information != MBUS_CONTROL_INFO_RESP_VARIABLE_MSB) {
     MBUS_ERROR("Non-variable data response (has no records?).\n");
     return NULL;
   }

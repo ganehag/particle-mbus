@@ -38,7 +38,8 @@ int MBusFrameData::parse(MBusFrame *frame) {
 
       return 0;
 
-    } else if (frame->control_information == MBUS_CONTROL_INFO_RESP_FIXED) {
+    } else if (frame->control_information == MBUS_CONTROL_INFO_RESP_FIXED ||
+      frame->control_information == MBUS_CONTROL_INFO_RESP_FIXED_MSB) {
       if (frame->data_size == 0) {
         // snprintf(error_str, sizeof(error_str), "Got zero data_size.");
 
@@ -48,7 +49,9 @@ int MBusFrameData::parse(MBusFrame *frame) {
       this->type = MBUS_DATA_TYPE_FIXED;
       return this->data_fix->parse(frame);
 
-    } else if (frame->control_information == MBUS_CONTROL_INFO_RESP_VARIABLE) {
+    } else if (frame->control_information == MBUS_CONTROL_INFO_RESP_VARIABLE || 
+      frame->control_information == MBUS_CONTROL_INFO_RESP_VARIABLE_MSB) {
+
       if (frame->data_size == 0) {
         // snprintf(error_str, sizeof(error_str), "Got zero data_size.");
 
