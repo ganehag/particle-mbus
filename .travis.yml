@@ -12,7 +12,7 @@ install:
 
 script: 
   - ./build.sh
-  - ./travis_qmake_gcc_cpp11_gcov
+  - ./particle_mbus_gcov
   - ./get_code_cov.sh
 
 after_success: 

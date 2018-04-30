@@ -1,3 +1,3 @@
 #!/bin/bash
-qmake particle_mbus.pro
+qmake particle_mbus_gcov.pro
 make
