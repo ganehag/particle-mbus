@@ -1,14 +1,14 @@
-SOURCES += tests/main.cpp src/MBus.cpp src/MBusFrame.cpp src/MBusDataFixed.cpp \
+SOURCES += tests/linux/test1.cpp tests/linux/frame_test.cpp src/MBus.cpp src/MBusFrame.cpp src/MBusDataFixed.cpp \
     src/MBusFrameData.cpp src/MBusDataInformationBlock.cpp src/MBusRecord.cpp \
     src/MBusDataRecord.cpp src/MBusValueInformationBlock.cpp \
     src/MBusDataVariable.cpp src/MBusVifTable.cpp
 
-# QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror -Isrc -I tests/include
-QMAKE_CXXFLAGS += -Wall -Wextra -Werror -Isrc -I tests/include
+# QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror -Isrc -Itests/linux/include -Itests/linux
+QMAKE_CXXFLAGS += -Wall -Wextra -Werror -Isrc -Itests/linux/include -Itests/linux
 
 # gcov
 QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage
-LIBS += -lgcov
+LIBS += -lgcov -lcppunit
 
 # C++11
 QMAKE_CXX = g++-6
