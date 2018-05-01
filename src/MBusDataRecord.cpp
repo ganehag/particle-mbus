@@ -576,6 +576,9 @@ int MBusDataRecord::decodeValue(double *value_out_real, char **value_out_str,
     *value_out_str_size = 3 * this->data_len;
     this->decodeBin((unsigned char *)(*value_out_str), this->data,
                     this->data_len, (3 * this->data_len + 1));
+    // decodeBin will erase its last 'space' character, so the string is -1 long
+    *value_out_str_size -= 1;
+
     result = 0;
     break;
 
