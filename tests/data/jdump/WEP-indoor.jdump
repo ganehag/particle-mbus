@@ -1,0 +1,8 @@
+Secondary address: {manufacturer ID: WEP, device ID: 00000021, device version: 2, device type: ROOM_SENSOR_TEMP_HUM, as bytes: 21000000B05C021B}
+Short Header: {Access No.: 18, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0C, VIB:78 -> descr:FABRICATION_NO, function:INST_VAL, value:64000449
+DIB:02, VIB:75 -> descr:ACTUALITY_DURATION, function:INST_VAL, value:10, unit:MIN, min
+DIB:01, VIB:FD71 -> descr:NOT_SUPPORTED, function:INST_VAL, value:30
+DIB:0A, VIB:66 -> descr:EXTERNAL_TEMPERATURE, function:INST_VAL, scaled value:22.0, unit:DEGREE_CELSIUS, °C
+DIB:0A, VIB:FB1A -> descr:REL_HUMIDITY, function:INST_VAL, scaled value:53.1, unit:PERCENTAGE, %
+DIB:02, VIB:FD971D -> descr:ERROR_FLAGS, function:INST_VAL, value:0

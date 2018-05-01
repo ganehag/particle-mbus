@@ -1,0 +1,9 @@
+Secondary address: {manufacturer ID: REL, device ID: 00000004, device version: 18, device type: OTHER, as bytes: 04000000AC481200}
+Short Header: {Access No.: 1, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0C, VIB:00 -> descr:ENERGY, function:INST_VAL, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:04, VIB:6D -> descr:DATE_TIME, function:INST_VAL, value:Thu Sep 20 13:16:00 CEST 2001
+DIB:42, VIB:6C -> descr:DATE, function:INST_VAL, storage:1, value:Sun Dec 31 00:00:00 CET 2000
+DIB:4C, VIB:00 -> descr:ENERGY, function:INST_VAL, storage:1, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:42, VIB:EC7E -> descr:DATE, function:INST_VAL, storage:1, value:Mon Dec 31 00:00:00 CET 2001
+Manufacturer specific bytes:
+43010100

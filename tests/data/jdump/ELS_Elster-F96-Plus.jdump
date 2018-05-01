@@ -1,0 +1,18 @@
+Secondary address: {manufacturer ID: ELS, device ID: 44493951, device version: 47, device type: HEAT_METER, as bytes: 5139494493152F04}
+Short Header: {Access No.: 161, status: 112, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0C, VIB:06 -> descr:ENERGY, function:INST_VAL, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:8C10, VIB:06 -> descr:ENERGY, function:INST_VAL, tariff:1, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:8C20, VIB:13 -> descr:VOLUME, function:INST_VAL, tariff:2, scaled value:0.0, unit:CUBIC_METRE, m³
+DIB:0C, VIB:13 -> descr:VOLUME, function:INST_VAL, scaled value:0.0, unit:CUBIC_METRE, m³
+DIB:3C, VIB:2B -> descr:POWER, function:ERROR_VAL, value:====>;;=, unit:WATT, W
+DIB:3B, VIB:3B -> descr:VOLUME_FLOW, function:ERROR_VAL, scaled value:1445.223, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:0A, VIB:5A -> descr:FLOW_TEMPERATURE, function:INST_VAL, scaled value:22.700000000000003, unit:DEGREE_CELSIUS, °C
+DIB:0A, VIB:5E -> descr:RETURN_TEMPERATURE, function:INST_VAL, scaled value:22.6, unit:DEGREE_CELSIUS, °C
+DIB:0A, VIB:62 -> descr:TEMPERATURE_DIFFERENCE, function:INST_VAL, scaled value:0.1, unit:KELVIN, S
+DIB:0A, VIB:27 -> descr:OPERATING_TIME, function:INST_VAL, value:0730, unit:DAY, d
+DIB:04, VIB:6D -> descr:DATE_TIME, function:INST_VAL, value:Thu Mar 13 13:09:00 CET 2014
+DIB:4C, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:1, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:4C, VIB:13 -> descr:VOLUME, function:INST_VAL, storage:1, scaled value:0.0, unit:CUBIC_METRE, m³
+DIB:CC10, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:1, tariff:1, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:CC20, VIB:13 -> descr:VOLUME, function:INST_VAL, storage:1, tariff:2, scaled value:0.0, unit:CUBIC_METRE, m³
+DIB:42, VIB:6C -> descr:DATE, function:INST_VAL, storage:1, value:Fri May 31 00:00:00 CEST 2013

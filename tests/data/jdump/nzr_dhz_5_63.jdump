@@ -1,0 +1,10 @@
+Secondary address: {manufacturer ID: NZR, device ID: 30100608, device version: 1, device type: ELECTRICITY_METER, as bytes: 08061030523B0102}
+Short Header: {Access No.: 1, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:04, VIB:03 -> descr:ENERGY, function:INST_VAL, value:1274, unit:WATT_HOUR, Wh
+DIB:04, VIB:837F -> descr:ENERGY, function:INST_VAL, value:1274, unit:WATT_HOUR, Wh
+DIB:02, VIB:FD48 -> descr:VOLTAGE, function:INST_VAL, scaled value:237.20000000000002, unit:VOLT, V
+DIB:02, VIB:FD5B -> descr:CURRENT, function:INST_VAL, scaled value:0.0, unit:AMPERE, A
+DIB:02, VIB:2B -> descr:POWER, function:INST_VAL, value:0, unit:WATT, W
+DIB:0C, VIB:78 -> descr:FABRICATION_NO, function:INST_VAL, value:30100608
+Manufacturer specific bytes:
+0E

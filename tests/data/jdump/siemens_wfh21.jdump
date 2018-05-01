@@ -1,0 +1,14 @@
+Secondary address: {manufacturer ID: LSE, device ID: 08006491, device version: 153, device type: WARM_WATER_METER, as bytes: 9164000865329906}
+Short Header: {Access No.: 218, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0C, VIB:13 -> descr:VOLUME, function:INST_VAL, scaled value:0.0, unit:CUBIC_METRE, m³
+DIB:0B, VIB:22 -> descr:ON_TIME, function:INST_VAL, value:044086, unit:HOUR, h
+DIB:04, VIB:6D -> descr:DATE_TIME, function:INST_VAL, value:Thu Dec 01 10:36:00 CET 2011
+DIB:32, VIB:6C -> descr:DATE, function:ERROR_VAL, value:Tue Nov 30 00:00:00 CET 1999
+DIB:0C, VIB:78 -> descr:FABRICATION_NO, function:INST_VAL, value:08006491
+DIB:06, VIB:FD0C -> descr:MODEL_VERSION, function:INST_VAL, value:2173253517322
+DIB:0D, VIB:FD0B -> descr:PARAMETER_SET_ID, function:INST_VAL, value:WFH21
+DIB:01, VIB:FD0E -> descr:FIRMWARE_VERSION, function:INST_VAL, value:0
+DIB:4C, VIB:13 -> descr:VOLUME, function:INST_VAL, storage:1, scaled value:0.0, unit:CUBIC_METRE, m³
+DIB:42, VIB:6C -> descr:DATE, function:INST_VAL, storage:1, value:Fri Dec 31 00:00:00 CET 2010
+Manufacturer specific bytes:
+37FD170000000000000000027A250002782500

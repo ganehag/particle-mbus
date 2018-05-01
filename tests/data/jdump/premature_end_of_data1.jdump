@@ -1,0 +1,5 @@
+Secondary address: {manufacturer ID: PAD, device ID: 12345678, device version: 1, device type: WATER_METER, as bytes: 7856341224400107}
+Short Header: {Access No.: 85, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:03, VIB:13 -> descr:VOLUME, function:INST_VAL, scaled value:12.565, unit:CUBIC_METRE, m³
+DIB:DA02, VIB:3B -> descr:VOLUME_FLOW, function:MAX_VAL, storage:5, scaled value:0.113, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:8B60, VIB:04 -> descr:ENERGY, function:INST_VAL, tariff:2, subunit:1, scaled value:17270.0, unit:WATT_HOUR, Wh

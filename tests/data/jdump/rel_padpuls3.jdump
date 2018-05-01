@@ -1,0 +1,9 @@
+Secondary address: {manufacturer ID: REL, device ID: 01030101, device version: 64, device type: HEAT_COST_ALLOCATOR, as bytes: 01010301AC484008}
+Short Header: {Access No.: 30, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0C, VIB:6E -> descr:HCA, function:INST_VAL, value:00001987, unit:RESERVED
+DIB:04, VIB:6D -> descr:DATE_TIME, function:INST_VAL, value:Sun Dec 31 10:41:00 CET 2000
+DIB:42, VIB:6C -> descr:DATE, function:INST_VAL, storage:1, value:Sun Dec 31 00:00:00 CET 2000
+DIB:4C, VIB:6E -> descr:HCA, function:INST_VAL, storage:1, value:00001302, unit:RESERVED
+DIB:42, VIB:EC7E -> descr:DATE, function:INST_VAL, storage:1, value:Mon Dec 31 00:00:00 CET 2001
+Manufacturer specific bytes:
+C001010C

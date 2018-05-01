@@ -1,0 +1,11 @@
+Secondary address: {manufacturer ID: HYD, device ID: 12345678, device version: 42, device type: HEAT_METER, as bytes: 7856341224232A04}
+Short Header: {Access No.: 38, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0C, VIB:06 -> descr:ENERGY, function:INST_VAL, scaled value:2.850427E9, unit:WATT_HOUR, Wh
+DIB:0C, VIB:13 -> descr:VOLUME, function:INST_VAL, scaled value:703.476, unit:CUBIC_METRE, m³
+DIB:4C, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:1, scaled value:1.445419E9, unit:WATT_HOUR, Wh
+DIB:42, VIB:6C -> descr:DATE, function:INST_VAL, storage:1, value:Mon Dec 31 00:00:00 CET 2007
+DIB:0B, VIB:3B -> descr:VOLUME_FLOW, function:INST_VAL, scaled value:0.127, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:0B, VIB:2A -> descr:POWER, function:INST_VAL, scaled value:329.70000000000005, unit:WATT, W
+DIB:0A, VIB:5A -> descr:FLOW_TEMPERATURE, function:INST_VAL, scaled value:44.300000000000004, unit:DEGREE_CELSIUS, °C
+DIB:0A, VIB:5E -> descr:RETURN_TEMPERATURE, function:INST_VAL, scaled value:25.1, unit:DEGREE_CELSIUS, °C
+DIB:02, VIB:FD17 -> descr:ERROR_FLAGS, function:INST_VAL, value:0

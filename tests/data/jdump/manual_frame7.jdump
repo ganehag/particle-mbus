@@ -1,0 +1,3 @@
+Secondary address: {manufacturer ID: PAD, device ID: 12345678, device version: 1, device type: WATER_METER, as bytes: 7856341224400107}
+Short Header: {Access No.: 19, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0C, VIB:78 -> descr:FABRICATION_NO, function:INST_VAL, value:01020304

@@ -1,0 +1,22 @@
+Secondary address: {manufacturer ID: GMC, device ID: 12345678, device version: 230, device type: ELECTRICITY_METER, as bytes: 78563412A31DE602}
+Short Header: {Access No.: 2, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:8240, VIB:FD48 -> descr:VOLTAGE, function:INST_VAL, subunit:1, scaled value:86.4, unit:VOLT, V
+DIB:828040, VIB:FD48 -> descr:VOLTAGE, function:INST_VAL, subunit:2, scaled value:95.9, unit:VOLT, V
+DIB:82C040, VIB:FD48 -> descr:VOLTAGE, function:INST_VAL, subunit:3, scaled value:105.60000000000001, unit:VOLT, V
+DIB:8240, VIB:FD59 -> descr:CURRENT, function:INST_VAL, subunit:1, scaled value:0.9570000000000001, unit:AMPERE, A
+DIB:828040, VIB:FD59 -> descr:CURRENT, function:INST_VAL, subunit:2, scaled value:1.055, unit:AMPERE, A
+DIB:82C040, VIB:FD59 -> descr:CURRENT, function:INST_VAL, subunit:3, scaled value:1.1500000000000001, unit:AMPERE, A
+DIB:8240, VIB:2B -> descr:POWER, function:INST_VAL, subunit:1, value:224, unit:WATT, W
+DIB:8240, VIB:2B -> descr:POWER, function:INST_VAL, subunit:1, value:65334, unit:WATT, W
+DIB:8410, VIB:04 -> descr:ENERGY, function:INST_VAL, tariff:1, scaled value:103880.0, unit:WATT_HOUR, Wh
+DIB:8420, VIB:04 -> descr:ENERGY, function:INST_VAL, tariff:2, scaled value:150000.0, unit:WATT_HOUR, Wh
+DIB:8450, VIB:04 -> descr:ENERGY, function:INST_VAL, tariff:1, subunit:1, scaled value:201590.0, unit:WATT_HOUR, Wh
+DIB:8460, VIB:04 -> descr:ENERGY, function:INST_VAL, tariff:2, subunit:1, scaled value:250000.0, unit:WATT_HOUR, Wh
+DIB:849040, VIB:04 -> descr:ENERGY, function:INST_VAL, tariff:1, subunit:2, scaled value:300910.0, unit:WATT_HOUR, Wh
+DIB:84A040, VIB:04 -> descr:ENERGY, function:INST_VAL, tariff:2, subunit:2, scaled value:350000.0, unit:WATT_HOUR, Wh
+DIB:84D040, VIB:04 -> descr:ENERGY, function:INST_VAL, tariff:1, subunit:3, scaled value:402370.0, unit:WATT_HOUR, Wh
+DIB:84E040, VIB:04 -> descr:ENERGY, function:INST_VAL, tariff:2, subunit:3, scaled value:450000.0, unit:WATT_HOUR, Wh
+DIB:8241, VIB:2B -> descr:POWER, function:INST_VAL, storage:2, subunit:1, value:224, unit:WATT, W
+DIB:8242, VIB:2B -> descr:POWER, function:INST_VAL, storage:4, subunit:1, value:0, unit:WATT, W
+DIB:8243, VIB:2B -> descr:POWER, function:INST_VAL, storage:6, subunit:1, value:0, unit:WATT, W
+DIB:8244, VIB:2B -> descr:POWER, function:INST_VAL, storage:8, subunit:1, value:202, unit:WATT, W

@@ -1,0 +1,31 @@
+Secondary address: {manufacturer ID: KAM, device ID: 06855817, device version: 8, device type: HEAT_METER, as bytes: 175885062D2C0804}
+Short Header: {Access No.: 4, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0C, VIB:78 -> descr:FABRICATION_NO, function:INST_VAL, value:06855817
+DIB:04, VIB:06 -> descr:ENERGY, function:INST_VAL, scaled value:3.7351E7, unit:WATT_HOUR, Wh
+DIB:04, VIB:14 -> descr:VOLUME, function:INST_VAL, scaled value:561.08, unit:CUBIC_METRE, m³
+DIB:04, VIB:22 -> descr:ON_TIME, function:INST_VAL, value:985, unit:HOUR, h
+DIB:04, VIB:59 -> descr:FLOW_TEMPERATURE, function:INST_VAL, scaled value:101.69, unit:DEGREE_CELSIUS, °C
+DIB:04, VIB:5D -> descr:RETURN_TEMPERATURE, function:INST_VAL, scaled value:46.160000000000004, unit:DEGREE_CELSIUS, °C
+DIB:04, VIB:61 -> descr:TEMPERATURE_DIFFERENCE, function:INST_VAL, scaled value:55.53, unit:KELVIN, S
+DIB:04, VIB:2D -> descr:POWER, function:INST_VAL, scaled value:34700.0, unit:WATT, W
+DIB:14, VIB:2D -> descr:POWER, function:MAX_VAL, scaled value:44800.0, unit:WATT, W
+DIB:04, VIB:3B -> descr:VOLUME_FLOW, function:INST_VAL, scaled value:0.543, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:14, VIB:3B -> descr:VOLUME_FLOW, function:MAX_VAL, scaled value:0.628, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:8410, VIB:06 -> descr:ENERGY, function:INST_VAL, tariff:1, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:8420, VIB:06 -> descr:ENERGY, function:INST_VAL, tariff:2, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:8440, VIB:14 -> descr:VOLUME, function:INST_VAL, subunit:1, scaled value:0.0, unit:CUBIC_METRE, m³
+DIB:848040, VIB:14 -> descr:VOLUME, function:INST_VAL, subunit:2, scaled value:0.0, unit:CUBIC_METRE, m³
+DIB:84C040, VIB:06 -> descr:ENERGY, function:INST_VAL, subunit:3, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:04, VIB:6D -> descr:DATE_TIME, function:INST_VAL, value:Wed Jan 05 15:26:00 CET 2011
+DIB:44, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:1, scaled value:3.3361E7, unit:WATT_HOUR, Wh
+DIB:44, VIB:14 -> descr:VOLUME, function:INST_VAL, storage:1, scaled value:500.98, unit:CUBIC_METRE, m³
+DIB:54, VIB:2D -> descr:POWER, function:MAX_VAL, storage:1, scaled value:55000.0, unit:WATT, W
+DIB:54, VIB:3B -> descr:VOLUME_FLOW, function:MAX_VAL, storage:1, scaled value:1.027, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:C410, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:1, tariff:1, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:C420, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:1, tariff:2, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:C440, VIB:14 -> descr:VOLUME, function:INST_VAL, storage:1, subunit:1, scaled value:0.0, unit:CUBIC_METRE, m³
+DIB:C48040, VIB:14 -> descr:VOLUME, function:INST_VAL, storage:1, subunit:2, scaled value:0.0, unit:CUBIC_METRE, m³
+DIB:C4C040, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:1, subunit:3, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:42, VIB:6C -> descr:DATE, function:INST_VAL, storage:1, value:Fri Dec 31 00:00:00 CET 2010
+Manufacturer specific bytes:
+00000000E7E40000636600000000000000000000000000005BC9A50234530000E0B20300899C68000000000001000107070901030000000000

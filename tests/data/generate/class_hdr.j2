@@ -1,0 +1,40 @@
+#ifndef FRAMES_TEST_H
+#define FRAMES_TEST_H
+
+#include <cppunit/TestFixture.h>
+#include <cppunit/extensions/HelperMacros.h>
+
+#include "MBus.h"
+
+{% for item in files %}
+class {{item.safename}}Test : public CppUnit::TestFixture {
+  CPPUNIT_TEST_SUITE( {{item.safename}}Test );
+{% for record in item.records %}
+  CPPUNIT_TEST( TestRecord{{loop.index0}} );
+{% endfor %}
+  CPPUNIT_TEST_SUITE_END();
+
+  MBusFrame *frame;
+  MBusDataVariable *vard;
+  MBusRecord *rec;
+
+  MBusRecord *getRecord(unsigned int pos);
+
+  unsigned int frame_data_len = {{ item.frame_data_length }};
+  unsigned char frame_data[{{item.frame_data_length}}] = {
+{% for line in item.frame_data %}
+    {{ line }}
+{% endfor %}
+  };
+
+ public:
+  void setUp(void);
+  void tearDown(void);
+
+{% for record in item.records %}
+  void TestRecord{{loop.index0}}(void);
+{% endfor %}
+};
+{% endfor %}
+
+#endif

@@ -186,6 +186,7 @@ class ACWItronBMPlusMTest : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord5 );
   CPPUNIT_TEST( TestRecord6 );
   CPPUNIT_TEST( TestRecord7 );
+  CPPUNIT_TEST( TestRecord8 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -216,6 +217,7 @@ class ACWItronBMPlusMTest : public CppUnit::TestFixture {
   void TestRecord5(void);
   void TestRecord6(void);
   void TestRecord7(void);
+  void TestRecord8(void);
 };
 class ACWItronCYBLEMBus_14Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( ACWItronCYBLEMBus_14Test );
@@ -226,6 +228,7 @@ class ACWItronCYBLEMBus_14Test : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord4 );
   CPPUNIT_TEST( TestRecord5 );
   CPPUNIT_TEST( TestRecord6 );
+  CPPUNIT_TEST( TestRecord7 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -257,6 +260,7 @@ class ACWItronCYBLEMBus_14Test : public CppUnit::TestFixture {
   void TestRecord4(void);
   void TestRecord5(void);
   void TestRecord6(void);
+  void TestRecord7(void);
 };
 class allmessCf50Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( allmessCf50Test );
@@ -269,6 +273,7 @@ class allmessCf50Test : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord6 );
   CPPUNIT_TEST( TestRecord7 );
   CPPUNIT_TEST( TestRecord8 );
+  CPPUNIT_TEST( TestRecord9 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -300,9 +305,25 @@ class allmessCf50Test : public CppUnit::TestFixture {
   void TestRecord6(void);
   void TestRecord7(void);
   void TestRecord8(void);
+  void TestRecord9(void);
 };
 class apatorLqm3Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( apatorLqm3Test );
+  CPPUNIT_TEST( TestRecord0 );
+  CPPUNIT_TEST( TestRecord1 );
+  CPPUNIT_TEST( TestRecord2 );
+  CPPUNIT_TEST( TestRecord3 );
+  CPPUNIT_TEST( TestRecord4 );
+  CPPUNIT_TEST( TestRecord5 );
+  CPPUNIT_TEST( TestRecord6 );
+  CPPUNIT_TEST( TestRecord7 );
+  CPPUNIT_TEST( TestRecord8 );
+  CPPUNIT_TEST( TestRecord9 );
+  CPPUNIT_TEST( TestRecord10 );
+  CPPUNIT_TEST( TestRecord11 );
+  CPPUNIT_TEST( TestRecord12 );
+  CPPUNIT_TEST( TestRecord13 );
+  CPPUNIT_TEST( TestRecord14 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -328,6 +349,21 @@ class apatorLqm3Test : public CppUnit::TestFixture {
   void setUp(void);
   void tearDown(void);
 
+  void TestRecord0(void);
+  void TestRecord1(void);
+  void TestRecord2(void);
+  void TestRecord3(void);
+  void TestRecord4(void);
+  void TestRecord5(void);
+  void TestRecord6(void);
+  void TestRecord7(void);
+  void TestRecord8(void);
+  void TestRecord9(void);
+  void TestRecord10(void);
+  void TestRecord11(void);
+  void TestRecord12(void);
+  void TestRecord13(void);
+  void TestRecord14(void);
 };
 class bergDzPlusTest : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( bergDzPlusTest );
@@ -820,6 +856,7 @@ class elsFalconTest : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord5 );
   CPPUNIT_TEST( TestRecord6 );
   CPPUNIT_TEST( TestRecord7 );
+  CPPUNIT_TEST( TestRecord8 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -851,6 +888,7 @@ class elsFalconTest : public CppUnit::TestFixture {
   void TestRecord5(void);
   void TestRecord6(void);
   void TestRecord7(void);
+  void TestRecord8(void);
 };
 class elsTmpaTelegramm1Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( elsTmpaTelegramm1Test );
@@ -859,6 +897,7 @@ class elsTmpaTelegramm1Test : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord2 );
   CPPUNIT_TEST( TestRecord3 );
   CPPUNIT_TEST( TestRecord4 );
+  CPPUNIT_TEST( TestRecord5 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -885,6 +924,7 @@ class elsTmpaTelegramm1Test : public CppUnit::TestFixture {
   void TestRecord2(void);
   void TestRecord3(void);
   void TestRecord4(void);
+  void TestRecord5(void);
 };
 class ElsterF2Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( ElsterF2Test );
@@ -1263,6 +1303,12 @@ class engelmannSensostar2cTest : public CppUnit::TestFixture {
 };
 class exampleData_01Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( exampleData_01Test );
+  CPPUNIT_TEST( TestRecord0 );
+  CPPUNIT_TEST( TestRecord1 );
+  CPPUNIT_TEST( TestRecord2 );
+  CPPUNIT_TEST( TestRecord3 );
+  CPPUNIT_TEST( TestRecord4 );
+  CPPUNIT_TEST( TestRecord5 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -1284,9 +1330,21 @@ class exampleData_01Test : public CppUnit::TestFixture {
   void setUp(void);
   void tearDown(void);
 
+  void TestRecord0(void);
+  void TestRecord1(void);
+  void TestRecord2(void);
+  void TestRecord3(void);
+  void TestRecord4(void);
+  void TestRecord5(void);
 };
 class exampleData_02Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( exampleData_02Test );
+  CPPUNIT_TEST( TestRecord0 );
+  CPPUNIT_TEST( TestRecord1 );
+  CPPUNIT_TEST( TestRecord2 );
+  CPPUNIT_TEST( TestRecord3 );
+  CPPUNIT_TEST( TestRecord4 );
+  CPPUNIT_TEST( TestRecord5 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -1308,68 +1366,15 @@ class exampleData_02Test : public CppUnit::TestFixture {
   void setUp(void);
   void tearDown(void);
 
-};
-class f4Test : public CppUnit::TestFixture {
-  CPPUNIT_TEST_SUITE( f4Test );
-  CPPUNIT_TEST( TestRecord0 );
-  CPPUNIT_TEST( TestRecord1 );
-  CPPUNIT_TEST( TestRecord2 );
-  CPPUNIT_TEST( TestRecord3 );
-  CPPUNIT_TEST( TestRecord4 );
-  CPPUNIT_TEST( TestRecord5 );
-  CPPUNIT_TEST( TestRecord6 );
-  CPPUNIT_TEST( TestRecord7 );
-  CPPUNIT_TEST( TestRecord8 );
-  CPPUNIT_TEST( TestRecord9 );
-  CPPUNIT_TEST( TestRecord10 );
-  CPPUNIT_TEST( TestRecord11 );
-  CPPUNIT_TEST( TestRecord12 );
-  CPPUNIT_TEST_SUITE_END();
-
-  MBusFrame *frame;
-  MBusDataVariable *vard;
-  MBusRecord *rec;
-
-  MBusRecord *getRecord(unsigned int pos);
-
-  unsigned int frame_data_len = 150;
-  unsigned char frame_data[150] = {
-    0x68, 0x90, 0x90, 0x68, 0x08, 0x11, 0x72, 0x05, 0x79, 0x62, 0x00, 0xcd, 
-    0x4e, 0x09, 0x04, 0x06, 0x00, 0x00, 0x00, 0x04, 0x06, 0xe8, 0xb4, 0x2f, 
-    0x00, 0x04, 0x14, 0xc1, 0x6c, 0x3f, 0x00, 0x84, 0x40, 0x14, 0xa9, 0x6c, 
-    0x3f, 0x00, 0x02, 0x5b, 0x61, 0x00, 0x02, 0x5f, 0x15, 0x00, 0x02, 0x62, 
-    0xf0, 0x02, 0x04, 0x22, 0xe9, 0x7c, 0x00, 0x00, 0x04, 0x26, 0xd0, 0x73, 
-    0x00, 0x00, 0x04, 0x3b, 0xff, 0x05, 0x00, 0x00, 0x04, 0x2c, 0xea, 0x33, 
-    0x00, 0x00, 0x04, 0x6d, 0x27, 0x17, 0x7b, 0x12, 0x84, 0x40, 0x6e, 0x00, 
-    0x00, 0x00, 0x00, 0x84, 0x80, 0x40, 0x6e, 0x00, 0x00, 0x00, 0x00, 0x1f, 
-    0xc4, 0x09, 0x01, 0x0c, 0x10, 0x01, 0x01, 0x01, 0x01, 0x07, 0x05, 0x79, 
-    0x62, 0x00, 0xcd, 0x4e, 0x09, 0x04, 0x07, 0xaf, 0xef, 0x03, 0x05, 0x79, 
-    0x62, 0x00, 0x05, 0x1f, 0x03, 0x02, 0xff, 0x0f, 0x05, 0x3c, 0x69, 0x65, 
-    0x9a, 0x65, 0x0f, 0x06, 0x20, 0x06, 0x00, 0x00, 0x04, 0x29, 0x1a, 0x01, 
-    0xa0, 0x05, 0x62, 0x41, 0x04, 0x16
-  };
-
- public:
-  void setUp(void);
-  void tearDown(void);
-
   void TestRecord0(void);
   void TestRecord1(void);
   void TestRecord2(void);
   void TestRecord3(void);
   void TestRecord4(void);
   void TestRecord5(void);
-  void TestRecord6(void);
-  void TestRecord7(void);
-  void TestRecord8(void);
-  void TestRecord9(void);
-  void TestRecord10(void);
-  void TestRecord11(void);
-  void TestRecord12(void);
 };
 class fillerTest : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( fillerTest );
-  CPPUNIT_TEST( TestRecord0 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -1390,7 +1395,6 @@ class fillerTest : public CppUnit::TestFixture {
   void setUp(void);
   void tearDown(void);
 
-  void TestRecord0(void);
 };
 class FINFinder_7E_23_8_230_0020Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( FINFinder_7E_23_8_230_0020Test );
@@ -1583,6 +1587,7 @@ class GWFMTKcoderTest : public CppUnit::TestFixture {
   void TestRecord0(void);
   void TestRecord1(void);
 };
+/*
 class invalidLengthTest : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( invalidLengthTest );
   CPPUNIT_TEST_SUITE_END();
@@ -1605,6 +1610,8 @@ class invalidLengthTest : public CppUnit::TestFixture {
 };
 class invalidLength2Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( invalidLength2Test );
+  CPPUNIT_TEST( TestRecord0 );
+  CPPUNIT_TEST( TestRecord1 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -1623,7 +1630,10 @@ class invalidLength2Test : public CppUnit::TestFixture {
   void setUp(void);
   void tearDown(void);
 
+  void TestRecord0(void);
+  void TestRecord1(void);
 };
+*/
 class itronBm_MTest : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( itronBm_MTest );
   CPPUNIT_TEST( TestRecord0 );
@@ -1634,6 +1644,7 @@ class itronBm_MTest : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord5 );
   CPPUNIT_TEST( TestRecord6 );
   CPPUNIT_TEST( TestRecord7 );
+  CPPUNIT_TEST( TestRecord8 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -1664,62 +1675,7 @@ class itronBm_MTest : public CppUnit::TestFixture {
   void TestRecord5(void);
   void TestRecord6(void);
   void TestRecord7(void);
-};
-class itronCf51BemaTest : public CppUnit::TestFixture {
-  CPPUNIT_TEST_SUITE( itronCf51BemaTest );
-  CPPUNIT_TEST( TestRecord0 );
-  CPPUNIT_TEST( TestRecord1 );
-  CPPUNIT_TEST( TestRecord2 );
-  CPPUNIT_TEST( TestRecord3 );
-  CPPUNIT_TEST( TestRecord4 );
-  CPPUNIT_TEST( TestRecord5 );
-  CPPUNIT_TEST( TestRecord6 );
-  CPPUNIT_TEST( TestRecord7 );
-  CPPUNIT_TEST( TestRecord8 );
-  CPPUNIT_TEST( TestRecord9 );
-  CPPUNIT_TEST( TestRecord10 );
-  CPPUNIT_TEST( TestRecord11 );
-  CPPUNIT_TEST( TestRecord12 );
-  CPPUNIT_TEST( TestRecord13 );
-  CPPUNIT_TEST_SUITE_END();
-
-  MBusFrame *frame;
-  MBusDataVariable *vard;
-  MBusRecord *rec;
-
-  MBusRecord *getRecord(unsigned int pos);
-
-  unsigned int frame_data_len = 99;
-  unsigned char frame_data[99] = {
-    0x68, 0x5d, 0x5d, 0x68, 0x08, 0x00, 0x72, 0x91, 0x23, 0x24, 0x14, 0x77, 
-    0x04, 0x0a, 0x04, 0x0b, 0x00, 0x00, 0x00, 0x0c, 0x78, 0x91, 0x23, 0x24, 
-    0x14, 0x04, 0x0f, 0x3b, 0x03, 0x00, 0x00, 0x0c, 0x15, 0x17, 0x05, 0x00, 
-    0x00, 0x0b, 0x2d, 0x00, 0x00, 0x00, 0x0b, 0x3b, 0x07, 0x00, 0x00, 0x0a, 
-    0x5a, 0x11, 0x04, 0x0a, 0x5e, 0x34, 0x03, 0x0b, 0x61, 0x75, 0x07, 0x00, 
-    0x04, 0x6d, 0x25, 0x10, 0xcd, 0x15, 0x02, 0x27, 0x1d, 0x00, 0x09, 0xfd, 
-    0x0e, 0x12, 0x09, 0xfd, 0x0f, 0x28, 0x8c, 0xc0, 0x00, 0x16, 0x00, 0x00, 
-    0x00, 0x00, 0x8c, 0x80, 0x40, 0x16, 0x00, 0x00, 0x00, 0x00, 0x0f, 0x00, 
-    0x00, 0x81, 0x16
-  };
-
- public:
-  void setUp(void);
-  void tearDown(void);
-
-  void TestRecord0(void);
-  void TestRecord1(void);
-  void TestRecord2(void);
-  void TestRecord3(void);
-  void TestRecord4(void);
-  void TestRecord5(void);
-  void TestRecord6(void);
-  void TestRecord7(void);
   void TestRecord8(void);
-  void TestRecord9(void);
-  void TestRecord10(void);
-  void TestRecord11(void);
-  void TestRecord12(void);
-  void TestRecord13(void);
 };
 class itronCf_51Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( itronCf_51Test );
@@ -1738,6 +1694,7 @@ class itronCf_51Test : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord12 );
   CPPUNIT_TEST( TestRecord13 );
   CPPUNIT_TEST( TestRecord14 );
+  CPPUNIT_TEST( TestRecord15 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -1778,6 +1735,7 @@ class itronCf_51Test : public CppUnit::TestFixture {
   void TestRecord12(void);
   void TestRecord13(void);
   void TestRecord14(void);
+  void TestRecord15(void);
 };
 class itronCf_55Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( itronCf_55Test );
@@ -1793,6 +1751,7 @@ class itronCf_55Test : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord9 );
   CPPUNIT_TEST( TestRecord10 );
   CPPUNIT_TEST( TestRecord11 );
+  CPPUNIT_TEST( TestRecord12 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -1828,6 +1787,7 @@ class itronCf_55Test : public CppUnit::TestFixture {
   void TestRecord9(void);
   void TestRecord10(void);
   void TestRecord11(void);
+  void TestRecord12(void);
 };
 class itronCfEcho_2Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( itronCfEcho_2Test );
@@ -1843,6 +1803,7 @@ class itronCfEcho_2Test : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord9 );
   CPPUNIT_TEST( TestRecord10 );
   CPPUNIT_TEST( TestRecord11 );
+  CPPUNIT_TEST( TestRecord12 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -1878,7 +1839,9 @@ class itronCfEcho_2Test : public CppUnit::TestFixture {
   void TestRecord9(void);
   void TestRecord10(void);
   void TestRecord11(void);
+  void TestRecord12(void);
 };
+/*
 class itronCybleMBusV1_4ColdWaterTest : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( itronCybleMBusV1_4ColdWaterTest );
   CPPUNIT_TEST( TestRecord0 );
@@ -1961,6 +1924,7 @@ class itronCybleMBusV1_4GasTest : public CppUnit::TestFixture {
   void TestRecord5(void);
   void TestRecord6(void);
 };
+*/
 class itronCybleMBusV1_4WaterTest : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( itronCybleMBusV1_4WaterTest );
   CPPUNIT_TEST( TestRecord0 );
@@ -1970,6 +1934,7 @@ class itronCybleMBusV1_4WaterTest : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord4 );
   CPPUNIT_TEST( TestRecord5 );
   CPPUNIT_TEST( TestRecord6 );
+  CPPUNIT_TEST( TestRecord7 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -2001,6 +1966,7 @@ class itronCybleMBusV1_4WaterTest : public CppUnit::TestFixture {
   void TestRecord4(void);
   void TestRecord5(void);
   void TestRecord6(void);
+  void TestRecord7(void);
 };
 class itronIntegralMkMaxxTest : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( itronIntegralMkMaxxTest );
@@ -2018,6 +1984,7 @@ class itronIntegralMkMaxxTest : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord11 );
   CPPUNIT_TEST( TestRecord12 );
   CPPUNIT_TEST( TestRecord13 );
+  CPPUNIT_TEST( TestRecord14 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -2057,101 +2024,7 @@ class itronIntegralMkMaxxTest : public CppUnit::TestFixture {
   void TestRecord11(void);
   void TestRecord12(void);
   void TestRecord13(void);
-};
-class kam_114F1Test : public CppUnit::TestFixture {
-  CPPUNIT_TEST_SUITE( kam_114F1Test );
-  CPPUNIT_TEST( TestRecord0 );
-  CPPUNIT_TEST( TestRecord1 );
-  CPPUNIT_TEST( TestRecord2 );
-  CPPUNIT_TEST( TestRecord3 );
-  CPPUNIT_TEST( TestRecord4 );
-  CPPUNIT_TEST( TestRecord5 );
-  CPPUNIT_TEST( TestRecord6 );
-  CPPUNIT_TEST( TestRecord7 );
-  CPPUNIT_TEST( TestRecord8 );
-  CPPUNIT_TEST( TestRecord9 );
-  CPPUNIT_TEST( TestRecord10 );
-  CPPUNIT_TEST( TestRecord11 );
-  CPPUNIT_TEST( TestRecord12 );
-  CPPUNIT_TEST( TestRecord13 );
-  CPPUNIT_TEST( TestRecord14 );
-  CPPUNIT_TEST( TestRecord15 );
-  CPPUNIT_TEST( TestRecord16 );
-  CPPUNIT_TEST( TestRecord17 );
-  CPPUNIT_TEST( TestRecord18 );
-  CPPUNIT_TEST( TestRecord19 );
-  CPPUNIT_TEST( TestRecord20 );
-  CPPUNIT_TEST( TestRecord21 );
-  CPPUNIT_TEST( TestRecord22 );
-  CPPUNIT_TEST( TestRecord23 );
-  CPPUNIT_TEST( TestRecord24 );
-  CPPUNIT_TEST( TestRecord25 );
-  CPPUNIT_TEST( TestRecord26 );
-  CPPUNIT_TEST_SUITE_END();
-
-  MBusFrame *frame;
-  MBusDataVariable *vard;
-  MBusRecord *rec;
-
-  MBusRecord *getRecord(unsigned int pos);
-
-  unsigned int frame_data_len = 253;
-  unsigned char frame_data[253] = {
-    0x68, 0xf7, 0xf7, 0x68, 0x08, 0x5e, 0x72, 0x94, 0x74, 0x00, 0x03, 0x2d, 
-    0x2c, 0x11, 0x04, 0xbe, 0x00, 0x00, 0x00, 0x0c, 0x78, 0x10, 0x43, 0x10, 
-    0x69, 0x04, 0x07, 0xd4, 0xdf, 0x06, 0x00, 0x04, 0x15, 0x0e, 0xa2, 0x10, 
-    0x00, 0x04, 0x22, 0x2f, 0x9f, 0x00, 0x00, 0x04, 0x59, 0x26, 0x20, 0x00, 
-    0x00, 0x04, 0x5d, 0xfd, 0x0a, 0x00, 0x00, 0x04, 0x61, 0x29, 0x15, 0x00, 
-    0x00, 0x04, 0x2d, 0x1d, 0x02, 0x00, 0x00, 0x14, 0x2d, 0x41, 0x0c, 0x00, 
-    0x00, 0x04, 0x3b, 0x60, 0x03, 0x00, 0x00, 0x14, 0x3b, 0x9b, 0x2a, 0x00, 
-    0x00, 0x84, 0x10, 0x07, 0x00, 0x00, 0x00, 0x00, 0x84, 0x20, 0x07, 0x00, 
-    0x00, 0x00, 0x00, 0x84, 0x40, 0x14, 0x00, 0x00, 0x00, 0x00, 0x84, 0x80, 
-    0x40, 0x14, 0x00, 0x00, 0x00, 0x00, 0x84, 0xc0, 0x40, 0x07, 0x00, 0x00, 
-    0x00, 0x00, 0x04, 0x6d, 0x39, 0x2c, 0x5e, 0x24, 0x44, 0x07, 0x9b, 0x2b, 
-    0x06, 0x00, 0x44, 0x15, 0x9a, 0xf7, 0x0e, 0x00, 0x54, 0x2d, 0x8a, 0x0b, 
-    0x00, 0x00, 0x54, 0x3b, 0xf8, 0x2b, 0x00, 0x00, 0xc4, 0x10, 0x07, 0x00, 
-    0x00, 0x00, 0x00, 0xc4, 0x20, 0x07, 0x00, 0x00, 0x00, 0x00, 0xc4, 0x40, 
-    0x14, 0x00, 0x00, 0x00, 0x00, 0xc4, 0x80, 0x40, 0x14, 0x00, 0x00, 0x00, 
-    0x00, 0xc4, 0xc0, 0x40, 0x07, 0x00, 0x00, 0x00, 0x00, 0x42, 0x6c, 0x3f, 
-    0x2c, 0x0f, 0x00, 0x00, 0x00, 0x00, 0x9f, 0x22, 0x0e, 0x00, 0x31, 0x29, 
-    0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-    0x00, 0x00, 0xbd, 0x0f, 0xa6, 0x02, 0x34, 0x53, 0x00, 0x00, 0xc3, 0xfc, 
-    0x24, 0x00, 0x06, 0xe4, 0x2d, 0x00, 0x00, 0x00, 0x00, 0x00, 0x11, 0x13, 
-    0x01, 0x06, 0x07, 0x09, 0x01, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x31, 
-    0x16
-  };
-
- public:
-  void setUp(void);
-  void tearDown(void);
-
-  void TestRecord0(void);
-  void TestRecord1(void);
-  void TestRecord2(void);
-  void TestRecord3(void);
-  void TestRecord4(void);
-  void TestRecord5(void);
-  void TestRecord6(void);
-  void TestRecord7(void);
-  void TestRecord8(void);
-  void TestRecord9(void);
-  void TestRecord10(void);
-  void TestRecord11(void);
-  void TestRecord12(void);
-  void TestRecord13(void);
   void TestRecord14(void);
-  void TestRecord15(void);
-  void TestRecord16(void);
-  void TestRecord17(void);
-  void TestRecord18(void);
-  void TestRecord19(void);
-  void TestRecord20(void);
-  void TestRecord21(void);
-  void TestRecord22(void);
-  void TestRecord23(void);
-  void TestRecord24(void);
-  void TestRecord25(void);
-  void TestRecord26(void);
 };
 class kamstrup_382_005Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( kamstrup_382_005Test );
@@ -2161,6 +2034,7 @@ class kamstrup_382_005Test : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord3 );
   CPPUNIT_TEST( TestRecord4 );
   CPPUNIT_TEST( TestRecord5 );
+  CPPUNIT_TEST( TestRecord6 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -2190,6 +2064,7 @@ class kamstrup_382_005Test : public CppUnit::TestFixture {
   void TestRecord3(void);
   void TestRecord4(void);
   void TestRecord5(void);
+  void TestRecord6(void);
 };
 class kamstrupMultical_601Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( kamstrupMultical_601Test );
@@ -2220,6 +2095,7 @@ class kamstrupMultical_601Test : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord24 );
   CPPUNIT_TEST( TestRecord25 );
   CPPUNIT_TEST( TestRecord26 );
+  CPPUNIT_TEST( TestRecord27 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -2285,6 +2161,7 @@ class kamstrupMultical_601Test : public CppUnit::TestFixture {
   void TestRecord24(void);
   void TestRecord25(void);
   void TestRecord26(void);
+  void TestRecord27(void);
 };
 class landisGyrUltraheatT230Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( landisGyrUltraheatT230Test );
@@ -2322,6 +2199,7 @@ class landisGyrUltraheatT230Test : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord31 );
   CPPUNIT_TEST( TestRecord32 );
   CPPUNIT_TEST( TestRecord33 );
+  CPPUNIT_TEST( TestRecord34 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -2392,6 +2270,7 @@ class landisGyrUltraheatT230Test : public CppUnit::TestFixture {
   void TestRecord31(void);
   void TestRecord32(void);
   void TestRecord33(void);
+  void TestRecord34(void);
 };
 class LGBG350Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( LGBG350Test );
@@ -2430,8 +2309,11 @@ class LGBG350Test : public CppUnit::TestFixture {
   void TestRecord4(void);
   void TestRecord5(void);
 };
+/*
 class manualFrame2Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( manualFrame2Test );
+  CPPUNIT_TEST( TestRecord0 );
+  CPPUNIT_TEST( TestRecord1 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -2451,6 +2333,8 @@ class manualFrame2Test : public CppUnit::TestFixture {
   void setUp(void);
   void tearDown(void);
 
+  void TestRecord0(void);
+  void TestRecord1(void);
 };
 class manualFrame3Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( manualFrame3Test );
@@ -2483,7 +2367,6 @@ class manualFrame3Test : public CppUnit::TestFixture {
 };
 class manualFrame7Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( manualFrame7Test );
-  CPPUNIT_TEST( TestRecord0 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -2503,8 +2386,8 @@ class manualFrame7Test : public CppUnit::TestFixture {
   void setUp(void);
   void tearDown(void);
 
-  void TestRecord0(void);
 };
+*/
 class metronaPolluthermTest : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( metronaPolluthermTest );
   CPPUNIT_TEST( TestRecord0 );
@@ -2589,6 +2472,7 @@ class metronaUltraheatXsTest : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord36 );
   CPPUNIT_TEST( TestRecord37 );
   CPPUNIT_TEST( TestRecord38 );
+  CPPUNIT_TEST( TestRecord39 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -2666,6 +2550,7 @@ class metronaUltraheatXsTest : public CppUnit::TestFixture {
   void TestRecord36(void);
   void TestRecord37(void);
   void TestRecord38(void);
+  void TestRecord39(void);
 };
 class minolMinocalC2Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( minolMinocalC2Test );
@@ -2878,6 +2763,7 @@ class nzrDhz_5_63Test : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord3 );
   CPPUNIT_TEST( TestRecord4 );
   CPPUNIT_TEST( TestRecord5 );
+  CPPUNIT_TEST( TestRecord6 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -2905,6 +2791,7 @@ class nzrDhz_5_63Test : public CppUnit::TestFixture {
   void TestRecord3(void);
   void TestRecord4(void);
   void TestRecord5(void);
+  void TestRecord6(void);
 };
 class omsFrame1Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( omsFrame1Test );
@@ -3011,11 +2898,11 @@ class omsFrame3Test : public CppUnit::TestFixture {
   void TestRecord7(void);
   void TestRecord8(void);
 };
+/*
 class prematureEndOfData1Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( prematureEndOfData1Test );
   CPPUNIT_TEST( TestRecord0 );
   CPPUNIT_TEST( TestRecord1 );
-  CPPUNIT_TEST( TestRecord2 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -3037,13 +2924,11 @@ class prematureEndOfData1Test : public CppUnit::TestFixture {
 
   void TestRecord0(void);
   void TestRecord1(void);
-  void TestRecord2(void);
 };
 class prematureEndOfData2Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( prematureEndOfData2Test );
   CPPUNIT_TEST( TestRecord0 );
   CPPUNIT_TEST( TestRecord1 );
-  CPPUNIT_TEST( TestRecord2 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -3065,13 +2950,11 @@ class prematureEndOfData2Test : public CppUnit::TestFixture {
 
   void TestRecord0(void);
   void TestRecord1(void);
-  void TestRecord2(void);
 };
 class prematureEndOfDif1Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( prematureEndOfDif1Test );
   CPPUNIT_TEST( TestRecord0 );
   CPPUNIT_TEST( TestRecord1 );
-  CPPUNIT_TEST( TestRecord2 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -3093,10 +2976,11 @@ class prematureEndOfDif1Test : public CppUnit::TestFixture {
 
   void TestRecord0(void);
   void TestRecord1(void);
-  void TestRecord2(void);
 };
 class prematureEndOfDif2Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( prematureEndOfDif2Test );
+  CPPUNIT_TEST( TestRecord0 );
+  CPPUNIT_TEST( TestRecord1 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -3116,9 +3000,14 @@ class prematureEndOfDif2Test : public CppUnit::TestFixture {
   void setUp(void);
   void tearDown(void);
 
+  void TestRecord0(void);
+  void TestRecord1(void);
 };
 class prematureEndOfVarVif1Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( prematureEndOfVarVif1Test );
+  CPPUNIT_TEST( TestRecord0 );
+  CPPUNIT_TEST( TestRecord1 );
+  CPPUNIT_TEST( TestRecord2 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -3140,12 +3029,14 @@ class prematureEndOfVarVif1Test : public CppUnit::TestFixture {
   void setUp(void);
   void tearDown(void);
 
+  void TestRecord0(void);
+  void TestRecord1(void);
+  void TestRecord2(void);
 };
 class prematureEndOfVif1Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( prematureEndOfVif1Test );
   CPPUNIT_TEST( TestRecord0 );
   CPPUNIT_TEST( TestRecord1 );
-  CPPUNIT_TEST( TestRecord2 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -3167,8 +3058,8 @@ class prematureEndOfVif1Test : public CppUnit::TestFixture {
 
   void TestRecord0(void);
   void TestRecord1(void);
-  void TestRecord2(void);
 };
+*/
 class ramModularisTest : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( ramModularisTest );
   CPPUNIT_TEST( TestRecord0 );
@@ -3201,6 +3092,7 @@ class ramModularisTest : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord27 );
   CPPUNIT_TEST( TestRecord28 );
   CPPUNIT_TEST( TestRecord29 );
+  CPPUNIT_TEST( TestRecord30 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -3264,6 +3156,7 @@ class ramModularisTest : public CppUnit::TestFixture {
   void TestRecord27(void);
   void TestRecord28(void);
   void TestRecord29(void);
+  void TestRecord30(void);
 };
 class RELRelayPadpuls2Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( RELRelayPadpuls2Test );
@@ -3272,6 +3165,7 @@ class RELRelayPadpuls2Test : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord2 );
   CPPUNIT_TEST( TestRecord3 );
   CPPUNIT_TEST( TestRecord4 );
+  CPPUNIT_TEST( TestRecord5 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -3298,6 +3192,7 @@ class RELRelayPadpuls2Test : public CppUnit::TestFixture {
   void TestRecord2(void);
   void TestRecord3(void);
   void TestRecord4(void);
+  void TestRecord5(void);
 };
 class relPadpuls2Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( relPadpuls2Test );
@@ -3306,6 +3201,7 @@ class relPadpuls2Test : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord2 );
   CPPUNIT_TEST( TestRecord3 );
   CPPUNIT_TEST( TestRecord4 );
+  CPPUNIT_TEST( TestRecord5 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -3332,6 +3228,7 @@ class relPadpuls2Test : public CppUnit::TestFixture {
   void TestRecord2(void);
   void TestRecord3(void);
   void TestRecord4(void);
+  void TestRecord5(void);
 };
 class relPadpuls3Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( relPadpuls3Test );
@@ -3340,6 +3237,7 @@ class relPadpuls3Test : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord2 );
   CPPUNIT_TEST( TestRecord3 );
   CPPUNIT_TEST( TestRecord4 );
+  CPPUNIT_TEST( TestRecord5 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -3366,35 +3264,7 @@ class relPadpuls3Test : public CppUnit::TestFixture {
   void TestRecord2(void);
   void TestRecord3(void);
   void TestRecord4(void);
-};
-class rspUdExampleTest : public CppUnit::TestFixture {
-  CPPUNIT_TEST_SUITE( rspUdExampleTest );
-  CPPUNIT_TEST( TestRecord0 );
-  CPPUNIT_TEST( TestRecord1 );
-  CPPUNIT_TEST( TestRecord2 );
-  CPPUNIT_TEST_SUITE_END();
-
-  MBusFrame *frame;
-  MBusDataVariable *vard;
-  MBusRecord *rec;
-
-  MBusRecord *getRecord(unsigned int pos);
-
-  unsigned int frame_data_len = 37;
-  unsigned char frame_data[37] = {
-    0x68, 0x1f, 0x1f, 0x68, 0x08, 0x02, 0x72, 0x78, 0x56, 0x34, 0x12, 0x24, 
-    0x40, 0x01, 0x07, 0x55, 0x00, 0x00, 0x00, 0x03, 0x13, 0x15, 0x31, 0x00, 
-    0xda, 0x02, 0x3b, 0x13, 0x01, 0x8b, 0x60, 0x04, 0x37, 0x18, 0x02, 0x18, 
-    0x16
-  };
-
- public:
-  void setUp(void);
-  void tearDown(void);
-
-  void TestRecord0(void);
-  void TestRecord1(void);
-  void TestRecord2(void);
+  void TestRecord5(void);
 };
 class SBCSaiaBurgessALE3Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( SBCSaiaBurgessALE3Test );
@@ -3468,8 +3338,11 @@ class SBCSaiaBurgessALE3Test : public CppUnit::TestFixture {
   void TestRecord18(void);
   void TestRecord19(void);
 };
+/*
 class senPollusonic_2Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( senPollusonic_2Test );
+  CPPUNIT_TEST( TestRecord0 );
+  CPPUNIT_TEST( TestRecord1 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -3489,7 +3362,10 @@ class senPollusonic_2Test : public CppUnit::TestFixture {
   void setUp(void);
   void tearDown(void);
 
+  void TestRecord0(void);
+  void TestRecord1(void);
 };
+*/
 class SENPollustatTest : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( SENPollustatTest );
   CPPUNIT_TEST( TestRecord0 );
@@ -3551,8 +3427,17 @@ class SENPollustatTest : public CppUnit::TestFixture {
   void TestRecord14(void);
   void TestRecord15(void);
 };
+/*
 class senPolluthermTest : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( senPolluthermTest );
+  CPPUNIT_TEST( TestRecord0 );
+  CPPUNIT_TEST( TestRecord1 );
+  CPPUNIT_TEST( TestRecord2 );
+  CPPUNIT_TEST( TestRecord3 );
+  CPPUNIT_TEST( TestRecord4 );
+  CPPUNIT_TEST( TestRecord5 );
+  CPPUNIT_TEST( TestRecord6 );
+  CPPUNIT_TEST( TestRecord7 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -3575,7 +3460,16 @@ class senPolluthermTest : public CppUnit::TestFixture {
   void setUp(void);
   void tearDown(void);
 
+  void TestRecord0(void);
+  void TestRecord1(void);
+  void TestRecord2(void);
+  void TestRecord3(void);
+  void TestRecord4(void);
+  void TestRecord5(void);
+  void TestRecord6(void);
+  void TestRecord7(void);
 };
+*/
 class SENSensusPolluStatETest : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( SENSensusPolluStatETest );
   CPPUNIT_TEST( TestRecord0 );
@@ -3662,50 +3556,6 @@ class SENSensusPolluThermTest : public CppUnit::TestFixture {
   void TestRecord7(void);
   void TestRecord8(void);
 };
-class siemensRvd235Test : public CppUnit::TestFixture {
-  CPPUNIT_TEST_SUITE( siemensRvd235Test );
-  CPPUNIT_TEST( TestRecord0 );
-  CPPUNIT_TEST( TestRecord1 );
-  CPPUNIT_TEST( TestRecord2 );
-  CPPUNIT_TEST( TestRecord3 );
-  CPPUNIT_TEST( TestRecord4 );
-  CPPUNIT_TEST( TestRecord5 );
-  CPPUNIT_TEST_SUITE_END();
-
-  MBusFrame *frame;
-  MBusDataVariable *vard;
-  MBusRecord *rec;
-
-  MBusRecord *getRecord(unsigned int pos);
-
-  unsigned int frame_data_len = 156;
-  unsigned char frame_data[156] = {
-    0x68, 0x96, 0x96, 0x68, 0x08, 0x00, 0x72, 0x04, 0x11, 0x29, 0x00, 0x7a, 
-    0x32, 0x29, 0x20, 0x0c, 0x28, 0x00, 0x00, 0x0c, 0x78, 0x20, 0x71, 0x04, 
-    0x00, 0x06, 0xfd, 0x0c, 0xfc, 0x03, 0x6d, 0x00, 0x2d, 0x00, 0x0d, 0xfd, 
-    0x0b, 0x06, 0x35, 0x33, 0x32, 0x44, 0x56, 0x52, 0x81, 0x30, 0xfd, 0x7c, 
-    0x01, 0x81, 0x20, 0xfd, 0x7c, 0x00, 0x01, 0xfd, 0x7c, 0x00, 0x0f, 0x02, 
-    0x78, 0x04, 0x00, 0x02, 0x7a, 0x04, 0x00, 0x32, 0x00, 0x1e, 0x09, 0x32, 
-    0x08, 0x00, 0x00, 0x34, 0x10, 0x00, 0x00, 0x00, 0x00, 0x31, 0x18, 0x00, 
-    0x34, 0x18, 0xff, 0xff, 0xff, 0xff, 0x71, 0x18, 0x00, 0x74, 0x18, 0xff, 
-    0xff, 0xff, 0xff, 0xb1, 0x01, 0x18, 0x00, 0xb4, 0x01, 0x18, 0xff, 0xff, 
-    0xff, 0xff, 0xf1, 0x01, 0x18, 0x00, 0xf4, 0x01, 0x18, 0xff, 0xff, 0xff, 
-    0xff, 0xb1, 0x02, 0x18, 0x00, 0xb4, 0x02, 0x18, 0xff, 0xff, 0xff, 0xff, 
-    0xf1, 0x02, 0x18, 0x00, 0x31, 0x28, 0x00, 0x34, 0x28, 0xff, 0xff, 0xff, 
-    0xff, 0x71, 0x28, 0x00, 0x01, 0x01, 0x00, 0x01, 0x09, 0x00, 0x24, 0x16
-  };
-
- public:
-  void setUp(void);
-  void tearDown(void);
-
-  void TestRecord0(void);
-  void TestRecord1(void);
-  void TestRecord2(void);
-  void TestRecord3(void);
-  void TestRecord4(void);
-  void TestRecord5(void);
-};
 class siemensWaterTest : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( siemensWaterTest );
   CPPUNIT_TEST( TestRecord0 );
@@ -3717,6 +3567,7 @@ class siemensWaterTest : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord6 );
   CPPUNIT_TEST( TestRecord7 );
   CPPUNIT_TEST( TestRecord8 );
+  CPPUNIT_TEST( TestRecord9 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -3750,6 +3601,7 @@ class siemensWaterTest : public CppUnit::TestFixture {
   void TestRecord6(void);
   void TestRecord7(void);
   void TestRecord8(void);
+  void TestRecord9(void);
 };
 class siemensWfh21Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( siemensWfh21Test );
@@ -3763,6 +3615,7 @@ class siemensWfh21Test : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord7 );
   CPPUNIT_TEST( TestRecord8 );
   CPPUNIT_TEST( TestRecord9 );
+  CPPUNIT_TEST( TestRecord10 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -3798,6 +3651,7 @@ class siemensWfh21Test : public CppUnit::TestFixture {
   void TestRecord7(void);
   void TestRecord8(void);
   void TestRecord9(void);
+  void TestRecord10(void);
 };
 class SLBCFCompactIntegralMKMaXXTest : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( SLBCFCompactIntegralMKMaXXTest );
@@ -3815,6 +3669,7 @@ class SLBCFCompactIntegralMKMaXXTest : public CppUnit::TestFixture {
   CPPUNIT_TEST( TestRecord11 );
   CPPUNIT_TEST( TestRecord12 );
   CPPUNIT_TEST( TestRecord13 );
+  CPPUNIT_TEST( TestRecord14 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -3854,6 +3709,7 @@ class SLBCFCompactIntegralMKMaXXTest : public CppUnit::TestFixture {
   void TestRecord11(void);
   void TestRecord12(void);
   void TestRecord13(void);
+  void TestRecord14(void);
 };
 class sontexSupercal_531Telegram1Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( sontexSupercal_531Telegram1Test );
@@ -3901,180 +3757,6 @@ class sontexSupercal_531Telegram1Test : public CppUnit::TestFixture {
   void TestRecord7(void);
   void TestRecord8(void);
   void TestRecord9(void);
-};
-class svm_114F1Test : public CppUnit::TestFixture {
-  CPPUNIT_TEST_SUITE( svm_114F1Test );
-  CPPUNIT_TEST( TestRecord0 );
-  CPPUNIT_TEST( TestRecord1 );
-  CPPUNIT_TEST( TestRecord2 );
-  CPPUNIT_TEST( TestRecord3 );
-  CPPUNIT_TEST( TestRecord4 );
-  CPPUNIT_TEST( TestRecord5 );
-  CPPUNIT_TEST( TestRecord6 );
-  CPPUNIT_TEST( TestRecord7 );
-  CPPUNIT_TEST( TestRecord8 );
-  CPPUNIT_TEST( TestRecord9 );
-  CPPUNIT_TEST( TestRecord10 );
-  CPPUNIT_TEST( TestRecord11 );
-  CPPUNIT_TEST( TestRecord12 );
-  CPPUNIT_TEST_SUITE_END();
-
-  MBusFrame *frame;
-  MBusDataVariable *vard;
-  MBusRecord *rec;
-
-  MBusRecord *getRecord(unsigned int pos);
-
-  unsigned int frame_data_len = 150;
-  unsigned char frame_data[150] = {
-    0x68, 0x90, 0x90, 0x68, 0x08, 0x01, 0x72, 0x86, 0x06, 0x01, 0x00, 0xcd, 
-    0x4e, 0x09, 0x04, 0x23, 0x00, 0x00, 0x00, 0x04, 0x06, 0x20, 0xb7, 0x05, 
-    0x00, 0x04, 0x14, 0x91, 0x1d, 0x08, 0x00, 0x84, 0x40, 0x14, 0x8b, 0x1d, 
-    0x08, 0x00, 0x02, 0x5b, 0x57, 0x00, 0x02, 0x5f, 0x15, 0x00, 0x02, 0x62, 
-    0x98, 0x02, 0x04, 0x22, 0x7d, 0x0d, 0x00, 0x00, 0x04, 0x26, 0x7d, 0x0d, 
-    0x00, 0x00, 0x04, 0x3b, 0x6d, 0x08, 0x00, 0x00, 0x04, 0x2c, 0x92, 0x40, 
-    0x00, 0x00, 0x04, 0x6d, 0x37, 0x0c, 0x5e, 0x24, 0x84, 0x40, 0x6e, 0x00, 
-    0x00, 0x00, 0x00, 0x84, 0x80, 0x40, 0x6e, 0x00, 0x00, 0x00, 0x00, 0x1f, 
-    0xe8, 0x03, 0x01, 0x05, 0x1b, 0x00, 0x01, 0x01, 0x01, 0x07, 0x86, 0x06, 
-    0x01, 0x00, 0xcd, 0x4e, 0x09, 0x04, 0x07, 0xaf, 0xef, 0x03, 0x57, 0x59, 
-    0x80, 0x00, 0x05, 0x1f, 0x03, 0x02, 0xff, 0x0f, 0x05, 0x3c, 0x3a, 0x65, 
-    0xcc, 0x65, 0xfd, 0x05, 0x16, 0x06, 0x02, 0x00, 0x95, 0x17, 0x1a, 0x01, 
-    0xa0, 0x05, 0x63, 0x42, 0x26, 0x16
-  };
-
- public:
-  void setUp(void);
-  void tearDown(void);
-
-  void TestRecord0(void);
-  void TestRecord1(void);
-  void TestRecord2(void);
-  void TestRecord3(void);
-  void TestRecord4(void);
-  void TestRecord5(void);
-  void TestRecord6(void);
-  void TestRecord7(void);
-  void TestRecord8(void);
-  void TestRecord9(void);
-  void TestRecord10(void);
-  void TestRecord11(void);
-  void TestRecord12(void);
-};
-class svm_114F2Test : public CppUnit::TestFixture {
-  CPPUNIT_TEST_SUITE( svm_114F2Test );
-  CPPUNIT_TEST( TestRecord0 );
-  CPPUNIT_TEST( TestRecord1 );
-  CPPUNIT_TEST( TestRecord2 );
-  CPPUNIT_TEST( TestRecord3 );
-  CPPUNIT_TEST( TestRecord4 );
-  CPPUNIT_TEST( TestRecord5 );
-  CPPUNIT_TEST( TestRecord6 );
-  CPPUNIT_TEST( TestRecord7 );
-  CPPUNIT_TEST( TestRecord8 );
-  CPPUNIT_TEST( TestRecord9 );
-  CPPUNIT_TEST( TestRecord10 );
-  CPPUNIT_TEST( TestRecord11 );
-  CPPUNIT_TEST( TestRecord12 );
-  CPPUNIT_TEST_SUITE_END();
-
-  MBusFrame *frame;
-  MBusDataVariable *vard;
-  MBusRecord *rec;
-
-  MBusRecord *getRecord(unsigned int pos);
-
-  unsigned int frame_data_len = 150;
-  unsigned char frame_data[150] = {
-    0x68, 0x90, 0x90, 0x68, 0x08, 0x01, 0x72, 0x56, 0x86, 0x00, 0x00, 0xcd, 
-    0x4e, 0x09, 0x04, 0x6d, 0x00, 0x00, 0x00, 0x04, 0x06, 0x41, 0xb2, 0x11, 
-    0x00, 0x04, 0x14, 0x65, 0xec, 0x1c, 0x00, 0x84, 0x40, 0x14, 0x5b, 0xec, 
-    0x1c, 0x00, 0x02, 0x5b, 0x54, 0x00, 0x02, 0x5f, 0x1f, 0x00, 0x02, 0x62, 
-    0x0f, 0x02, 0x04, 0x22, 0x22, 0xb2, 0x00, 0x00, 0x04, 0x26, 0x22, 0xb2, 
-    0x00, 0x00, 0x04, 0x3b, 0xc6, 0x00, 0x00, 0x00, 0x04, 0x2c, 0x95, 0x04, 
-    0x00, 0x00, 0x04, 0x6d, 0x13, 0x0f, 0x5e, 0x24, 0x84, 0x40, 0x6e, 0x00, 
-    0x00, 0x00, 0x00, 0x84, 0x80, 0x40, 0x6e, 0x00, 0x00, 0x00, 0x00, 0x1f, 
-    0xe8, 0x03, 0x01, 0x02, 0x16, 0x01, 0x01, 0x01, 0x01, 0x07, 0x56, 0x86, 
-    0x00, 0x00, 0xcd, 0x4e, 0x09, 0x04, 0x07, 0xaf, 0xff, 0x03, 0x77, 0x90, 
-    0x11, 0x00, 0x05, 0x1f, 0x03, 0x02, 0xff, 0x0f, 0x05, 0x3c, 0xcb, 0x65, 
-    0x8b, 0x65, 0x5b, 0x06, 0x3a, 0x06, 0x03, 0x00, 0x58, 0x3a, 0x1b, 0x01, 
-    0xa0, 0x05, 0x62, 0x41, 0x53, 0x16
-  };
-
- public:
-  void setUp(void);
-  void tearDown(void);
-
-  void TestRecord0(void);
-  void TestRecord1(void);
-  void TestRecord2(void);
-  void TestRecord3(void);
-  void TestRecord4(void);
-  void TestRecord5(void);
-  void TestRecord6(void);
-  void TestRecord7(void);
-  void TestRecord8(void);
-  void TestRecord9(void);
-  void TestRecord10(void);
-  void TestRecord11(void);
-  void TestRecord12(void);
-};
-class svm_121F1Test : public CppUnit::TestFixture {
-  CPPUNIT_TEST_SUITE( svm_121F1Test );
-  CPPUNIT_TEST( TestRecord0 );
-  CPPUNIT_TEST( TestRecord1 );
-  CPPUNIT_TEST( TestRecord2 );
-  CPPUNIT_TEST( TestRecord3 );
-  CPPUNIT_TEST( TestRecord4 );
-  CPPUNIT_TEST( TestRecord5 );
-  CPPUNIT_TEST( TestRecord6 );
-  CPPUNIT_TEST( TestRecord7 );
-  CPPUNIT_TEST( TestRecord8 );
-  CPPUNIT_TEST( TestRecord9 );
-  CPPUNIT_TEST( TestRecord10 );
-  CPPUNIT_TEST( TestRecord11 );
-  CPPUNIT_TEST( TestRecord12 );
-  CPPUNIT_TEST_SUITE_END();
-
-  MBusFrame *frame;
-  MBusDataVariable *vard;
-  MBusRecord *rec;
-
-  MBusRecord *getRecord(unsigned int pos);
-
-  unsigned int frame_data_len = 150;
-  unsigned char frame_data[150] = {
-    0x68, 0x90, 0x90, 0x68, 0x08, 0x01, 0x72, 0x28, 0x04, 0x66, 0x00, 0xcd, 
-    0x4e, 0x09, 0x04, 0xe4, 0x00, 0x00, 0x00, 0x04, 0x06, 0x64, 0x29, 0x37, 
-    0x00, 0x04, 0x14, 0x50, 0xd0, 0x55, 0x00, 0x84, 0x40, 0x14, 0x4c, 0xd0, 
-    0x55, 0x00, 0x02, 0x5b, 0x47, 0x00, 0x02, 0x5f, 0x1e, 0x00, 0x02, 0x62, 
-    0x9c, 0x01, 0x04, 0x22, 0xad, 0x55, 0x00, 0x00, 0x04, 0x26, 0xab, 0x55, 
-    0x00, 0x00, 0x04, 0x3b, 0xec, 0x07, 0x00, 0x00, 0x04, 0x2c, 0x8d, 0x25, 
-    0x00, 0x00, 0x04, 0x6d, 0x22, 0x0f, 0x5e, 0x24, 0x84, 0x40, 0x6e, 0x00, 
-    0x00, 0x00, 0x00, 0x84, 0x80, 0x40, 0x6e, 0x00, 0x00, 0x00, 0x00, 0x1f, 
-    0xc4, 0x09, 0x01, 0x01, 0x18, 0x00, 0x01, 0x01, 0x01, 0x07, 0x28, 0x04, 
-    0x66, 0x00, 0xcd, 0x4e, 0x09, 0x04, 0x07, 0xaf, 0xef, 0x03, 0x67, 0x06, 
-    0x40, 0x01, 0x05, 0x1f, 0x03, 0x02, 0xff, 0x0f, 0x05, 0x3c, 0x6c, 0x65, 
-    0xd8, 0x65, 0x8a, 0x05, 0x9d, 0x05, 0x02, 0x00, 0x19, 0x17, 0x1b, 0x01, 
-    0xa0, 0x05, 0x63, 0x42, 0xbe, 0x16
-  };
-
- public:
-  void setUp(void);
-  void tearDown(void);
-
-  void TestRecord0(void);
-  void TestRecord1(void);
-  void TestRecord2(void);
-  void TestRecord3(void);
-  void TestRecord4(void);
-  void TestRecord5(void);
-  void TestRecord6(void);
-  void TestRecord7(void);
-  void TestRecord8(void);
-  void TestRecord9(void);
-  void TestRecord10(void);
-  void TestRecord11(void);
-  void TestRecord12(void);
 };
 class svmF22Telegram1Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( svmF22Telegram1Test );
@@ -4129,44 +3811,6 @@ class svmF22Telegram1Test : public CppUnit::TestFixture {
   void TestRecord10(void);
   void TestRecord11(void);
   void TestRecord12(void);
-};
-class svmF22Telegram2Test : public CppUnit::TestFixture {
-  CPPUNIT_TEST_SUITE( svmF22Telegram2Test );
-  CPPUNIT_TEST_SUITE_END();
-
-  MBusFrame *frame;
-  MBusDataVariable *vard;
-  MBusRecord *rec;
-
-  MBusRecord *getRecord(unsigned int pos);
-
-  unsigned int frame_data_len = 228;
-  unsigned char frame_data[228] = {
-    0x68, 0xde, 0xde, 0x68, 0x08, 0x01, 0x72, 0x89, 0x60, 0x00, 0x01, 0xcd, 
-    0x4e, 0x09, 0x04, 0x18, 0x70, 0x00, 0x00, 0x1f, 0x45, 0x00, 0x3c, 0x01, 
-    0x7f, 0xb0, 0x09, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-    0xc5, 0x00, 0x84, 0x11, 0x98, 0xa1, 0x01, 0x00, 0xc9, 0x18, 0x00, 0x00, 
-    0x00, 0x00, 0x00, 0x01, 0x58, 0x04, 0x87, 0x24, 0x81, 0x01, 0x5b, 0x00, 
-    0x00, 0x48, 0x18, 0x00, 0x63, 0x60, 0x7d, 0x7f, 0x3e, 0x5f, 0x60, 0x01, 
-    0x00, 0x0a, 0x01, 0x02, 0x99, 0x00, 0x00, 0x0e, 0x50, 0xc3, 0x00, 0x00, 
-    0x7f, 0x7f, 0x80, 0x01, 0x0a, 0x00, 0x00, 0xff, 0x02, 0x00, 0x02, 0x18, 
-    0x00, 0x00, 0x00, 0x00, 0x28, 0x10, 0x36, 0x20, 0x06, 0x02, 0xbe, 0x23, 
-    0xbf, 0x23, 0x0a, 0x0b, 0x10, 0x28, 0x10, 0x36, 0x20, 0x06, 0x02, 0xbe, 
-    0x23, 0xbf, 0x23, 0x0a, 0x0b, 0x10, 0x28, 0x10, 0x36, 0x00, 0x00, 0x00, 
-    0x00, 0x00, 0x93, 0x92, 0xc9, 0x00, 0x10, 0x00, 0x00, 0x02, 0x89, 0x60, 
-    0x00, 0x01, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x08, 0x06, 
-    0x08, 0x13, 0x08, 0x5a, 0x08, 0x5e, 0x08, 0x62, 0x08, 0x3d, 0x00, 0x00, 
-    0x00, 0x00, 0x00, 0x00, 0x00, 0x10, 0x01, 0x00, 0x0d, 0x01, 0x45, 0x00, 
-    0x46, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-    0x0c, 0x0a, 0x02, 0x25, 0x6e, 0x02, 0x6e, 0x6d, 0x00, 0x00, 0xf6, 0x16
-  };
-
- public:
-  void setUp(void);
-  void tearDown(void);
-
 };
 class tchTelegramm1Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( tchTelegramm1Test );
@@ -4262,8 +3906,12 @@ class THICma10Test : public CppUnit::TestFixture {
   void TestRecord10(void);
   void TestRecord11(void);
 };
+/*
 class tooLongVarVifTest : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( tooLongVarVifTest );
+  CPPUNIT_TEST( TestRecord0 );
+  CPPUNIT_TEST( TestRecord1 );
+  CPPUNIT_TEST( TestRecord2 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -4285,12 +3933,14 @@ class tooLongVarVifTest : public CppUnit::TestFixture {
   void setUp(void);
   void tearDown(void);
 
+  void TestRecord0(void);
+  void TestRecord1(void);
+  void TestRecord2(void);
 };
 class tooManyDifeTest : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( tooManyDifeTest );
   CPPUNIT_TEST( TestRecord0 );
   CPPUNIT_TEST( TestRecord1 );
-  CPPUNIT_TEST( TestRecord2 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -4313,13 +3963,11 @@ class tooManyDifeTest : public CppUnit::TestFixture {
 
   void TestRecord0(void);
   void TestRecord1(void);
-  void TestRecord2(void);
 };
 class tooManyVifeTest : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( tooManyVifeTest );
   CPPUNIT_TEST( TestRecord0 );
   CPPUNIT_TEST( TestRecord1 );
-  CPPUNIT_TEST( TestRecord2 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -4342,7 +3990,6 @@ class tooManyVifeTest : public CppUnit::TestFixture {
 
   void TestRecord0(void);
   void TestRecord1(void);
-  void TestRecord2(void);
 };
 class tooShortHeaderTest : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( tooShortHeaderTest );
@@ -4365,6 +4012,7 @@ class tooShortHeaderTest : public CppUnit::TestFixture {
   void tearDown(void);
 
 };
+*/
 class WEPIndoorTest : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( WEPIndoorTest );
   CPPUNIT_TEST( TestRecord0 );
@@ -4404,7 +4052,6 @@ class WEPIndoorTest : public CppUnit::TestFixture {
 };
 class wmbusConvertedTest : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( wmbusConvertedTest );
-  CPPUNIT_TEST( TestRecord0 );
   CPPUNIT_TEST_SUITE_END();
 
   MBusFrame *frame;
@@ -4425,7 +4072,6 @@ class wmbusConvertedTest : public CppUnit::TestFixture {
   void setUp(void);
   void tearDown(void);
 
-  void TestRecord0(void);
 };
 class ZRMMinolMinocalC2Test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( ZRMMinolMinocalC2Test );

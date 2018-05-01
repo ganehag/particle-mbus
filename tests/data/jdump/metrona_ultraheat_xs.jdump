@@ -1,0 +1,43 @@
+Secondary address: {manufacturer ID: LUG, device ID: 01810054, device version: 2, device type: HEAT_METER, as bytes: 54008101A7320204}
+Short Header: {Access No.: 15, status: 16, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:09, VIB:74 -> descr:ACTUALITY_DURATION, function:INST_VAL, value:04, unit:SECOND, s
+DIB:09, VIB:70 -> descr:AVERAGING_DURATION, function:INST_VAL, value:04, unit:SECOND, s
+DIB:0C, VIB:06 -> descr:ENERGY, function:INST_VAL, scaled value:1.9969E7, unit:WATT_HOUR, Wh
+DIB:0C, VIB:14 -> descr:VOLUME, function:INST_VAL, scaled value:26492.18, unit:CUBIC_METRE, m³
+DIB:0B, VIB:2E -> descr:POWER, function:INST_VAL, scaled value:0.0, unit:WATT, W
+DIB:0B, VIB:3B -> descr:VOLUME_FLOW, function:INST_VAL, scaled value:0.0, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:0A, VIB:5B -> descr:FLOW_TEMPERATURE, function:INST_VAL, value:0000, unit:DEGREE_CELSIUS, °C
+DIB:0A, VIB:5F -> descr:RETURN_TEMPERATURE, function:INST_VAL, value:0000, unit:DEGREE_CELSIUS, °C
+DIB:0A, VIB:62 -> descr:TEMPERATURE_DIFFERENCE, function:INST_VAL, scaled value:0.0, unit:KELVIN, S
+DIB:4C, VIB:14 -> descr:VOLUME, function:INST_VAL, storage:1, scaled value:26492.18, unit:CUBIC_METRE, m³
+DIB:4C, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:1, scaled value:1.9969E7, unit:WATT_HOUR, Wh
+DIB:0C, VIB:78 -> descr:FABRICATION_NO, function:INST_VAL, value:65110054
+DIB:8910, VIB:71 -> descr:AVERAGING_DURATION, function:INST_VAL, tariff:1, value:60, unit:MIN, min
+DIB:9B10, VIB:2D -> descr:POWER, function:MAX_VAL, tariff:1, scaled value:31600.0, unit:WATT, W
+DIB:DB10, VIB:2D -> descr:POWER, function:MAX_VAL, storage:1, tariff:1, scaled value:31600.0, unit:WATT, W
+DIB:9B10, VIB:3B -> descr:VOLUME_FLOW, function:MAX_VAL, tariff:1, scaled value:8.82, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:9A10, VIB:5B -> descr:FLOW_TEMPERATURE, function:MAX_VAL, tariff:1, value:0044, unit:DEGREE_CELSIUS, °C
+DIB:9A10, VIB:5F -> descr:RETURN_TEMPERATURE, function:MAX_VAL, tariff:1, value:0040, unit:DEGREE_CELSIUS, °C
+DIB:0C, VIB:22 -> descr:ON_TIME, function:INST_VAL, value:00070067, unit:HOUR, h
+DIB:3C, VIB:22 -> descr:ON_TIME, function:ERROR_VAL, value:00051609, unit:HOUR, h
+DIB:7C, VIB:22 -> descr:ON_TIME, function:ERROR_VAL, storage:1, value:00047817, unit:HOUR, h
+DIB:42, VIB:6C -> descr:DATE, function:INST_VAL, storage:1, value:Sat Jan 01 00:00:00 CET 2000
+DIB:8C20, VIB:06 -> descr:ENERGY, function:INST_VAL, tariff:2, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:8C30, VIB:06 -> descr:ENERGY, function:INST_VAL, tariff:3, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:8C8010, VIB:06 -> descr:ENERGY, function:INST_VAL, tariff:4, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:CC20, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:1, tariff:2, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:CC30, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:1, tariff:3, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:CC8010, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:1, tariff:4, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:9A11, VIB:5B -> descr:FLOW_TEMPERATURE, function:MAX_VAL, storage:2, tariff:1, value:0036, unit:DEGREE_CELSIUS, °C
+DIB:9A11, VIB:5F -> descr:RETURN_TEMPERATURE, function:MAX_VAL, storage:2, tariff:1, value:0040, unit:DEGREE_CELSIUS, °C
+DIB:9B11, VIB:3B -> descr:VOLUME_FLOW, function:MAX_VAL, storage:2, tariff:1, scaled value:0.0, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:9B11, VIB:2D -> descr:POWER, function:MAX_VAL, storage:2, tariff:1, scaled value:0.0, unit:WATT, W
+DIB:BC01, VIB:22 -> descr:ON_TIME, function:ERROR_VAL, storage:2, value:00051465, unit:HOUR, h
+DIB:8C01, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:2, scaled value:1.9969E7, unit:WATT_HOUR, Wh
+DIB:8C21, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:2, tariff:2, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:8C31, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:2, tariff:3, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:8C8110, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:2, tariff:4, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:8C01, VIB:14 -> descr:VOLUME, function:INST_VAL, storage:2, scaled value:26492.18, unit:CUBIC_METRE, m³
+DIB:04, VIB:6D -> descr:DATE_TIME, function:INST_VAL, value:Thu Jun 07 00:38:00 CEST 2012
+Manufacturer specific bytes:
+0302000023

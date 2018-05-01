@@ -1,0 +1,62 @@
+#include <cppunit/extensions/HelperMacros.h>
+#include <cstring>
+#include "frame_test.h"
+
+using namespace std;
+
+{% for item in files %}
+CPPUNIT_TEST_SUITE_REGISTRATION( {{item.safename}}Test );
+
+MBusRecord* {{item.safename}}Test::getRecord(unsigned int pos) {
+ MBusDataRecord *ptr;
+ if(vard == NULL) return NULL;
+ ptr = vard->record;
+ for(unsigned int i = 0; i < pos && ptr != NULL; i++)
+   ptr = ptr->next;
+ if(ptr == NULL) return NULL;
+ return ptr->getRecord();
+};
+
+void {{item.safename}}Test::setUp() {
+  frame = new MBusFrame();
+  frame->parse((unsigned char *)frame_data, frame_data_len);
+};
+
+void {{item.safename}}Test::tearDown() {
+  delete frame;
+  frame = NULL;
+};
+
+{% for record in item.records %}
+void {{item.safename}}Test::TestRecord{{loop.index0}}(void) {
+{% if record.quantity != 'MANUFACTURER_SPECIFIC' and record.value != None %}
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+  {#  CPPUNIT_ASSERT( vard->nrecords == {{ item.records|length }} ); #}
+
+  record = getRecord({{loop.index0}});
+  CPPUNIT_ASSERT( record != NULL );
+  {% if record.value is number %}
+  CPPUNIT_ASSERT_DOUBLES_EQUAL({{record.value}}, record->value->real_val, 0.000001);
+  {% else %}
+  const string {{item.safename}}_record_{{loop.index0}} { "{{record.value}}" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("{{record.value}}", {{record.value|length}}, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp({{item.safename}}_record_{{loop.index0}}.c_str(), record->value->str_val.value, record->value->str_val.size));
+  {% endif %}
+{#  CPPUNIT_ASSERT( record->value->real_val == {{record.value}} );#}
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+{% endif %}
+};
+{% endfor %}
+
+{% endfor %}
+

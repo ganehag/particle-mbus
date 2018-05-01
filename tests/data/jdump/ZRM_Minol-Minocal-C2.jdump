@@ -1,0 +1,36 @@
+Secondary address: {manufacturer ID: ZRM, device ID: 31425084, device version: 129, device type: HEAT_METER, as bytes: 845042314D6A8104}
+Short Header: {Access No.: 115, status: 39, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:04, VIB:06 -> descr:ENERGY, function:INST_VAL, scaled value:3000.0, unit:WATT_HOUR, Wh
+DIB:02, VIB:FD17 -> descr:ERROR_FLAGS, function:INST_VAL, value:0
+DIB:8404, VIB:6D -> descr:DATE_TIME, function:INST_VAL, storage:8, value:Thu Jan 01 00:00:00 CET 2015
+DIB:8404, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:8, scaled value:3000.0, unit:WATT_HOUR, Wh
+DIB:8405, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:10, scaled value:3000.0, unit:WATT_HOUR, Wh
+DIB:04, VIB:13 -> descr:VOLUME, function:INST_VAL, scaled value:0.074, unit:CUBIC_METRE, m³
+DIB:04, VIB:3B -> descr:VOLUME_FLOW, function:INST_VAL, scaled value:0.0, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:54, VIB:3B -> descr:VOLUME_FLOW, function:MAX_VAL, storage:1, scaled value:0.043000000000000003, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:54, VIB:6D -> descr:DATE_TIME, function:MAX_VAL, storage:1, value:Thu Sep 01 08:30:00 CEST 2011
+DIB:04, VIB:2D -> descr:POWER, function:INST_VAL, scaled value:0.0, unit:WATT, W
+DIB:9401, VIB:2D -> descr:POWER, function:MAX_VAL, storage:2, scaled value:2000.0, unit:WATT, W
+DIB:9401, VIB:6D -> descr:DATE_TIME, function:MAX_VAL, storage:2, value:Thu Sep 01 08:30:00 CEST 2011
+DIB:02, VIB:59 -> descr:FLOW_TEMPERATURE, function:INST_VAL, scaled value:20.71, unit:DEGREE_CELSIUS, °C
+DIB:02, VIB:5D -> descr:RETURN_TEMPERATURE, function:INST_VAL, scaled value:20.38, unit:DEGREE_CELSIUS, °C
+DIB:04, VIB:6D -> descr:DATE_TIME, function:INST_VAL, value:Thu Mar 13 12:45:00 CET 2014
+DIB:828001, VIB:6C -> descr:DATE, function:INST_VAL, storage:32, value:Sat Mar 01 00:00:00 CET 2014
+DIB:848001, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:32, scaled value:3000.0, unit:WATT_HOUR, Wh
+DIB:C28001, VIB:6C -> descr:DATE, function:INST_VAL, storage:33, value:Sat Feb 01 00:00:00 CET 2014
+DIB:C48001, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:33, scaled value:3000.0, unit:WATT_HOUR, Wh
+DIB:828101, VIB:6C -> descr:DATE, function:INST_VAL, storage:34, value:Wed Jan 01 00:00:00 CET 2014
+DIB:848101, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:34, scaled value:3000.0, unit:WATT_HOUR, Wh
+DIB:C28101, VIB:6C -> descr:DATE, function:INST_VAL, storage:35, value:Sun Dec 01 00:00:00 CET 2013
+DIB:C48101, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:35, scaled value:3000.0, unit:WATT_HOUR, Wh
+DIB:828201, VIB:6C -> descr:DATE, function:INST_VAL, storage:36, value:Fri Nov 01 00:00:00 CET 2013
+DIB:848201, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:36, scaled value:3000.0, unit:WATT_HOUR, Wh
+DIB:C28201, VIB:6C -> descr:DATE, function:INST_VAL, storage:37, value:Tue Oct 01 00:00:00 CEST 2013
+DIB:C48201, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:37, scaled value:3000.0, unit:WATT_HOUR, Wh
+DIB:828301, VIB:6C -> descr:DATE, function:INST_VAL, storage:38, value:Sun Sep 01 00:00:00 CEST 2013
+DIB:848301, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:38, scaled value:3000.0, unit:WATT_HOUR, Wh
+DIB:C28301, VIB:6C -> descr:DATE, function:INST_VAL, storage:39, value:Thu Aug 01 00:00:00 CEST 2013
+DIB:C48301, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:39, scaled value:3000.0, unit:WATT_HOUR, Wh
+DIB:928001, VIB:6C -> descr:DATE, function:MAX_VAL, storage:32, value:Sat Mar 01 00:00:00 CET 2014
+DIB:948001, VIB:3B -> descr:VOLUME_FLOW, function:MAX_VAL, storage:32, scaled value:0.0, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:948001, VIB:2D -> descr:POWER, function:MAX_VAL, storage:32, scaled value:0.0, unit:WATT, W

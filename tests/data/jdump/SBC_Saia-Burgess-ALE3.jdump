@@ -1,0 +1,22 @@
+Secondary address: {manufacturer ID: SBC, device ID: 19000055, device version: 22, device type: ELECTRICITY_METER, as bytes: 55000019434C1602}
+Short Header: {Access No.: 191, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:8C10, VIB:04 -> descr:ENERGY, function:INST_VAL, tariff:1, scaled value:2930.0, unit:WATT_HOUR, Wh
+DIB:8C11, VIB:04 -> descr:ENERGY, function:INST_VAL, storage:2, tariff:1, scaled value:2930.0, unit:WATT_HOUR, Wh
+DIB:8C20, VIB:04 -> descr:ENERGY, function:INST_VAL, tariff:2, scaled value:60.0, unit:WATT_HOUR, Wh
+DIB:8C21, VIB:04 -> descr:ENERGY, function:INST_VAL, storage:2, tariff:2, scaled value:60.0, unit:WATT_HOUR, Wh
+DIB:02, VIB:FDC9FF01 -> descr:VOLTAGE, function:INST_VAL, value:223, unit:VOLT, V
+DIB:02, VIB:FDDBFF01 -> descr:CURRENT, function:INST_VAL, scaled value:0.0, unit:AMPERE, A
+DIB:02, VIB:ACFF01 -> descr:POWER, function:INST_VAL, scaled value:0.0, unit:WATT, W
+DIB:8240, VIB:ACFF01 -> descr:POWER, function:INST_VAL, subunit:1, scaled value:0.0, unit:WATT, W
+DIB:02, VIB:FDC9FF02 -> descr:VOLTAGE, function:INST_VAL, value:0, unit:VOLT, V
+DIB:02, VIB:FDDBFF02 -> descr:CURRENT, function:INST_VAL, scaled value:0.0, unit:AMPERE, A
+DIB:02, VIB:ACFF02 -> descr:POWER, function:INST_VAL, scaled value:0.0, unit:WATT, W
+DIB:8240, VIB:ACFF02 -> descr:POWER, function:INST_VAL, subunit:1, scaled value:0.0, unit:WATT, W
+DIB:02, VIB:FDC9FF03 -> descr:VOLTAGE, function:INST_VAL, value:0, unit:VOLT, V
+DIB:02, VIB:FDDBFF03 -> descr:CURRENT, function:INST_VAL, scaled value:0.0, unit:AMPERE, A
+DIB:02, VIB:ACFF03 -> descr:POWER, function:INST_VAL, scaled value:0.0, unit:WATT, W
+DIB:8240, VIB:ACFF03 -> descr:POWER, function:INST_VAL, subunit:1, scaled value:0.0, unit:WATT, W
+DIB:02, VIB:FF68 -> descr:MANUFACTURER_SPECIFIC, function:INST_VAL, value:0
+DIB:02, VIB:ACFF00 -> descr:POWER, function:INST_VAL, scaled value:0.0, unit:WATT, W
+DIB:8240, VIB:ACFF00 -> descr:POWER, function:INST_VAL, subunit:1, scaled value:0.0, unit:WATT, W
+DIB:01, VIB:FF14 -> descr:MANUFACTURER_SPECIFIC, function:INST_VAL, value:0

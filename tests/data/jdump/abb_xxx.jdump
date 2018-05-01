@@ -1,0 +1,14 @@
+Secondary address: {manufacturer ID: ABB, device ID: 00385972, device version: 32, device type: ELECTRICITY_METER, as bytes: 7259380042042002}
+Short Header: {Access No.: 12, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0E, VIB:8400 -> descr:ENERGY, function:INST_VAL, scaled value:59070.0, unit:WATT_HOUR, Wh
+DIB:04, VIB:FFA000 -> descr:MANUFACTURER_SPECIFIC, function:INST_VAL, value:100
+DIB:04, VIB:FFA115 -> descr:MANUFACTURER_SPECIFIC, function:INST_VAL, value:0
+DIB:04, VIB:FFA200 -> descr:MANUFACTURER_SPECIFIC, function:INST_VAL, value:5
+DIB:04, VIB:FFA315 -> descr:MANUFACTURER_SPECIFIC, function:INST_VAL, value:0
+DIB:07, VIB:FFA600 -> descr:MANUFACTURER_SPECIFIC, function:INST_VAL, value:0
+DIB:07, VIB:FFA700 -> descr:MANUFACTURER_SPECIFIC, function:INST_VAL, value:0
+DIB:07, VIB:FFA800 -> descr:MANUFACTURER_SPECIFIC, function:INST_VAL, value:0
+DIB:07, VIB:FFA900 -> descr:MANUFACTURER_SPECIFIC, function:INST_VAL, value:0
+DIB:0D, VIB:FD8E00 -> descr:FIRMWARE_VERSION, function:INST_VAL, value:B1.24.0
+DIB:0D, VIB:FFAA00 -> descr:MANUFACTURER_SPECIFIC, function:INST_VAL, value:B24 113-100
+More records follow ...

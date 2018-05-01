@@ -1,0 +1,16 @@
+Secondary address: {manufacturer ID: ACW, device ID: 11100091, device version: 9, device type: HEAT_METER, as bytes: 9100101177040904}
+Short Header: {Access No.: 81, status: 16, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0C, VIB:78 -> descr:FABRICATION_NO, function:INST_VAL, value:11100091
+DIB:04, VIB:06 -> descr:ENERGY, function:INST_VAL, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:0C, VIB:14 -> descr:VOLUME, function:INST_VAL, scaled value:0.0, unit:CUBIC_METRE, m³
+DIB:3B, VIB:2D -> descr:POWER, function:ERROR_VAL, scaled value:9.99999E7, unit:WATT, W
+DIB:3B, VIB:3B -> descr:VOLUME_FLOW, function:ERROR_VAL, scaled value:999.999, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:0A, VIB:5A -> descr:FLOW_TEMPERATURE, function:INST_VAL, scaled value:20.5, unit:DEGREE_CELSIUS, °C
+DIB:0A, VIB:5E -> descr:RETURN_TEMPERATURE, function:INST_VAL, scaled value:20.6, unit:DEGREE_CELSIUS, °C
+DIB:0B, VIB:61 -> descr:TEMPERATURE_DIFFERENCE, function:INST_VAL, scaled value:0.09, unit:KELVIN, S
+DIB:04, VIB:6D -> descr:DATE_TIME, function:INST_VAL, value:Tue Jan 24 13:29:00 CET 2012
+DIB:02, VIB:27 -> descr:OPERATING_TIME, function:INST_VAL, value:385, unit:DAY, d
+DIB:09, VIB:FD0E -> descr:FIRMWARE_VERSION, function:INST_VAL, value:19
+DIB:09, VIB:FD0F -> descr:OTHER_SOFTWARE_VERSION, function:INST_VAL, value:45
+Manufacturer specific bytes:
+2000

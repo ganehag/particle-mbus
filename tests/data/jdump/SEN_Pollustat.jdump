@@ -1,0 +1,18 @@
+Secondary address: {manufacturer ID: SEN, device ID: 00011788, device version: 6, device type: HEAT_COOLING_METER, as bytes: 88170100AE4C060D}
+Short Header: {Access No.: 62, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:04, VIB:6D -> descr:DATE_TIME, function:INST_VAL, value:Tue Apr 07 14:59:00 CEST 2015
+DIB:34, VIB:6D -> descr:DATE_TIME, function:ERROR_VAL, value:Sat Jan 01 00:00:00 CET 2000
+DIB:34, VIB:FD17 -> descr:ERROR_FLAGS, function:ERROR_VAL, value:67108864
+DIB:04, VIB:20 -> descr:ON_TIME, function:INST_VAL, value:15803026, unit:SECOND, s
+DIB:04, VIB:24 -> descr:OPERATING_TIME, function:INST_VAL, value:15145636, unit:SECOND, s
+DIB:04, VIB:863B -> descr:ENERGY, function:INST_VAL, scaled value:3.9831E7, unit:WATT_HOUR, Wh
+DIB:04, VIB:13 -> descr:VOLUME, function:INST_VAL, scaled value:6162.878, unit:CUBIC_METRE, m³
+DIB:05, VIB:2E -> descr:POWER, function:INST_VAL, scaled value:-170.72178423404694, unit:WATT, W
+DIB:05, VIB:3E -> descr:VOLUME_FLOW, function:INST_VAL, scaled value:3.23003888130188, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:05, VIB:5B -> descr:FLOW_TEMPERATURE, function:INST_VAL, scaled value:31.147323608398438, unit:DEGREE_CELSIUS, °C
+DIB:05, VIB:5F -> descr:RETURN_TEMPERATURE, function:INST_VAL, scaled value:31.193099975585938, unit:DEGREE_CELSIUS, °C
+DIB:05, VIB:63 -> descr:TEMPERATURE_DIFFERENCE, function:INST_VAL, scaled value:-0.0457763671875, unit:KELVIN, S
+DIB:04, VIB:BE50 -> descr:VOLUME_FLOW, function:INST_VAL, value:11582321, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:04, VIB:BE58 -> descr:VOLUME_FLOW, function:INST_VAL, value:756, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:0C, VIB:78 -> descr:FABRICATION_NO, function:INST_VAL, value:00011788
+DIB:02, VIB:7F -> descr:MANUFACTURER_SPECIFIC, function:INST_VAL, value:46352

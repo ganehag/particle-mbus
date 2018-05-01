@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<MBusData>
+
+    <SlaveInformation>
+        <Id>0</Id>
+        <Medium>Other</Medium>
+        <AccessNumber>0</AccessNumber>
+        <Status>00</Status>
+    </SlaveInformation>
+
+    <DataRecord id="0">
+        <Function>Actual value</Function>
+        <Unit>h,m,s</Unit>
+        <Value>0</Value>
+    </DataRecord>
+
+    <DataRecord id="1">
+        <Function>Actual value</Function>
+        <Unit>h,m,s</Unit>
+        <Value>0</Value>
+    </DataRecord>
+
+</MBusData>

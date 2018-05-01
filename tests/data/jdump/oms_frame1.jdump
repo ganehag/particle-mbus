@@ -1,0 +1,5 @@
+Secondary address: {manufacturer ID: ELS, device ID: 12345678, device version: 51, device type: GAS_METER, as bytes: 7856341293153303}
+Short Header: {Access No.: 42, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0C, VIB:14 -> descr:VOLUME, function:INST_VAL, scaled value:28504.27, unit:CUBIC_METRE, m³
+DIB:04, VIB:6D -> descr:DATE_TIME, function:INST_VAL, value:Sat May 31 23:50:00 CEST 2008
+DIB:02, VIB:FD17 -> descr:ERROR_FLAGS, function:INST_VAL, value:0

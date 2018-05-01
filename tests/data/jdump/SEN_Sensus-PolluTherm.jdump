@@ -1,0 +1,11 @@
+Secondary address: {manufacturer ID: SEN, device ID: 24351689, device version: 11, device type: HEAT_METER, as bytes: 89163524AE4C0B04}
+Short Header: {Access No.: 84, status: 16, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0C, VIB:07 -> descr:ENERGY, function:INST_VAL, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:0C, VIB:14 -> descr:VOLUME, function:INST_VAL, scaled value:0.0, unit:CUBIC_METRE, m³
+DIB:0C, VIB:3C -> descr:VOLUME_FLOW, function:INST_VAL, scaled value:0.0, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:0C, VIB:2C -> descr:POWER, function:INST_VAL, scaled value:0.0, unit:WATT, W
+DIB:32, VIB:5A -> descr:FLOW_TEMPERATURE, function:ERROR_VAL, scaled value:0.0, unit:DEGREE_CELSIUS, °C
+DIB:32, VIB:5E -> descr:RETURN_TEMPERATURE, function:ERROR_VAL, scaled value:0.0, unit:DEGREE_CELSIUS, °C
+DIB:33, VIB:60 -> descr:TEMPERATURE_DIFFERENCE, function:ERROR_VAL, scaled value:0.0, unit:KELVIN, S
+DIB:0C, VIB:78 -> descr:FABRICATION_NO, function:INST_VAL, value:24351689
+DIB:0C, VIB:FD10 -> descr:CUSTOMER_LOCATION, function:INST_VAL, value:24351689

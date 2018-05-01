@@ -1,0 +1,13 @@
+Secondary address: {manufacturer ID: SLB, device ID: 02205100, device version: 2, device type: HEAT_METER, as bytes: 00512002824D0204}
+Short Header: {Access No.: 0, status: 136, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:04, VIB:07 -> descr:ENERGY, function:INST_VAL, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:0C, VIB:15 -> descr:VOLUME, function:INST_VAL, scaled value:0.30000000000000004, unit:CUBIC_METRE, m³
+DIB:0B, VIB:2E -> descr:POWER, function:INST_VAL, scaled value:0.0, unit:WATT, W
+DIB:0B, VIB:3B -> descr:VOLUME_FLOW, function:INST_VAL, scaled value:0.0, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:0A, VIB:5A -> descr:FLOW_TEMPERATURE, function:INST_VAL, scaled value:128.8, unit:DEGREE_CELSIUS, °C
+DIB:0A, VIB:5E -> descr:RETURN_TEMPERATURE, function:INST_VAL, scaled value:51.6, unit:DEGREE_CELSIUS, °C
+DIB:0B, VIB:61 -> descr:TEMPERATURE_DIFFERENCE, function:INST_VAL, scaled value:77.23, unit:KELVIN, S
+DIB:02, VIB:6C -> descr:DATE, function:INST_VAL, value:Thu Jan 12 00:00:00 CET 2012
+DIB:02, VIB:27 -> descr:OPERATING_TIME, function:INST_VAL, value:3383, unit:DAY, d
+Manufacturer specific bytes:
+6000

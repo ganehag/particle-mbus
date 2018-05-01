@@ -1,0 +1,8 @@
+Secondary address: {manufacturer ID: LGB, device ID: 12082058, device version: 64, device type: GAS_METER, as bytes: 58200812E2304003}
+Short Header: {Access No.: 64, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:4C, VIB:13 -> descr:VOLUME, function:INST_VAL, storage:1, scaled value:10834.092, unit:CUBIC_METRE, m³
+DIB:46, VIB:6D -> descr:DATE_TIME, function:INST_VAL, storage:1, value:167873347584
+DIB:0D, VIB:78 -> descr:FABRICATION_NO, function:INST_VAL, value:G0017591208205814
+DIB:8940, VIB:FD1A -> descr:DIGITAL_OUTPUT, function:INST_VAL, subunit:1, value:01
+DIB:01, VIB:FD17 -> descr:ERROR_FLAGS, function:INST_VAL, value:0
+DIB:01, VIB:FD67 -> descr:SPECIAL_SUPPLIER_INFORMATION, function:INST_VAL, value:15

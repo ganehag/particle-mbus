@@ -1,0 +1,34 @@
+Secondary address: {manufacturer ID: RAM, device ID: 00025776, device version: 3, device type: WATER_METER, as bytes: 765702002D480307}
+Short Header: {Access No.: 139, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:04, VIB:13 -> descr:VOLUME, function:INST_VAL, scaled value:10.116, unit:CUBIC_METRE, m³
+DIB:04, VIB:6D -> descr:DATE_TIME, function:INST_VAL, value:Fri Oct 18 21:40:00 CEST 2013
+DIB:42, VIB:6C -> descr:DATE, function:INST_VAL, storage:1, value:Sat Sep 28 00:00:00 CEST 2013
+DIB:44, VIB:13 -> descr:VOLUME, function:INST_VAL, storage:1, scaled value:8.393, unit:CUBIC_METRE, m³
+DIB:42, VIB:EC7E -> descr:DATE, function:INST_VAL, storage:1, value:Sun Sep 28 00:00:00 CEST 2014
+DIB:0C, VIB:78 -> descr:FABRICATION_NO, function:INST_VAL, value:00025776
+DIB:8201, VIB:6C -> descr:DATE, function:INST_VAL, storage:2, value:Mon Sep 30 00:00:00 CEST 2013
+DIB:8401, VIB:13 -> descr:VOLUME, function:INST_VAL, storage:2, scaled value:8.527000000000001, unit:CUBIC_METRE, m³
+DIB:C201, VIB:6C -> descr:DATE, function:INST_VAL, storage:3, value:Wed Oct 31 00:00:00 CET 2012
+DIB:C401, VIB:13 -> descr:VOLUME, function:INST_VAL, storage:3, scaled value:99999.995, unit:CUBIC_METRE, m³
+DIB:8202, VIB:6C -> descr:DATE, function:INST_VAL, storage:4, value:Fri Nov 30 00:00:00 CET 2012
+DIB:8402, VIB:13 -> descr:VOLUME, function:INST_VAL, storage:4, scaled value:99999.993, unit:CUBIC_METRE, m³
+DIB:C202, VIB:6C -> descr:DATE, function:INST_VAL, storage:5, value:Mon Dec 31 00:00:00 CET 2012
+DIB:C402, VIB:13 -> descr:VOLUME, function:INST_VAL, storage:5, scaled value:0.782, unit:CUBIC_METRE, m³
+DIB:8203, VIB:6C -> descr:DATE, function:INST_VAL, storage:6, value:Thu Jan 31 00:00:00 CET 2013
+DIB:8403, VIB:13 -> descr:VOLUME, function:INST_VAL, storage:6, scaled value:1.929, unit:CUBIC_METRE, m³
+DIB:C203, VIB:6C -> descr:DATE, function:INST_VAL, storage:7, value:Thu Feb 28 00:00:00 CET 2013
+DIB:C403, VIB:13 -> descr:VOLUME, function:INST_VAL, storage:7, scaled value:3.092, unit:CUBIC_METRE, m³
+DIB:8204, VIB:6C -> descr:DATE, function:INST_VAL, storage:8, value:Sun Mar 31 00:00:00 CET 2013
+DIB:8404, VIB:13 -> descr:VOLUME, function:INST_VAL, storage:8, scaled value:4.6610000000000005, unit:CUBIC_METRE, m³
+DIB:C204, VIB:6C -> descr:DATE, function:INST_VAL, storage:9, value:Tue Apr 30 00:00:00 CEST 2013
+DIB:C404, VIB:13 -> descr:VOLUME, function:INST_VAL, storage:9, scaled value:4.767, unit:CUBIC_METRE, m³
+DIB:8205, VIB:6C -> descr:DATE, function:INST_VAL, storage:10, value:Fri May 31 00:00:00 CEST 2013
+DIB:8405, VIB:13 -> descr:VOLUME, function:INST_VAL, storage:10, scaled value:5.124, unit:CUBIC_METRE, m³
+DIB:C205, VIB:6C -> descr:DATE, function:INST_VAL, storage:11, value:Sun Jun 30 00:00:00 CEST 2013
+DIB:C405, VIB:13 -> descr:VOLUME, function:INST_VAL, storage:11, scaled value:5.176, unit:CUBIC_METRE, m³
+DIB:8206, VIB:6C -> descr:DATE, function:INST_VAL, storage:12, value:Wed Jul 31 00:00:00 CEST 2013
+DIB:8406, VIB:13 -> descr:VOLUME, function:INST_VAL, storage:12, scaled value:5.246, unit:CUBIC_METRE, m³
+DIB:C206, VIB:6C -> descr:DATE, function:INST_VAL, storage:13, value:Sat Aug 31 00:00:00 CEST 2013
+DIB:C406, VIB:13 -> descr:VOLUME, function:INST_VAL, storage:13, scaled value:5.668, unit:CUBIC_METRE, m³
+Manufacturer specific bytes:
+010000

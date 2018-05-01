@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<MBusData>
+
+    <SlaveInformation>
+        <Id>54000834</Id>
+        <Manufacturer>ELV</Manufacturer>
+        <Version>50</Version>
+        <ProductName>Elvaco CMa11</ProductName>
+        <Medium>Other</Medium>
+        <AccessNumber>242</AccessNumber>
+        <Status>00</Status>
+        <Signature>0000</Signature>
+    </SlaveInformation>
+
+    <DataRecord id="0">
+        <Function>Instantaneous value</Function>
+        <StorageNumber>0</StorageNumber>
+        <Unit></Unit>
+        <Quantity>Digital Input</Quantity>
+        <Value>0.000000</Value>
+    </DataRecord>
+
+    <DataRecord id="1">
+        <Function>Instantaneous value</Function>
+        <StorageNumber>0</StorageNumber>
+        <Unit>-</Unit>
+        <Quantity>%RH</Quantity>
+        <Value>45.640000</Value>
+    </DataRecord>
+
+    <DataRecord id="2">
+        <Function>Minimum value</Function>
+        <StorageNumber>0</StorageNumber>
+        <Unit>-</Unit>
+        <Quantity>%RH</Quantity>
+        <Value>45.520000</Value>
+    </DataRecord>
+
+</MBusData>

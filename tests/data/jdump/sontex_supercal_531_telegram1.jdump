@@ -1,0 +1,13 @@
+Secondary address: {manufacturer ID: SON, device ID: 08420624, device version: 13, device type: HEAT_METER, as bytes: 24064208EE4D0D04}
+Short Header: {Access No.: 44, status: 48, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:04, VIB:0E -> descr:ENERGY, function:INST_VAL, scaled value:0.0, unit:JOULE, J
+DIB:04, VIB:14 -> descr:VOLUME, function:INST_VAL, scaled value:0.0, unit:CUBIC_METRE, m³
+DIB:05, VIB:5B -> descr:FLOW_TEMPERATURE, function:INST_VAL, scaled value:0.0, unit:DEGREE_CELSIUS, °C
+DIB:05, VIB:5F -> descr:RETURN_TEMPERATURE, function:INST_VAL, scaled value:0.0, unit:DEGREE_CELSIUS, °C
+DIB:05, VIB:3E -> descr:VOLUME_FLOW, function:INST_VAL, scaled value:0.0, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:05, VIB:2B -> descr:POWER, function:INST_VAL, scaled value:0.0, unit:WATT, W
+DIB:C400, VIB:0E -> descr:ENERGY, function:INST_VAL, storage:1, scaled value:0.0, unit:JOULE, J
+DIB:C400, VIB:14 -> descr:VOLUME, function:INST_VAL, storage:1, scaled value:0.0, unit:CUBIC_METRE, m³
+DIB:C440, VIB:14 -> descr:VOLUME, function:INST_VAL, storage:1, subunit:1, scaled value:0.0, unit:CUBIC_METRE, m³
+DIB:C48040, VIB:14 -> descr:VOLUME, function:INST_VAL, storage:1, subunit:2, scaled value:0.0, unit:CUBIC_METRE, m³
+More records follow ...

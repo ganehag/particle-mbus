@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<MBusData>
+
+    <SlaveInformation>
+        <Id>0</Id>
+        <Manufacturer>@@@</Manufacturer>
+        <Version>0</Version>
+        <ProductName></ProductName>
+        <Medium>Other</Medium>
+        <AccessNumber>0</AccessNumber>
+        <Status>00</Status>
+        <Signature>0000</Signature>
+    </SlaveInformation>
+
+</MBusData>

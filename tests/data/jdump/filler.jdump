@@ -1,0 +1,3 @@
+Secondary address: {manufacturer ID: KAM, device ID: 17677731, device version: 1, device type: ELECTRICITY_METER, as bytes: 317767172D2C0102}
+Short Header: {Access No.: 0, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:04, VIB:833B -> descr:ENERGY, function:INST_VAL, value:5000, unit:WATT_HOUR, Wh

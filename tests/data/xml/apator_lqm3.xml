@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<MBusData>
+
+    <SlaveInformation>
+        <Id>150995974</Id>
+        <Manufacturer>@@@</Manufacturer>
+        <Version>82</Version>
+        <ProductName></ProductName>
+        <Medium>Heat: Outlet</Medium>
+        <AccessNumber>168</AccessNumber>
+        <Status>00</Status>
+        <Signature>0000</Signature>
+    </SlaveInformation>
+
+    <DataRecord id="0">
+        <Function>Instantaneous value</Function>
+        <StorageNumber>0</StorageNumber>
+        <Unit></Unit>
+        <Quantity>Time point (date)</Quantity>
+        <Value>2015-05-17</Value>
+    </DataRecord>
+
+    <DataRecord id="1">
+        <Function>Instantaneous value</Function>
+        <StorageNumber>0</StorageNumber>
+        <Unit>J</Unit>
+        <Quantity>Energy</Quantity>
+        <Value>144108000000</Value>
+    </DataRecord>
+
+    <DataRecord id="2">
+        <Function>Instantaneous value</Function>
+        <StorageNumber>0</StorageNumber>
+        <Unit>J</Unit>
+        <Quantity>Energy</Quantity>
+        <Value>0</Value>
+    </DataRecord>
+
+    <DataRecord id="3">
+        <Function>Instantaneous value</Function>
+        <StorageNumber>0</StorageNumber>
+        <Unit>m^3</Unit>
+        <Quantity>Volume</Quantity>
+        <Value>5633.188</Value>
+    </DataRecord>
+
+    <DataRecord id="4">
+        <Function>Error state</Function>
+        <StorageNumber>0</StorageNumber>
+        <Unit>m^3</Unit>
+        <Quantity>Volume</Quantity>
+        <Value>0</Value>
+    </DataRecord>
+
+    <DataRecord id="5">
+        <Function>Instantaneous value</Function>
+        <StorageNumber>0</StorageNumber>
+        <Unit>m^3</Unit>
+        <Quantity>Volume</Quantity>
+        <Value>0</Value>
+    </DataRecord>
+
+    <DataRecord id="6">
+        <Function>Instantaneous value</Function>
+        <StorageNumber>0</StorageNumber>
+        <Unit>m^3</Unit>
+        <Quantity>Volume</Quantity>
+        <Value>0</Value>
+    </DataRecord>
+
+    <DataRecord id="7">
+        <Function>Instantaneous value</Function>
+        <StorageNumber>0</StorageNumber>
+        <Unit>m^3</Unit>
+        <Quantity>Volume</Quantity>
+        <Value>0</Value>
+    </DataRecord>
+
+    <DataRecord id="8">
+        <Function>Instantaneous value</Function>
+        <StorageNumber>0</StorageNumber>
+        <Unit>m^3</Unit>
+        <Quantity>Volume flow</Quantity>
+        <Value>0</Value>
+    </DataRecord>
+
+    <DataRecord id="9">
+        <Function>Instantaneous value</Function>
+        <StorageNumber>0</StorageNumber>
+        <Unit>W</Unit>
+        <Quantity>Power</Quantity>
+        <Value>0</Value>
+    </DataRecord>
+
+    <DataRecord id="10">
+        <Function>Instantaneous value</Function>
+        <StorageNumber>0</StorageNumber>
+        <Unit>°C</Unit>
+        <Quantity>Flow temperature</Quantity>
+        <Value>21.3</Value>
+    </DataRecord>
+
+    <DataRecord id="11">
+		<Function>Instantaneous value</Function>
+        <StorageNumber>0</StorageNumber>
+        <Unit>°C</Unit>
+        <Quantity>Return temperature</Quantity>
+        <Value>21.3</Value>
+    </DataRecord>
+
+    <DataRecord id="12">
+        <Function>Instantaneous value</Function>
+        <StorageNumber>0</StorageNumber>
+        <Unit>s</Unit>
+        <Quantity>On time</Quantity>
+        <Value>286354800</Value>
+    </DataRecord>
+
+    <DataRecord id="13">
+        <Function>Error state</Function>
+        <StorageNumber>0</StorageNumber>
+        <Unit>s</Unit>
+        <Quantity>On time</Quantity>
+        <Value>838800</Value>
+    </DataRecord>
+
+    <DataRecord id="14">
+        <Function>Instantaneous value</Function>
+        <StorageNumber>0</StorageNumber>
+        <Unit></Unit>
+        <Quantity>Any VIF</Quantity>
+        <Value>0</Value>
+    </DataRecord>
+
+</MBusData>
+

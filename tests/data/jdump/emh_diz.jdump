@@ -1,0 +1,5 @@
+Secondary address: {manufacturer ID: EMH, device ID: 00623702, device version: 0, device type: ELECTRICITY_METER, as bytes: 02376200A8150002}
+Short Header: {Access No.: 7, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:8C10, VIB:04 -> descr:ENERGY, function:INST_VAL, tariff:1, scaled value:4090.0, unit:WATT_HOUR, Wh
+DIB:C400, VIB:2A -> descr:POWER, function:INST_VAL, storage:1, scaled value:0.0, unit:WATT, W
+DIB:01, VIB:FD17 -> descr:ERROR_FLAGS, function:INST_VAL, value:0

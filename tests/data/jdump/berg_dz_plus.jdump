@@ -1,0 +1,21 @@
+Secondary address: {manufacturer ID: ABB, device ID: 00000000, device version: 2, device type: ELECTRICITY_METER, as bytes: 0000000042040202}
+Short Header: {Access No.: 0, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0E, VIB:04 -> descr:ENERGY, function:INST_VAL, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:8E10, VIB:04 -> descr:ENERGY, function:INST_VAL, tariff:1, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:8E20, VIB:04 -> descr:ENERGY, function:INST_VAL, tariff:2, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:8EB000, VIB:04 -> descr:ENERGY, function:INST_VAL, tariff:3, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:8E8010, VIB:04 -> descr:ENERGY, function:INST_VAL, tariff:4, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:8E8040, VIB:04 -> descr:ENERGY, function:INST_VAL, subunit:2, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:8E9040, VIB:04 -> descr:ENERGY, function:INST_VAL, tariff:1, subunit:2, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:8EA040, VIB:04 -> descr:ENERGY, function:INST_VAL, tariff:2, subunit:2, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:8EB040, VIB:04 -> descr:ENERGY, function:INST_VAL, tariff:3, subunit:2, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:8E8050, VIB:04 -> descr:ENERGY, function:INST_VAL, tariff:4, subunit:2, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:01, VIB:FF13 -> descr:MANUFACTURER_SPECIFIC, function:INST_VAL, value:0
+DIB:0B, VIB:FF12 -> descr:MANUFACTURER_SPECIFIC, function:INST_VAL, value:000000
+DIB:0A, VIB:FF68 -> descr:MANUFACTURER_SPECIFIC, function:INST_VAL, value:0000
+DIB:0A, VIB:FF69 -> descr:MANUFACTURER_SPECIFIC, function:INST_VAL, value:0000
+DIB:07, VIB:FD17 -> descr:ERROR_FLAGS, function:INST_VAL, value:0
+DIB:01, VIB:FF18 -> descr:MANUFACTURER_SPECIFIC, function:INST_VAL, value:0
+Manufacturer specific bytes:
+00000000000000000000000000000000
+More records follow ...

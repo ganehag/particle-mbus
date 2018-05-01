@@ -1,0 +1,9 @@
+Secondary address: {manufacturer ID: ELS, device ID: 70112345, device version: 2, device type: WATER_METER, as bytes: 4523117093150207}
+Short Header: {Access No.: 2, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0C, VIB:13 -> descr:VOLUME, function:INST_VAL, scaled value:1234.567, unit:CUBIC_METRE, m³
+DIB:04, VIB:6D -> descr:DATE_TIME, function:INST_VAL, value:Tue Feb 06 13:58:00 CET 2007
+DIB:42, VIB:6C -> descr:DATE, function:INST_VAL, storage:1, value:Mon Jan 01 00:00:00 CET 2007
+DIB:4C, VIB:13 -> descr:VOLUME, function:INST_VAL, storage:1, scaled value:456.951, unit:CUBIC_METRE, m³
+DIB:42, VIB:EC7E -> descr:DATE, function:INST_VAL, storage:1, value:Tue Jan 01 00:00:00 CET 2008
+Manufacturer specific bytes:
+00

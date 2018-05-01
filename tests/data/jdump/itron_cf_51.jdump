@@ -1,0 +1,19 @@
+Secondary address: {manufacturer ID: ACW, device ID: 11155185, device version: 10, device type: HEAT_COOLING_METER, as bytes: 8551151177040A0D}
+Short Header: {Access No.: 27, status: 16, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0C, VIB:78 -> descr:FABRICATION_NO, function:INST_VAL, value:11155185
+DIB:04, VIB:06 -> descr:ENERGY, function:INST_VAL, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:0C, VIB:14 -> descr:VOLUME, function:INST_VAL, scaled value:0.0, unit:CUBIC_METRE, m³
+DIB:3B, VIB:2D -> descr:POWER, function:ERROR_VAL, scaled value:9.99999E7, unit:WATT, W
+DIB:0B, VIB:3B -> descr:VOLUME_FLOW, function:INST_VAL, scaled value:0.0, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:3A, VIB:5A -> descr:FLOW_TEMPERATURE, function:ERROR_VAL, scaled value:999.9000000000001, unit:DEGREE_CELSIUS, °C
+DIB:3A, VIB:5E -> descr:RETURN_TEMPERATURE, function:ERROR_VAL, scaled value:999.9000000000001, unit:DEGREE_CELSIUS, °C
+DIB:3B, VIB:61 -> descr:TEMPERATURE_DIFFERENCE, function:ERROR_VAL, scaled value:9999.99, unit:KELVIN, S
+DIB:04, VIB:6D -> descr:DATE_TIME, function:INST_VAL, value:Tue Jan 24 13:24:00 CET 2012
+DIB:02, VIB:27 -> descr:OPERATING_TIME, function:INST_VAL, value:104, unit:DAY, d
+DIB:09, VIB:FD0E -> descr:FIRMWARE_VERSION, function:INST_VAL, value:11
+DIB:09, VIB:FD0F -> descr:OTHER_SOFTWARE_VERSION, function:INST_VAL, value:26
+DIB:8CC000, VIB:16 -> descr:VOLUME, function:INST_VAL, subunit:1, value:00000321, unit:CUBIC_METRE, m³
+DIB:8C8040, VIB:14 -> descr:VOLUME, function:INST_VAL, subunit:2, scaled value:1.23, unit:CUBIC_METRE, m³
+DIB:04, VIB:863C -> descr:ENERGY, function:INST_VAL, scaled value:0.0, unit:WATT_HOUR, Wh
+Manufacturer specific bytes:
+0320

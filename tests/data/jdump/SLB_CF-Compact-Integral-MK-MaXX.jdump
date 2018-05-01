@@ -1,0 +1,18 @@
+Secondary address: {manufacturer ID: SLB, device ID: 11817314, device version: 6, device type: HEAT_METER, as bytes: 14738111824D0604}
+Short Header: {Access No.: 3, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0C, VIB:78 -> descr:FABRICATION_NO, function:INST_VAL, value:11817314
+DIB:0C, VIB:06 -> descr:ENERGY, function:INST_VAL, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:0C, VIB:14 -> descr:VOLUME, function:INST_VAL, scaled value:0.02, unit:CUBIC_METRE, m³
+DIB:0A, VIB:3B -> descr:VOLUME_FLOW, function:INST_VAL, scaled value:0.0, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:0B, VIB:5A -> descr:FLOW_TEMPERATURE, function:INST_VAL, scaled value:21.8, unit:DEGREE_CELSIUS, °C
+DIB:0B, VIB:5E -> descr:RETURN_TEMPERATURE, function:INST_VAL, scaled value:22.0, unit:DEGREE_CELSIUS, °C
+DIB:0B, VIB:61 -> descr:TEMPERATURE_DIFFERENCE, function:INST_VAL, scaled value:-0.18, unit:KELVIN, S
+DIB:32, VIB:26 -> descr:OPERATING_TIME, function:ERROR_VAL, value:0, unit:HOUR, h
+DIB:02, VIB:27 -> descr:OPERATING_TIME, function:INST_VAL, value:1176, unit:DAY, d
+DIB:04, VIB:6D -> descr:DATE_TIME, function:INST_VAL, value:Thu Mar 13 14:02:00 CET 2014
+DIB:8440, VIB:14 -> descr:VOLUME, function:INST_VAL, subunit:1, scaled value:1.23, unit:CUBIC_METRE, m³
+DIB:848040, VIB:14 -> descr:VOLUME, function:INST_VAL, subunit:2, scaled value:3.21, unit:CUBIC_METRE, m³
+DIB:09, VIB:FD0E -> descr:FIRMWARE_VERSION, function:INST_VAL, value:03
+DIB:09, VIB:FD0F -> descr:OTHER_SOFTWARE_VERSION, function:INST_VAL, value:18
+Manufacturer specific bytes:
+0016

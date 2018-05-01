@@ -1,0 +1,38 @@
+Secondary address: {manufacturer ID: LUG, device ID: 66660205, device version: 7, device type: HEAT_METER, as bytes: 05026666A7320704}
+Short Header: {Access No.: 1, status: 16, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:09, VIB:74 -> descr:ACTUALITY_DURATION, function:INST_VAL, value:04, unit:SECOND, s
+DIB:09, VIB:70 -> descr:AVERAGING_DURATION, function:INST_VAL, value:08, unit:SECOND, s
+DIB:0C, VIB:06 -> descr:ENERGY, function:INST_VAL, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:0C, VIB:14 -> descr:VOLUME, function:INST_VAL, scaled value:0.0, unit:CUBIC_METRE, m³
+DIB:0B, VIB:2D -> descr:POWER, function:INST_VAL, scaled value:0.0, unit:WATT, W
+DIB:0B, VIB:3B -> descr:VOLUME_FLOW, function:INST_VAL, scaled value:0.0, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:0B, VIB:5A -> descr:FLOW_TEMPERATURE, function:INST_VAL, scaled value:19.5, unit:DEGREE_CELSIUS, °C
+DIB:0B, VIB:5E -> descr:RETURN_TEMPERATURE, function:INST_VAL, scaled value:19.700000000000003, unit:DEGREE_CELSIUS, °C
+DIB:0B, VIB:62 -> descr:TEMPERATURE_DIFFERENCE, function:INST_VAL, scaled value:-0.2, unit:KELVIN, S
+DIB:0C, VIB:78 -> descr:FABRICATION_NO, function:INST_VAL, value:66660205
+DIB:8910, VIB:71 -> descr:AVERAGING_DURATION, function:INST_VAL, tariff:1, value:07, unit:MIN, min
+DIB:3C, VIB:22 -> descr:ON_TIME, function:ERROR_VAL, value:00003769, unit:HOUR, h
+DIB:0C, VIB:22 -> descr:ON_TIME, function:INST_VAL, value:00003769, unit:HOUR, h
+DIB:0C, VIB:26 -> descr:OPERATING_TIME, function:INST_VAL, value:00000000, unit:HOUR, h
+DIB:8C9010, VIB:06 -> descr:ENERGY, function:INST_VAL, tariff:5, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:9B10, VIB:2D -> descr:POWER, function:MAX_VAL, tariff:1, scaled value:0.0, unit:WATT, W
+DIB:9B10, VIB:3B -> descr:VOLUME_FLOW, function:MAX_VAL, tariff:1, scaled value:0.0, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:9B10, VIB:5A -> descr:FLOW_TEMPERATURE, function:MAX_VAL, tariff:1, scaled value:30.700000000000003, unit:DEGREE_CELSIUS, °C
+DIB:9B10, VIB:5E -> descr:RETURN_TEMPERATURE, function:MAX_VAL, tariff:1, scaled value:50.7, unit:DEGREE_CELSIUS, °C
+DIB:9410, VIB:AD6F -> descr:POWER, function:MAX_VAL, tariff:1, scaled value:0.0, unit:WATT, W
+DIB:9410, VIB:BB6F -> descr:VOLUME_FLOW, function:MAX_VAL, tariff:1, scaled value:0.0, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:9410, VIB:DA6F -> descr:FLOW_TEMPERATURE, function:MAX_VAL, tariff:1, scaled value:4.10653746E7, unit:DEGREE_CELSIUS, °C
+DIB:9410, VIB:DE6F -> descr:RETURN_TEMPERATURE, function:MAX_VAL, tariff:1, scaled value:4.0953732300000004E7, unit:DEGREE_CELSIUS, °C
+DIB:4C, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:1, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:4C, VIB:14 -> descr:VOLUME, function:INST_VAL, storage:1, scaled value:0.0, unit:CUBIC_METRE, m³
+DIB:7C, VIB:22 -> descr:ON_TIME, function:ERROR_VAL, storage:1, value:00003469, unit:HOUR, h
+DIB:4C, VIB:26 -> descr:OPERATING_TIME, function:INST_VAL, storage:1, value:00000000, unit:HOUR, h
+DIB:CC9010, VIB:06 -> descr:ENERGY, function:INST_VAL, storage:1, tariff:5, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:DB10, VIB:2D -> descr:POWER, function:MAX_VAL, storage:1, tariff:1, scaled value:0.0, unit:WATT, W
+DIB:DB10, VIB:3B -> descr:VOLUME_FLOW, function:MAX_VAL, storage:1, tariff:1, scaled value:0.0, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:DB10, VIB:5A -> descr:FLOW_TEMPERATURE, function:MAX_VAL, storage:1, tariff:1, scaled value:30.700000000000003, unit:DEGREE_CELSIUS, °C
+DIB:DB10, VIB:5E -> descr:RETURN_TEMPERATURE, function:MAX_VAL, storage:1, tariff:1, scaled value:50.7, unit:DEGREE_CELSIUS, °C
+DIB:848F0F, VIB:6D -> descr:DATE_TIME, function:INST_VAL, storage:510, value:Wed Jan 01 00:00:00 CET 2127
+DIB:04, VIB:6D -> descr:DATE_TIME, function:INST_VAL, value:Fri Jan 13 12:04:00 CET 2012
+Manufacturer specific bytes:
+0907006601

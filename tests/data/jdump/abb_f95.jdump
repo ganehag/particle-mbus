@@ -1,0 +1,16 @@
+Secondary address: {manufacturer ID: HYD, device ID: 26718590, device version: 40, device type: HEAT_METER, as bytes: 9085712624232804}
+Short Header: {Access No.: 115, status: 80, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0C, VIB:05 -> descr:ENERGY, function:INST_VAL, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:0C, VIB:12 -> descr:VOLUME, function:INST_VAL, scaled value:0.0742, unit:CUBIC_METRE, m³
+DIB:3C, VIB:2A -> descr:POWER, function:ERROR_VAL, scaled value:1.44521543E7, unit:WATT, W
+DIB:3B, VIB:3A -> descr:VOLUME_FLOW, function:ERROR_VAL, scaled value:152.1543, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:0A, VIB:5A -> descr:FLOW_TEMPERATURE, function:INST_VAL, scaled value:20.400000000000002, unit:DEGREE_CELSIUS, °C
+DIB:0A, VIB:5E -> descr:RETURN_TEMPERATURE, function:INST_VAL, scaled value:20.400000000000002, unit:DEGREE_CELSIUS, °C
+DIB:0A, VIB:62 -> descr:TEMPERATURE_DIFFERENCE, function:INST_VAL, scaled value:0.0, unit:KELVIN, S
+DIB:04, VIB:6D -> descr:DATE_TIME, function:INST_VAL, value:Fri Jan 13 16:34:00 CET 2012
+DIB:4C, VIB:05 -> descr:ENERGY, function:INST_VAL, storage:1, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:44, VIB:6D -> descr:DATE_TIME, function:INST_VAL, storage:1, value:Sat Apr 30 23:59:00 CEST 2011
+DIB:44, VIB:ED7E -> descr:DATE_TIME, function:INST_VAL, storage:1, value:Mon Apr 30 23:59:00 CEST 2012
+DIB:8C01, VIB:05 -> descr:ENERGY, function:INST_VAL, storage:2, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:8401, VIB:6D -> descr:DATE_TIME, function:INST_VAL, storage:2, value:Sat Dec 31 23:59:00 CET 2011
+DIB:0B, VIB:26 -> descr:OPERATING_TIME, function:INST_VAL, value:311590800, unit:SECOND, s

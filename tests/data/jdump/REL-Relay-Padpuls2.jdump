@@ -1,0 +1,9 @@
+Secondary address: {manufacturer ID: REL, device ID: 11216301, device version: 65, device type: GAS_METER, as bytes: 01632111AC484103}
+Short Header: {Access No.: 177, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0C, VIB:14 -> descr:VOLUME, function:INST_VAL, scaled value:28760.81, unit:CUBIC_METRE, m³
+DIB:04, VIB:6D -> descr:DATE_TIME, function:INST_VAL, value:Thu Jul 09 21:33:00 CEST 2015
+DIB:42, VIB:6C -> descr:DATE, function:INST_VAL, storage:1, value:Wed Dec 31 00:00:00 CET 2014
+DIB:4C, VIB:14 -> descr:VOLUME, function:INST_VAL, storage:1, scaled value:25973.82, unit:CUBIC_METRE, m³
+DIB:42, VIB:EC7E -> descr:DATE, function:INST_VAL, storage:1, value:Thu Dec 31 00:00:00 CET 2015
+Manufacturer specific bytes:
+C001010C

@@ -1,0 +1,23 @@
+Secondary address: {manufacturer ID: EDC, device ID: 11120895, device version: 2, device type: HEAT_METER, as bytes: 9508121183140204}
+Short Header: {Access No.: 23, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:8400, VIB:863B -> descr:ENERGY, function:INST_VAL, scaled value:35000.0, unit:WATT_HOUR, Wh
+DIB:8400, VIB:863C -> descr:ENERGY, function:INST_VAL, scaled value:465000.0, unit:WATT_HOUR, Wh
+DIB:8440, VIB:863B -> descr:ENERGY, function:INST_VAL, subunit:1, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:8440, VIB:863C -> descr:ENERGY, function:INST_VAL, subunit:1, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:8500, VIB:5B -> descr:FLOW_TEMPERATURE, function:INST_VAL, scaled value:21.53670310974121, unit:DEGREE_CELSIUS, °C
+DIB:8500, VIB:5F -> descr:RETURN_TEMPERATURE, function:INST_VAL, scaled value:21.60504150390625, unit:DEGREE_CELSIUS, °C
+DIB:8540, VIB:5B -> descr:FLOW_TEMPERATURE, function:INST_VAL, subunit:1, scaled value:92.0, unit:DEGREE_CELSIUS, °C
+DIB:8540, VIB:5F -> descr:RETURN_TEMPERATURE, function:INST_VAL, subunit:1, scaled value:92.0, unit:DEGREE_CELSIUS, °C
+DIB:8500, VIB:3B -> descr:VOLUME_FLOW, function:INST_VAL, scaled value:7.070391178131104E-4, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:8540, VIB:3B -> descr:VOLUME_FLOW, function:INST_VAL, subunit:1, scaled value:0.0, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:9500, VIB:3B -> descr:VOLUME_FLOW, function:MAX_VAL, scaled value:0.35762173461914065, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:9540, VIB:3B -> descr:VOLUME_FLOW, function:MAX_VAL, subunit:1, scaled value:0.0, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:8500, VIB:2B -> descr:POWER, function:INST_VAL, scaled value:0.0, unit:WATT, W
+DIB:8540, VIB:2B -> descr:POWER, function:INST_VAL, subunit:1, scaled value:0.0, unit:WATT, W
+DIB:9500, VIB:2B -> descr:POWER, function:MAX_VAL, scaled value:18511.912109375, unit:WATT, W
+DIB:9540, VIB:2B -> descr:POWER, function:MAX_VAL, subunit:1, scaled value:0.0, unit:WATT, W
+DIB:04, VIB:6D -> descr:DATE_TIME, function:INST_VAL, value:Tue Jul 10 15:25:00 CEST 2012
+DIB:8400, VIB:7C0143 -> descr:USER_DEFINED :C, function:INST_VAL, value:3571
+DIB:8440, VIB:7C0143 -> descr:USER_DEFINED :C, function:INST_VAL, subunit:1, value:413
+DIB:8400, VIB:7C0163 -> descr:USER_DEFINED :c, function:INST_VAL, value:1
+DIB:8440, VIB:7C0163 -> descr:USER_DEFINED :c, function:INST_VAL, subunit:1, value:1

@@ -1,0 +1,4 @@
+Secondary address: {manufacturer ID: LSE, device ID: 10060958, device version: 22, device type: BUS_SYSTEM_COMPONENT, as bytes: 580906106532160E}
+Short Header: {Access No.: 123, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+Manufacturer specific bytes:
+5F420111FFFFFFFF010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000

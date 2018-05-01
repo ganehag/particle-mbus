@@ -1,0 +1,18 @@
+Secondary address: {manufacturer ID: SVM, device ID: 00660428, device version: 9, device type: HEAT_METER, as bytes: 28046600CD4E0904}
+Short Header: {Access No.: 228, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:04, VIB:06 -> descr:ENERGY, function:INST_VAL, scaled value:3.615076E9, unit:WATT_HOUR, Wh
+DIB:04, VIB:14 -> descr:VOLUME, function:INST_VAL, scaled value:56238.880000000005, unit:CUBIC_METRE, m³
+DIB:8440, VIB:14 -> descr:VOLUME, function:INST_VAL, subunit:1, scaled value:56238.840000000004, unit:CUBIC_METRE, m³
+DIB:02, VIB:5B -> descr:FLOW_TEMPERATURE, function:INST_VAL, value:71, unit:DEGREE_CELSIUS, °C
+DIB:02, VIB:5F -> descr:RETURN_TEMPERATURE, function:INST_VAL, value:30, unit:DEGREE_CELSIUS, °C
+DIB:02, VIB:62 -> descr:TEMPERATURE_DIFFERENCE, function:INST_VAL, scaled value:41.2, unit:KELVIN, S
+DIB:04, VIB:22 -> descr:ON_TIME, function:INST_VAL, value:21933, unit:HOUR, h
+DIB:04, VIB:26 -> descr:OPERATING_TIME, function:INST_VAL, value:21931, unit:HOUR, h
+DIB:04, VIB:3B -> descr:VOLUME_FLOW, function:INST_VAL, scaled value:2.028, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:04, VIB:2C -> descr:POWER, function:INST_VAL, scaled value:96130.0, unit:WATT, W
+DIB:04, VIB:6D -> descr:DATE_TIME, function:INST_VAL, value:Mon Apr 30 15:34:00 CEST 2018
+DIB:8440, VIB:6E -> descr:HCA, function:INST_VAL, subunit:1, value:0, unit:RESERVED
+DIB:848040, VIB:6E -> descr:HCA, function:INST_VAL, subunit:2, value:0, unit:RESERVED
+Manufacturer specific bytes:
+C409010118000101010728046600CD4E090407AFEF0367064001051F0302FF0F053C6C65D8658A059D05020019171B01A0056342
+More records follow ...

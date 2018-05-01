@@ -1,0 +1,4 @@
+Secondary address: {manufacturer ID: GWF, device ID: 00182007, device version: 53, device type: WATER_METER, as bytes: 07201800E61E3507}
+Short Header: {Access No.: 76, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0C, VIB:78 -> descr:FABRICATION_NO, function:INST_VAL, value:00182007
+DIB:0C, VIB:16 -> descr:VOLUME, function:INST_VAL, value:00000269, unit:CUBIC_METRE, m³

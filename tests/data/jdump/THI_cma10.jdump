@@ -1,0 +1,15 @@
+Secondary address: {manufacturer ID: ELV, device ID: 00000002, device version: 21, device type: OTHER, as bytes: 0200000096151500}
+Short Header: {Access No.: 13, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:01, VIB:FD1B -> descr:DIGITAL_INPUT, function:INST_VAL, value:2
+DIB:02, VIB:FC0348522574 -> descr:USER_DEFINED :%RH, function:INST_VAL, value:4660
+DIB:22, VIB:FC0348522574 -> descr:USER_DEFINED :%RH, function:MIN_VAL, value:3782
+DIB:12, VIB:FC0348522574 -> descr:USER_DEFINED :%RH, function:MAX_VAL, value:5122
+DIB:02, VIB:65 -> descr:EXTERNAL_TEMPERATURE, function:INST_VAL, scaled value:22.62, unit:DEGREE_CELSIUS, °C
+DIB:22, VIB:65 -> descr:EXTERNAL_TEMPERATURE, function:MIN_VAL, scaled value:22.5, unit:DEGREE_CELSIUS, °C
+DIB:12, VIB:65 -> descr:EXTERNAL_TEMPERATURE, function:MAX_VAL, scaled value:23.26, unit:DEGREE_CELSIUS, °C
+DIB:01, VIB:72 -> descr:AVERAGING_DURATION, function:INST_VAL, value:0, unit:HOUR, h
+DIB:72, VIB:65 -> descr:EXTERNAL_TEMPERATURE, function:ERROR_VAL, storage:1, scaled value:0.0, unit:DEGREE_CELSIUS, °C
+DIB:B201, VIB:65 -> descr:EXTERNAL_TEMPERATURE, function:ERROR_VAL, storage:2, scaled value:0.0, unit:DEGREE_CELSIUS, °C
+DIB:0C, VIB:78 -> descr:FABRICATION_NO, function:INST_VAL, value:00000002
+DIB:02, VIB:FD0F -> descr:OTHER_SOFTWARE_VERSION, function:INST_VAL, value:772
+More records follow ...

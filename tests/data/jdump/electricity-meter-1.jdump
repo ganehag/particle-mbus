@@ -1,0 +1,22 @@
+Secondary address: {manufacturer ID: SBC, device ID: 0500023>, device version: 18, device type: ELECTRICITY_METER, as bytes: 3E020005434C1202}
+Short Header: {Access No.: 19, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:8C10, VIB:04 -> descr:ENERGY, function:INST_VAL, tariff:1, scaled value:12520.0, unit:WATT_HOUR, Wh
+DIB:8C11, VIB:04 -> descr:ENERGY, function:INST_VAL, storage:2, tariff:1, scaled value:12520.0, unit:WATT_HOUR, Wh
+DIB:8C20, VIB:04 -> descr:ENERGY, function:INST_VAL, tariff:2, scaled value:1.774433E7, unit:WATT_HOUR, Wh
+DIB:8C21, VIB:04 -> descr:ENERGY, function:INST_VAL, storage:2, tariff:2, scaled value:1.774433E7, unit:WATT_HOUR, Wh
+DIB:02, VIB:FDC9FF01 -> descr:VOLTAGE, function:INST_VAL, value:237, unit:VOLT, V
+DIB:02, VIB:FDDBFF01 -> descr:CURRENT, function:INST_VAL, scaled value:3.2, unit:AMPERE, A
+DIB:02, VIB:ACFF01 -> descr:POWER, function:INST_VAL, scaled value:790.0, unit:WATT, W
+DIB:8240, VIB:ACFF01 -> descr:POWER, function:INST_VAL, subunit:1, scaled value:655180.0, unit:WATT, W
+DIB:02, VIB:FDC9FF02 -> descr:VOLTAGE, function:INST_VAL, value:231, unit:VOLT, V
+DIB:02, VIB:FDDBFF02 -> descr:CURRENT, function:INST_VAL, scaled value:3.5, unit:AMPERE, A
+DIB:02, VIB:ACFF02 -> descr:POWER, function:INST_VAL, scaled value:810.0, unit:WATT, W
+DIB:8240, VIB:ACFF02 -> descr:POWER, function:INST_VAL, subunit:1, scaled value:655210.0, unit:WATT, W
+DIB:02, VIB:FDC9FF03 -> descr:VOLTAGE, function:INST_VAL, value:228, unit:VOLT, V
+DIB:02, VIB:FDDBFF03 -> descr:CURRENT, function:INST_VAL, scaled value:6.9, unit:AMPERE, A
+DIB:02, VIB:ACFF03 -> descr:POWER, function:INST_VAL, scaled value:1600.0, unit:WATT, W
+DIB:8240, VIB:ACFF03 -> descr:POWER, function:INST_VAL, subunit:1, scaled value:655040.0, unit:WATT, W
+DIB:02, VIB:FF68 -> descr:MANUFACTURER_SPECIFIC, function:INST_VAL, value:0
+DIB:02, VIB:ACFF00 -> descr:POWER, function:INST_VAL, scaled value:3200.0, unit:WATT, W
+DIB:8240, VIB:ACFF00 -> descr:POWER, function:INST_VAL, subunit:1, scaled value:654710.0, unit:WATT, W
+DIB:01, VIB:FF13 -> descr:MANUFACTURER_SPECIFIC, function:INST_VAL, value:4

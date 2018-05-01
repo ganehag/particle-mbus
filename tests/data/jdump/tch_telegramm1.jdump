@@ -1,0 +1,12 @@
+Secondary address: {manufacturer ID: TCH, device ID: 21519982, device version: 38, device type: HEAT_METER, as bytes: 8299512168502604}
+Short Header: {Access No.: 133, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0C, VIB:05 -> descr:ENERGY, function:INST_VAL, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:04, VIB:6D -> descr:DATE_TIME, function:INST_VAL, value:Fri Sep 29 13:50:00 CEST 2000
+DIB:4C, VIB:05 -> descr:ENERGY, function:INST_VAL, storage:1, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:42, VIB:6C -> descr:DATE, function:INST_VAL, storage:1, value:Mon May 29 00:00:00 CEST 2000
+DIB:0B, VIB:3A -> descr:VOLUME_FLOW, function:INST_VAL, scaled value:0.0, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:0A, VIB:5A -> descr:FLOW_TEMPERATURE, function:INST_VAL, scaled value:23.400000000000002, unit:DEGREE_CELSIUS, °C
+DIB:0A, VIB:5E -> descr:RETURN_TEMPERATURE, function:INST_VAL, scaled value:22.400000000000002, unit:DEGREE_CELSIUS, °C
+DIB:0C, VIB:2A -> descr:POWER, function:INST_VAL, scaled value:0.0, unit:WATT, W
+DIB:0C, VIB:13 -> descr:VOLUME, function:INST_VAL, scaled value:0.064, unit:CUBIC_METRE, m³
+More records follow ...

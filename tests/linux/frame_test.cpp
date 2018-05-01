@@ -1,5 +1,8 @@
 #include <cppunit/extensions/HelperMacros.h>
+#include <cstring>
 #include "frame_test.h"
+
+using namespace std;
 
 CPPUNIT_TEST_SUITE_REGISTRATION( abbDeltaTest );
 
@@ -29,10 +32,9 @@ void abbDeltaTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -48,10 +50,9 @@ void abbDeltaTest::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -67,10 +68,9 @@ void abbDeltaTest::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -86,10 +86,9 @@ void abbDeltaTest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -105,10 +104,9 @@ void abbDeltaTest::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -124,10 +122,9 @@ void abbDeltaTest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -143,10 +140,9 @@ void abbDeltaTest::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -162,10 +158,9 @@ void abbDeltaTest::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -181,10 +176,9 @@ void abbDeltaTest::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -200,10 +194,9 @@ void abbDeltaTest::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -214,8 +207,40 @@ void abbDeltaTest::TestRecord9(void) {
   }
 };
 void abbDeltaTest::TestRecord10(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(10);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void abbDeltaTest::TestRecord11(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(11);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1000000.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void abbDeltaTest::TestRecord12(void) {
   MBusRecord *record = NULL;
@@ -223,10 +248,9 @@ void abbDeltaTest::TestRecord12(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(12);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -237,6 +261,22 @@ void abbDeltaTest::TestRecord12(void) {
   }
 };
 void abbDeltaTest::TestRecord13(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(13);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION( abbF95Test );
@@ -267,10 +307,9 @@ void abbF95Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -286,10 +325,9 @@ void abbF95Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0742", 0.0742, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0742, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -305,10 +343,9 @@ void abbF95Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("14452154.3", 14452154.3, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(14452154.3, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -324,10 +361,9 @@ void abbF95Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("152.1543", 152.1543, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(152.1543, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -343,10 +379,9 @@ void abbF95Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("20.4", 20.4, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(20.4, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -362,10 +397,9 @@ void abbF95Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("20.4", 20.4, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(20.4, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -381,10 +415,9 @@ void abbF95Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -395,6 +428,24 @@ void abbF95Test::TestRecord6(void) {
   }
 };
 void abbF95Test::TestRecord7(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(7);
+  CPPUNIT_ASSERT( record != NULL );
+  const string abbF95_record_7 { "2012-01-13T16:34:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-01-13T16:34:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(abbF95_record_7.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void abbF95Test::TestRecord8(void) {
   MBusRecord *record = NULL;
@@ -402,10 +453,9 @@ void abbF95Test::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -416,8 +466,44 @@ void abbF95Test::TestRecord8(void) {
   }
 };
 void abbF95Test::TestRecord9(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(9);
+  CPPUNIT_ASSERT( record != NULL );
+  const string abbF95_record_9 { "2011-04-30T23:59:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2011-04-30T23:59:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(abbF95_record_9.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void abbF95Test::TestRecord10(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(10);
+  CPPUNIT_ASSERT( record != NULL );
+  const string abbF95_record_10 { "2012-04-30T23:59:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-04-30T23:59:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(abbF95_record_10.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void abbF95Test::TestRecord11(void) {
   MBusRecord *record = NULL;
@@ -425,10 +511,9 @@ void abbF95Test::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -439,6 +524,24 @@ void abbF95Test::TestRecord11(void) {
   }
 };
 void abbF95Test::TestRecord12(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(12);
+  CPPUNIT_ASSERT( record != NULL );
+  const string abbF95_record_12 { "2011-12-31T23:59:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2011-12-31T23:59:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(abbF95_record_12.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void abbF95Test::TestRecord13(void) {
   MBusRecord *record = NULL;
@@ -446,10 +549,9 @@ void abbF95Test::TestRecord13(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(13);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("311590800.0", 311590800.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(311590800.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -488,10 +590,9 @@ void abbXxxTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("59070.0", 59070.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(59070.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -502,24 +603,188 @@ void abbXxxTest::TestRecord0(void) {
   }
 };
 void abbXxxTest::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(100.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void abbXxxTest::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void abbXxxTest::TestRecord3(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(3);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(5.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void abbXxxTest::TestRecord4(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(4);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void abbXxxTest::TestRecord5(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(5);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void abbXxxTest::TestRecord6(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(6);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void abbXxxTest::TestRecord7(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(7);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void abbXxxTest::TestRecord8(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(8);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void abbXxxTest::TestRecord9(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(9);
+  CPPUNIT_ASSERT( record != NULL );
+  const string abbXxx_record_9 { "B1.24.0" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("B1.24.0", 7, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(abbXxx_record_9.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void abbXxxTest::TestRecord10(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(10);
+  CPPUNIT_ASSERT( record != NULL );
+  const string abbXxx_record_10 { "B24 113-100" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("B24 113-100", 11, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(abbXxx_record_10.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION( ACWItronBMPlusMTest );
@@ -550,10 +815,9 @@ void ACWItronBMPlusMTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("11490378.0", 11490378.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(11490378.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -569,10 +833,9 @@ void ACWItronBMPlusMTest::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("54.321", 54.321, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(54.321, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -583,6 +846,24 @@ void ACWItronBMPlusMTest::TestRecord1(void) {
   }
 };
 void ACWItronBMPlusMTest::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ACWItronBMPlusM_record_2 { "2000-00-00" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2000-00-00", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ACWItronBMPlusM_record_2.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ACWItronBMPlusMTest::TestRecord3(void) {
   MBusRecord *record = NULL;
@@ -590,10 +871,9 @@ void ACWItronBMPlusMTest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -604,6 +884,24 @@ void ACWItronBMPlusMTest::TestRecord3(void) {
   }
 };
 void ACWItronBMPlusMTest::TestRecord4(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(4);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ACWItronBMPlusM_record_4 { "2014-03-13T11:11:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2014-03-13T11:11:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ACWItronBMPlusM_record_4.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ACWItronBMPlusMTest::TestRecord5(void) {
   MBusRecord *record = NULL;
@@ -611,10 +909,9 @@ void ACWItronBMPlusMTest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -630,10 +927,9 @@ void ACWItronBMPlusMTest::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("2.0", 2.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(2.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -649,10 +945,29 @@ void ACWItronBMPlusMTest::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("6.0", 6.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(6.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void ACWItronBMPlusMTest::TestRecord8(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(8);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ACWItronBMPlusM_record_8 { "00 01 75 13" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("00 01 75 13", 11, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ACWItronBMPlusM_record_8.c_str(), record->value->str_val.value, record->value->str_val.size));
   if(record != NULL) {
     delete record;
   }
@@ -691,10 +1006,9 @@ void ACWItronCYBLEMBus_14Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("9011523.0", 9011523.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(9011523.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -705,8 +1019,44 @@ void ACWItronCYBLEMBus_14Test::TestRecord0(void) {
   }
 };
 void ACWItronCYBLEMBus_14Test::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ACWItronCYBLEMBus_14_record_1 { "09LA076755" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("09LA076755", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ACWItronCYBLEMBus_14_record_1.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ACWItronCYBLEMBus_14Test::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ACWItronCYBLEMBus_14_record_2 { "2014-03-13T14:26:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2014-03-13T14:26:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ACWItronCYBLEMBus_14_record_2.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ACWItronCYBLEMBus_14Test::TestRecord3(void) {
   MBusRecord *record = NULL;
@@ -714,10 +1064,9 @@ void ACWItronCYBLEMBus_14Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("2516.0", 2516.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(2516.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -733,10 +1082,9 @@ void ACWItronCYBLEMBus_14Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.031", 0.031, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.031, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -752,10 +1100,9 @@ void ACWItronCYBLEMBus_14Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -771,10 +1118,29 @@ void ACWItronCYBLEMBus_14Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.031", 0.031, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.031, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void ACWItronCYBLEMBus_14Test::TestRecord7(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(7);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ACWItronCYBLEMBus_14_record_7 { "00 01 1F" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("00 01 1F", 8, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ACWItronCYBLEMBus_14_record_7.c_str(), record->value->str_val.value, record->value->str_val.size));
   if(record != NULL) {
     delete record;
   }
@@ -813,10 +1179,9 @@ void allmessCf50Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -832,10 +1197,9 @@ void allmessCf50Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.3", 0.3, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.3, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -851,10 +1215,9 @@ void allmessCf50Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -870,10 +1233,9 @@ void allmessCf50Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -889,10 +1251,9 @@ void allmessCf50Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("128.8", 128.8, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(128.8, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -908,10 +1269,9 @@ void allmessCf50Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("51.6", 51.6, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(51.6, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -927,10 +1287,9 @@ void allmessCf50Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("77.23", 77.23, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(77.23, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -941,6 +1300,24 @@ void allmessCf50Test::TestRecord6(void) {
   }
 };
 void allmessCf50Test::TestRecord7(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(7);
+  CPPUNIT_ASSERT( record != NULL );
+  const string allmessCf50_record_7 { "2012-01-12" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-01-12", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(allmessCf50_record_7.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void allmessCf50Test::TestRecord8(void) {
   MBusRecord *record = NULL;
@@ -948,10 +1325,29 @@ void allmessCf50Test::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3383.0", 3383.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(292291200.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void allmessCf50Test::TestRecord9(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(9);
+  CPPUNIT_ASSERT( record != NULL );
+  const string allmessCf50_record_9 { "60 00" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("60 00", 5, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(allmessCf50_record_9.c_str(), record->value->str_val.value, record->value->str_val.size));
   if(record != NULL) {
     delete record;
   }
@@ -984,6 +1380,278 @@ void apatorLqm3Test::tearDown() {
   frame = NULL;
 };
 
+void apatorLqm3Test::TestRecord0(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(0);
+  CPPUNIT_ASSERT( record != NULL );
+  const string apatorLqm3_record_0 { "2015-05-17" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2015-05-17", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(apatorLqm3_record_0.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void apatorLqm3Test::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1.44108e+11, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void apatorLqm3Test::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void apatorLqm3Test::TestRecord3(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(3);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(5633.188, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void apatorLqm3Test::TestRecord4(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(4);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void apatorLqm3Test::TestRecord5(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(5);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void apatorLqm3Test::TestRecord6(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(6);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void apatorLqm3Test::TestRecord7(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(7);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void apatorLqm3Test::TestRecord8(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(8);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void apatorLqm3Test::TestRecord9(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(9);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void apatorLqm3Test::TestRecord10(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(10);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(21.3, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void apatorLqm3Test::TestRecord11(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(11);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(21.3, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void apatorLqm3Test::TestRecord12(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(12);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(286354800.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void apatorLqm3Test::TestRecord13(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(13);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(838800.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void apatorLqm3Test::TestRecord14(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(14);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
 
 CPPUNIT_TEST_SUITE_REGISTRATION( bergDzPlusTest );
 
@@ -1013,10 +1681,9 @@ void bergDzPlusTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1032,10 +1699,9 @@ void bergDzPlusTest::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1051,10 +1717,9 @@ void bergDzPlusTest::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1070,10 +1735,9 @@ void bergDzPlusTest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1089,10 +1753,9 @@ void bergDzPlusTest::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1108,10 +1771,9 @@ void bergDzPlusTest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1127,10 +1789,9 @@ void bergDzPlusTest::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1146,10 +1807,9 @@ void bergDzPlusTest::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1165,10 +1825,9 @@ void bergDzPlusTest::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1184,10 +1843,9 @@ void bergDzPlusTest::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1198,12 +1856,76 @@ void bergDzPlusTest::TestRecord9(void) {
   }
 };
 void bergDzPlusTest::TestRecord10(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(10);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void bergDzPlusTest::TestRecord11(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(11);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void bergDzPlusTest::TestRecord12(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(12);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void bergDzPlusTest::TestRecord13(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(13);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void bergDzPlusTest::TestRecord14(void) {
   MBusRecord *record = NULL;
@@ -1211,10 +1933,9 @@ void bergDzPlusTest::TestRecord14(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(14);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1225,6 +1946,22 @@ void bergDzPlusTest::TestRecord14(void) {
   }
 };
 void bergDzPlusTest::TestRecord15(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(15);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION( EDCTest );
@@ -1255,10 +1992,9 @@ void EDCTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("35000.0", 35000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(35000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1274,10 +2010,9 @@ void EDCTest::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("465000.0", 465000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(465000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1293,10 +2028,9 @@ void EDCTest::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1312,10 +2046,9 @@ void EDCTest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1331,10 +2064,9 @@ void EDCTest::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("21.5367031097", 21.5367031097, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(21.536703, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1350,10 +2082,9 @@ void EDCTest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("21.6050415039", 21.6050415039, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(21.605042, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1369,10 +2100,9 @@ void EDCTest::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("92.0", 92.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(92.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1388,10 +2118,9 @@ void EDCTest::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("92.0", 92.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(92.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1407,10 +2136,9 @@ void EDCTest::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.000707039117813", 0.000707039117813, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.000707, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1426,10 +2154,9 @@ void EDCTest::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1445,10 +2172,9 @@ void EDCTest::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.357621734619", 0.357621734619, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.357622, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1464,10 +2190,9 @@ void EDCTest::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1483,10 +2208,9 @@ void EDCTest::TestRecord12(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(12);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1502,10 +2226,9 @@ void EDCTest::TestRecord13(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(13);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1521,10 +2244,9 @@ void EDCTest::TestRecord14(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(14);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("18511.9121094", 18511.9121094, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(18511.912109, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1540,10 +2262,9 @@ void EDCTest::TestRecord15(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(15);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1554,6 +2275,24 @@ void EDCTest::TestRecord15(void) {
   }
 };
 void EDCTest::TestRecord16(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(16);
+  CPPUNIT_ASSERT( record != NULL );
+  const string EDC_record_16 { "2012-07-10T15:25:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-07-10T15:25:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(EDC_record_16.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void EDCTest::TestRecord17(void) {
   MBusRecord *record = NULL;
@@ -1561,10 +2300,9 @@ void EDCTest::TestRecord17(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(17);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3571.0", 3571.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3571.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1580,10 +2318,9 @@ void EDCTest::TestRecord18(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(18);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("413.0", 413.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(413.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1599,10 +2336,9 @@ void EDCTest::TestRecord19(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(19);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1.0", 1.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1618,10 +2354,9 @@ void EDCTest::TestRecord20(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(20);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1.0", 1.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1660,10 +2395,9 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("24083345.0", 24083345.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(24083345.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1674,6 +2408,24 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord0(void) {
   }
 };
 void EFEEngelmannElsterSensoStar_2Test::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  const string EFEEngelmannElsterSensoStar_2_record_1 { "2014-03-12T14:23:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2014-03-12T14:23:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(EFEEngelmannElsterSensoStar_2_record_1.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void EFEEngelmannElsterSensoStar_2Test::TestRecord2(void) {
   MBusRecord *record = NULL;
@@ -1681,10 +2433,9 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1700,10 +2451,9 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1719,10 +2469,9 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1738,10 +2487,9 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1757,10 +2505,9 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1776,10 +2523,9 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1795,10 +2541,9 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1814,10 +2559,9 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1833,10 +2577,9 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1847,8 +2590,44 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord10(void) {
   }
 };
 void EFEEngelmannElsterSensoStar_2Test::TestRecord11(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(11);
+  CPPUNIT_ASSERT( record != NULL );
+  const string EFEEngelmannElsterSensoStar_2_record_11 { "2013-12-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2013-12-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(EFEEngelmannElsterSensoStar_2_record_11.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void EFEEngelmannElsterSensoStar_2Test::TestRecord12(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(12);
+  CPPUNIT_ASSERT( record != NULL );
+  const string EFEEngelmannElsterSensoStar_2_record_12 { "2014-12-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2014-12-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(EFEEngelmannElsterSensoStar_2_record_12.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void EFEEngelmannElsterSensoStar_2Test::TestRecord13(void) {
   MBusRecord *record = NULL;
@@ -1856,10 +2635,9 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord13(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(13);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1875,10 +2653,9 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord14(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(14);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1894,10 +2671,9 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord15(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(15);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1913,10 +2689,9 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord16(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(16);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.025", 0.025, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.025, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1932,10 +2707,9 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord17(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(17);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1951,10 +2725,9 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord18(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(18);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("11.0", 11.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(11.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1970,10 +2743,9 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord19(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(19);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("22.0", 22.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(22.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -1989,10 +2761,9 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord20(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(20);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("21.0", 21.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(21.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2008,10 +2779,9 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord21(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(21);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.09", 0.09, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.09, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2027,10 +2797,9 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord22(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(22);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("524.0", 524.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(45273600.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2046,10 +2815,9 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord23(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(23);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2065,10 +2833,9 @@ void EFEEngelmannElsterSensoStar_2Test::TestRecord24(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(24);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1.1e-05", 1.1e-05, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1.1e-05, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2107,10 +2874,9 @@ void EFEEngelmannWaterStarTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("4990254.0", 4990254.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(4990254.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2121,6 +2887,24 @@ void EFEEngelmannWaterStarTest::TestRecord0(void) {
   }
 };
 void EFEEngelmannWaterStarTest::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  const string EFEEngelmannWaterStar_record_1 { "2014-03-13T12:10:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2014-03-13T12:10:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(EFEEngelmannWaterStar_record_1.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void EFEEngelmannWaterStarTest::TestRecord2(void) {
   MBusRecord *record = NULL;
@@ -2128,10 +2912,9 @@ void EFEEngelmannWaterStarTest::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.332", 0.332, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.332, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2147,10 +2930,9 @@ void EFEEngelmannWaterStarTest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.331", 0.331, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.331, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2166,10 +2948,9 @@ void EFEEngelmannWaterStarTest::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.332", 0.332, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.332, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2180,8 +2961,44 @@ void EFEEngelmannWaterStarTest::TestRecord4(void) {
   }
 };
 void EFEEngelmannWaterStarTest::TestRecord5(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(5);
+  CPPUNIT_ASSERT( record != NULL );
+  const string EFEEngelmannWaterStar_record_5 { "2013-12-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2013-12-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(EFEEngelmannWaterStar_record_5.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void EFEEngelmannWaterStarTest::TestRecord6(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(6);
+  CPPUNIT_ASSERT( record != NULL );
+  const string EFEEngelmannWaterStar_record_6 { "2014-12-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2014-12-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(EFEEngelmannWaterStar_record_6.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void EFEEngelmannWaterStarTest::TestRecord7(void) {
   MBusRecord *record = NULL;
@@ -2189,10 +3006,9 @@ void EFEEngelmannWaterStarTest::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2208,10 +3024,9 @@ void EFEEngelmannWaterStarTest::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("2.07", 2.07, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(2.07, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2227,10 +3042,9 @@ void EFEEngelmannWaterStarTest::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1191.0", 1191.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(102902400.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2246,10 +3060,9 @@ void EFEEngelmannWaterStarTest::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2265,10 +3078,9 @@ void EFEEngelmannWaterStarTest::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("8e-06", 8e-06, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(8e-06, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2307,10 +3119,9 @@ void electricityMeter_1Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("12520.0", 12520.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(12520.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2326,10 +3137,9 @@ void electricityMeter_1Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("12520.0", 12520.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(12520.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2345,10 +3155,9 @@ void electricityMeter_1Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("17744330.0", 17744330.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(17744330.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2364,10 +3173,9 @@ void electricityMeter_1Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("17744330.0", 17744330.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(17744330.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2383,10 +3191,9 @@ void electricityMeter_1Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("237.0", 237.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(237.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2402,10 +3209,9 @@ void electricityMeter_1Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3.2", 3.2, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3.2, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2421,10 +3227,9 @@ void electricityMeter_1Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("790.0", 790.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(790.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2440,10 +3245,9 @@ void electricityMeter_1Test::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("655180.0", 655180.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(-180.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2459,10 +3263,9 @@ void electricityMeter_1Test::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("231.0", 231.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(231.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2478,10 +3281,9 @@ void electricityMeter_1Test::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3.5", 3.5, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3.5, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2497,10 +3299,9 @@ void electricityMeter_1Test::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("810.0", 810.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(810.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2516,10 +3317,9 @@ void electricityMeter_1Test::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("655210.0", 655210.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(-150.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2535,10 +3335,9 @@ void electricityMeter_1Test::TestRecord12(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(12);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("228.0", 228.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(228.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2554,10 +3353,9 @@ void electricityMeter_1Test::TestRecord13(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(13);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("6.9", 6.9, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(6.9, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2573,10 +3371,9 @@ void electricityMeter_1Test::TestRecord14(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(14);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1600.0", 1600.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1600.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2592,10 +3389,9 @@ void electricityMeter_1Test::TestRecord15(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(15);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("655040.0", 655040.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(-320.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2606,6 +3402,22 @@ void electricityMeter_1Test::TestRecord15(void) {
   }
 };
 void electricityMeter_1Test::TestRecord16(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(16);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void electricityMeter_1Test::TestRecord17(void) {
   MBusRecord *record = NULL;
@@ -2613,10 +3425,9 @@ void electricityMeter_1Test::TestRecord17(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(17);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3200.0", 3200.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3200.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2632,10 +3443,9 @@ void electricityMeter_1Test::TestRecord18(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(18);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("654710.0", 654710.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(-650.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2646,6 +3456,22 @@ void electricityMeter_1Test::TestRecord18(void) {
   }
 };
 void electricityMeter_1Test::TestRecord19(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(19);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(4.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION( electricityMeter_2Test );
@@ -2676,10 +3502,9 @@ void electricityMeter_2Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("2540.0", 2540.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(2540.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2695,10 +3520,9 @@ void electricityMeter_2Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("2540.0", 2540.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(2540.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2714,10 +3538,9 @@ void electricityMeter_2Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("4441280.0", 4441280.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(4441280.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2733,10 +3556,9 @@ void electricityMeter_2Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("4441280.0", 4441280.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(4441280.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2752,10 +3574,9 @@ void electricityMeter_2Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("233.0", 233.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(233.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2771,10 +3592,9 @@ void electricityMeter_2Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.1", 0.1, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.1, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2790,10 +3610,9 @@ void electricityMeter_2Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2809,10 +3628,9 @@ void electricityMeter_2Test::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2828,10 +3646,9 @@ void electricityMeter_2Test::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("234.0", 234.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(234.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2847,10 +3664,9 @@ void electricityMeter_2Test::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2866,10 +3682,9 @@ void electricityMeter_2Test::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2885,10 +3700,9 @@ void electricityMeter_2Test::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2904,10 +3718,9 @@ void electricityMeter_2Test::TestRecord12(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(12);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("235.0", 235.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(235.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2923,10 +3736,9 @@ void electricityMeter_2Test::TestRecord13(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(13);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.1", 0.1, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.1, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2942,10 +3754,9 @@ void electricityMeter_2Test::TestRecord14(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(14);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2961,10 +3772,9 @@ void electricityMeter_2Test::TestRecord15(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(15);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -2975,6 +3785,22 @@ void electricityMeter_2Test::TestRecord15(void) {
   }
 };
 void electricityMeter_2Test::TestRecord16(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(16);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void electricityMeter_2Test::TestRecord17(void) {
   MBusRecord *record = NULL;
@@ -2982,10 +3808,9 @@ void electricityMeter_2Test::TestRecord17(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(17);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3001,10 +3826,9 @@ void electricityMeter_2Test::TestRecord18(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(18);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3015,6 +3839,22 @@ void electricityMeter_2Test::TestRecord18(void) {
   }
 };
 void electricityMeter_2Test::TestRecord19(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(19);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(4.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION( ELSElsterF96PlusTest );
@@ -3045,10 +3885,9 @@ void ELSElsterF96PlusTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3064,10 +3903,9 @@ void ELSElsterF96PlusTest::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3083,10 +3921,9 @@ void ELSElsterF96PlusTest::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3102,10 +3939,9 @@ void ELSElsterF96PlusTest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3116,6 +3952,22 @@ void ELSElsterF96PlusTest::TestRecord3(void) {
   }
 };
 void ELSElsterF96PlusTest::TestRecord4(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(4);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(144445223.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ELSElsterF96PlusTest::TestRecord5(void) {
   MBusRecord *record = NULL;
@@ -3123,10 +3975,9 @@ void ELSElsterF96PlusTest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1445.223", 1445.223, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1445.223, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3142,10 +3993,9 @@ void ELSElsterF96PlusTest::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("22.7", 22.7, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(22.7, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3161,10 +4011,9 @@ void ELSElsterF96PlusTest::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("22.6", 22.6, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(22.6, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3180,10 +4029,9 @@ void ELSElsterF96PlusTest::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.1", 0.1, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.1, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3199,10 +4047,9 @@ void ELSElsterF96PlusTest::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("730.0", 730.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(63072000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3213,6 +4060,24 @@ void ELSElsterF96PlusTest::TestRecord9(void) {
   }
 };
 void ELSElsterF96PlusTest::TestRecord10(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(10);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ELSElsterF96Plus_record_10 { "2014-03-13T13:09:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2014-03-13T13:09:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ELSElsterF96Plus_record_10.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ELSElsterF96PlusTest::TestRecord11(void) {
   MBusRecord *record = NULL;
@@ -3220,10 +4085,9 @@ void ELSElsterF96PlusTest::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3239,10 +4103,9 @@ void ELSElsterF96PlusTest::TestRecord12(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(12);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3258,10 +4121,9 @@ void ELSElsterF96PlusTest::TestRecord13(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(13);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3277,10 +4139,9 @@ void ELSElsterF96PlusTest::TestRecord14(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(14);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3291,6 +4152,24 @@ void ELSElsterF96PlusTest::TestRecord14(void) {
   }
 };
 void ELSElsterF96PlusTest::TestRecord15(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(15);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ELSElsterF96Plus_record_15 { "2013-05-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2013-05-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ELSElsterF96Plus_record_15.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION( elsFalconTest );
@@ -3321,10 +4200,9 @@ void elsFalconTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1234.567", 1234.567, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1234.567, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3335,8 +4213,44 @@ void elsFalconTest::TestRecord0(void) {
   }
 };
 void elsFalconTest::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  const string elsFalcon_record_1 { "2007-02-06T13:58:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2007-02-06T13:58:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(elsFalcon_record_1.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void elsFalconTest::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  const string elsFalcon_record_2 { "2007-01-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2007-01-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(elsFalcon_record_2.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void elsFalconTest::TestRecord3(void) {
   MBusRecord *record = NULL;
@@ -3344,10 +4258,9 @@ void elsFalconTest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("456.951", 456.951, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(456.951, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3358,6 +4271,24 @@ void elsFalconTest::TestRecord3(void) {
   }
 };
 void elsFalconTest::TestRecord4(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(4);
+  CPPUNIT_ASSERT( record != NULL );
+  const string elsFalcon_record_4 { "2008-01-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2008-01-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(elsFalcon_record_4.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void elsFalconTest::TestRecord5(void) {
   MBusRecord *record = NULL;
@@ -3365,10 +4296,9 @@ void elsFalconTest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("5.945", 5.945, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(5.945, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3379,6 +4309,24 @@ void elsFalconTest::TestRecord5(void) {
   }
 };
 void elsFalconTest::TestRecord6(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(6);
+  CPPUNIT_ASSERT( record != NULL );
+  const string elsFalcon_record_6 { "2008-01-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2008-01-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(elsFalcon_record_6.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void elsFalconTest::TestRecord7(void) {
   MBusRecord *record = NULL;
@@ -3386,10 +4334,29 @@ void elsFalconTest::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("6.137", 6.137, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(6.137, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void elsFalconTest::TestRecord8(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(8);
+  CPPUNIT_ASSERT( record != NULL );
+  const string elsFalcon_record_8 { "0E 42 20 01 01 01 00 05 08 5E 01 20 3D 12 08 3D 12 08 00" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("0E 42 20 01 01 01 00 05 08 5E 01 20 3D 12 08 3D 12 08 00", 56, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(elsFalcon_record_8.c_str(), record->value->str_val.value, record->value->str_val.size));
   if(record != NULL) {
     delete record;
   }
@@ -3428,10 +4395,9 @@ void elsTmpaTelegramm1Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1234.567", 1234.567, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1234.567, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3442,8 +4408,44 @@ void elsTmpaTelegramm1Test::TestRecord0(void) {
   }
 };
 void elsTmpaTelegramm1Test::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  const string elsTmpaTelegramm1_record_1 { "2007-02-06T13:58:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2007-02-06T13:58:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(elsTmpaTelegramm1_record_1.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void elsTmpaTelegramm1Test::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  const string elsTmpaTelegramm1_record_2 { "2007-01-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2007-01-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(elsTmpaTelegramm1_record_2.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void elsTmpaTelegramm1Test::TestRecord3(void) {
   MBusRecord *record = NULL;
@@ -3451,10 +4453,9 @@ void elsTmpaTelegramm1Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("456.951", 456.951, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(456.951, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3465,6 +4466,42 @@ void elsTmpaTelegramm1Test::TestRecord3(void) {
   }
 };
 void elsTmpaTelegramm1Test::TestRecord4(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(4);
+  CPPUNIT_ASSERT( record != NULL );
+  const string elsTmpaTelegramm1_record_4 { "2008-01-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2008-01-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(elsTmpaTelegramm1_record_4.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void elsTmpaTelegramm1Test::TestRecord5(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(5);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION( ElsterF2Test );
@@ -3495,10 +4532,9 @@ void ElsterF2Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("5272000.0", 5272000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(5272000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3514,10 +4550,9 @@ void ElsterF2Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1204.27", 1204.27, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1204.27, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3533,10 +4568,9 @@ void ElsterF2Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("917.69", 917.69, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(917.69, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3552,10 +4586,9 @@ void ElsterF2Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("28.0", 28.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(28.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3571,10 +4604,9 @@ void ElsterF2Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("34.0", 34.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(34.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3590,10 +4622,9 @@ void ElsterF2Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3609,10 +4640,9 @@ void ElsterF2Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("41393.0", 41393.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(149014800.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3628,10 +4658,9 @@ void ElsterF2Test::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("41393.0", 41393.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(149014800.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3647,10 +4676,9 @@ void ElsterF2Test::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3666,10 +4694,9 @@ void ElsterF2Test::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3680,6 +4707,24 @@ void ElsterF2Test::TestRecord9(void) {
   }
 };
 void ElsterF2Test::TestRecord10(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(10);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ElsterF2_record_10 { "2013-06-29T12:12:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2013-06-29T12:12:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ElsterF2_record_10.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ElsterF2Test::TestRecord11(void) {
   MBusRecord *record = NULL;
@@ -3687,10 +4732,9 @@ void ElsterF2Test::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3706,10 +4750,9 @@ void ElsterF2Test::TestRecord12(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(12);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3748,10 +4791,9 @@ void ELVElvacoCMa10Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("2.0", 2.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(2.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3767,10 +4809,9 @@ void ELVElvacoCMa10Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("5410.0", 5410.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(54.1, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3786,10 +4827,9 @@ void ELVElvacoCMa10Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3364.0", 3364.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(33.64, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3805,10 +4845,9 @@ void ELVElvacoCMa10Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("7363.0", 7363.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(73.63, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3824,10 +4863,9 @@ void ELVElvacoCMa10Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("20.94", 20.94, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(20.94, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3843,10 +4881,9 @@ void ELVElvacoCMa10Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("13.72", 13.72, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(13.72, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3862,10 +4899,9 @@ void ELVElvacoCMa10Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("29.78", 29.78, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(29.78, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3881,10 +4917,9 @@ void ELVElvacoCMa10Test::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("24.0", 24.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(86400.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3900,10 +4935,9 @@ void ELVElvacoCMa10Test::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("20.92", 20.92, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(20.92, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3919,10 +4953,9 @@ void ELVElvacoCMa10Test::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("20.79", 20.79, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(20.79, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3938,10 +4971,9 @@ void ELVElvacoCMa10Test::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("24011561.0", 24011561.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(24011561.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3957,10 +4989,9 @@ void ELVElvacoCMa10Test::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("262144.0", 262144.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(262144.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -3999,10 +5030,9 @@ void elvTempHumidTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4018,10 +5048,9 @@ void elvTempHumidTest::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("4564.0", 4564.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(45.64, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4037,10 +5066,9 @@ void elvTempHumidTest::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("4552.0", 4552.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(45.52, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4056,10 +5084,9 @@ void elvTempHumidTest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("5812.0", 5812.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(58.12, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4075,10 +5102,9 @@ void elvTempHumidTest::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("22.56", 22.56, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(22.56, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4094,10 +5120,9 @@ void elvTempHumidTest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("21.6", 21.6, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(21.6, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4113,10 +5138,9 @@ void elvTempHumidTest::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("23.39", 23.39, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(23.39, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4132,10 +5156,9 @@ void elvTempHumidTest::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("24.0", 24.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(86400.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4151,10 +5174,9 @@ void elvTempHumidTest::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("22.76", 22.76, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(22.76, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4170,10 +5192,9 @@ void elvTempHumidTest::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("22.69", 22.69, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(22.69, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4189,10 +5210,9 @@ void elvTempHumidTest::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("54000834.0", 54000834.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(54000834.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4208,10 +5228,9 @@ void elvTempHumidTest::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("262144.0", 262144.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(262144.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4250,10 +5269,9 @@ void emhDizTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("4090.0", 4090.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(4090.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4269,10 +5287,9 @@ void emhDizTest::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4288,10 +5305,9 @@ void emhDizTest::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4330,10 +5346,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("32629.0", 32629.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(32629.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4349,10 +5364,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1364.0", 1364.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1364.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4368,10 +5382,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4387,10 +5400,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("7854.0", 7854.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(7854.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4406,10 +5418,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4425,10 +5436,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("-2.0", -2.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(-2.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4444,10 +5454,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4463,10 +5472,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4482,10 +5490,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("-2.0", -2.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(-2.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4501,10 +5508,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("14.0", 14.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(14.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4520,10 +5526,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4539,10 +5544,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4558,10 +5562,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord12(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(12);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("14.0", 14.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(14.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4577,10 +5580,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord13(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(13);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("225.7", 225.7, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(225.7, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4596,10 +5598,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord14(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(14);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4615,10 +5616,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord15(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(15);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4634,10 +5634,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord16(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(16);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("187.4", 187.4, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(187.4, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4653,10 +5652,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord17(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(17);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4672,10 +5670,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord18(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(18);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4691,10 +5688,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord19(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(19);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("241.0", 241.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(241.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4710,10 +5706,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord20(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(20);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4729,10 +5724,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord21(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(21);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4748,10 +5742,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord22(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(22);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("-0.066", -0.066, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(-0.066, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4767,10 +5760,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord23(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(23);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4786,10 +5778,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord24(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(24);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4805,10 +5796,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord25(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(25);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("-0.066", -0.066, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(-0.066, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4819,12 +5809,76 @@ void EMUEMUProfessional_375MBusTest::TestRecord25(void) {
   }
 };
 void EMUEMUProfessional_375MBusTest::TestRecord26(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(26);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(13.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void EMUEMUProfessional_375MBusTest::TestRecord27(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(27);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void EMUEMUProfessional_375MBusTest::TestRecord28(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(28);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void EMUEMUProfessional_375MBusTest::TestRecord29(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(29);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(500.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void EMUEMUProfessional_375MBusTest::TestRecord30(void) {
   MBusRecord *record = NULL;
@@ -4832,10 +5886,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord30(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(30);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("56.0", 56.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(56.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4851,10 +5904,9 @@ void EMUEMUProfessional_375MBusTest::TestRecord31(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(31);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4893,10 +5945,9 @@ void engelmannSensostar2cTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("10380010.0", 10380010.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(10380010.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4907,6 +5958,24 @@ void engelmannSensostar2cTest::TestRecord0(void) {
   }
 };
 void engelmannSensostar2cTest::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  const string engelmannSensostar2c_record_1 { "2012-06-06T20:50:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-06-06T20:50:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(engelmannSensostar2c_record_1.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void engelmannSensostar2cTest::TestRecord2(void) {
   MBusRecord *record = NULL;
@@ -4914,10 +5983,9 @@ void engelmannSensostar2cTest::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("12.9", 12.9, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(12.9, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4933,10 +6001,9 @@ void engelmannSensostar2cTest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("800000.0", 800000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(800000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4952,10 +6019,9 @@ void engelmannSensostar2cTest::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4971,10 +6037,9 @@ void engelmannSensostar2cTest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -4990,10 +6055,9 @@ void engelmannSensostar2cTest::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5009,10 +6073,9 @@ void engelmannSensostar2cTest::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5028,10 +6091,9 @@ void engelmannSensostar2cTest::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("95.0", 95.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(95.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5047,10 +6109,9 @@ void engelmannSensostar2cTest::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("43.0", 43.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(43.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5066,10 +6127,9 @@ void engelmannSensostar2cTest::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("52.58", 52.58, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(52.58, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5085,10 +6145,9 @@ void engelmannSensostar2cTest::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("506.0", 506.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(43718400.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5104,10 +6163,9 @@ void engelmannSensostar2cTest::TestRecord12(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(12);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5123,10 +6181,9 @@ void engelmannSensostar2cTest::TestRecord13(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(13);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.1", 0.1, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.1, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5137,6 +6194,24 @@ void engelmannSensostar2cTest::TestRecord13(void) {
   }
 };
 void engelmannSensostar2cTest::TestRecord14(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(14);
+  CPPUNIT_ASSERT( record != NULL );
+  const string engelmannSensostar2c_record_14 { "2011-12-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2011-12-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(engelmannSensostar2c_record_14.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void engelmannSensostar2cTest::TestRecord15(void) {
   MBusRecord *record = NULL;
@@ -5144,10 +6219,9 @@ void engelmannSensostar2cTest::TestRecord15(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(15);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("12.9", 12.9, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(12.9, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5163,10 +6237,9 @@ void engelmannSensostar2cTest::TestRecord16(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(16);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("800000.0", 800000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(800000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5182,10 +6255,9 @@ void engelmannSensostar2cTest::TestRecord17(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(17);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5201,10 +6273,9 @@ void engelmannSensostar2cTest::TestRecord18(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(18);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5215,6 +6286,24 @@ void engelmannSensostar2cTest::TestRecord18(void) {
   }
 };
 void engelmannSensostar2cTest::TestRecord19(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(19);
+  CPPUNIT_ASSERT( record != NULL );
+  const string engelmannSensostar2c_record_19 { "2010-12-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2010-12-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(engelmannSensostar2c_record_19.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void engelmannSensostar2cTest::TestRecord20(void) {
   MBusRecord *record = NULL;
@@ -5222,10 +6311,9 @@ void engelmannSensostar2cTest::TestRecord20(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(20);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("8.4", 8.4, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(8.4, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5241,10 +6329,9 @@ void engelmannSensostar2cTest::TestRecord21(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(21);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("500000.0", 500000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(500000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5260,10 +6347,9 @@ void engelmannSensostar2cTest::TestRecord22(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(22);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5279,10 +6365,9 @@ void engelmannSensostar2cTest::TestRecord23(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(23);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5315,6 +6400,114 @@ void exampleData_01Test::tearDown() {
   frame = NULL;
 };
 
+void exampleData_01Test::TestRecord0(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(0);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1389817000.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void exampleData_01Test::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(504647.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void exampleData_01Test::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void exampleData_01Test::TestRecord3(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(3);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void exampleData_01Test::TestRecord4(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(4);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(41.737434, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void exampleData_01Test::TestRecord5(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(5);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(35.46365, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
 
 CPPUNIT_TEST_SUITE_REGISTRATION( exampleData_02Test );
 
@@ -5338,39 +6531,15 @@ void exampleData_02Test::tearDown() {
   frame = NULL;
 };
 
-
-CPPUNIT_TEST_SUITE_REGISTRATION( f4Test );
-
-MBusRecord* f4Test::getRecord(unsigned int pos) {
- MBusDataRecord *ptr;
- if(vard == NULL) return NULL;
- ptr = vard->record;
- for(unsigned int i = 0; i < pos && ptr != NULL; i++)
-   ptr = ptr->next;
- if(ptr == NULL) return NULL;
- return ptr->getRecord();
-};
-
-void f4Test::setUp() {
-  frame = new MBusFrame();
-  frame->parse((unsigned char *)frame_data, frame_data_len);
-};
-
-void f4Test::tearDown() {
-  delete frame;
-  frame = NULL;
-};
-
-void f4Test::TestRecord0(void) {
+void exampleData_02Test::TestRecord0(void) {
   MBusRecord *record = NULL;
   vard = frame->getVariableData();
 
   CPPUNIT_ASSERT( vard != NULL );
-
 
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3126504000.0", 3126504000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1389817000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5380,16 +6549,15 @@ void f4Test::TestRecord0(void) {
     vard = NULL;
   }
 };
-void f4Test::TestRecord1(void) {
+void exampleData_02Test::TestRecord1(void) {
   MBusRecord *record = NULL;
   vard = frame->getVariableData();
 
   CPPUNIT_ASSERT( vard != NULL );
-
 
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("41566.09", 41566.09, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(504647.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5399,16 +6567,15 @@ void f4Test::TestRecord1(void) {
     vard = NULL;
   }
 };
-void f4Test::TestRecord2(void) {
+void exampleData_02Test::TestRecord2(void) {
   MBusRecord *record = NULL;
   vard = frame->getVariableData();
 
   CPPUNIT_ASSERT( vard != NULL );
-
 
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("41565.85", 41565.85, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5418,16 +6585,15 @@ void f4Test::TestRecord2(void) {
     vard = NULL;
   }
 };
-void f4Test::TestRecord3(void) {
+void exampleData_02Test::TestRecord3(void) {
   MBusRecord *record = NULL;
   vard = frame->getVariableData();
 
   CPPUNIT_ASSERT( vard != NULL );
-
 
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("97.0", 97.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5437,16 +6603,15 @@ void f4Test::TestRecord3(void) {
     vard = NULL;
   }
 };
-void f4Test::TestRecord4(void) {
+void exampleData_02Test::TestRecord4(void) {
   MBusRecord *record = NULL;
   vard = frame->getVariableData();
 
   CPPUNIT_ASSERT( vard != NULL );
-
 
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("21.0", 21.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(41.211052, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5456,132 +6621,15 @@ void f4Test::TestRecord4(void) {
     vard = NULL;
   }
 };
-void f4Test::TestRecord5(void) {
+void exampleData_02Test::TestRecord5(void) {
   MBusRecord *record = NULL;
   vard = frame->getVariableData();
 
   CPPUNIT_ASSERT( vard != NULL );
-
 
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("75.2", 75.2, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void f4Test::TestRecord6(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(6);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("31977.0", 31977.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void f4Test::TestRecord7(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(7);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("29648.0", 29648.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void f4Test::TestRecord8(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(8);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1.535", 1.535, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void f4Test::TestRecord9(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(9);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("132900.0", 132900.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void f4Test::TestRecord10(void) {
-};
-void f4Test::TestRecord11(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(11);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void f4Test::TestRecord12(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(12);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(35.385593, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5614,25 +6662,6 @@ void fillerTest::tearDown() {
   frame = NULL;
 };
 
-void fillerTest::TestRecord0(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(0);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("5000.0", 5000.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
 
 CPPUNIT_TEST_SUITE_REGISTRATION( FINFinder_7E_23_8_230_0020Test );
 
@@ -5662,10 +6691,9 @@ void FINFinder_7E_23_8_230_0020Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1728680.0", 1728680.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1728680.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5681,10 +6709,9 @@ void FINFinder_7E_23_8_230_0020Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1728680.0", 1728680.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1728680.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5700,10 +6727,9 @@ void FINFinder_7E_23_8_230_0020Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("230.0", 230.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(230.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5719,10 +6745,9 @@ void FINFinder_7E_23_8_230_0020Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.6", 0.6, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.6, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5738,10 +6763,9 @@ void FINFinder_7E_23_8_230_0020Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("90.0", 90.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(90.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5757,10 +6781,9 @@ void FINFinder_7E_23_8_230_0020Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("655330.0", 655330.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(-30.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5822,10 +6845,9 @@ void frame2Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("12.565", 12.565, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(12.565, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5841,10 +6863,9 @@ void frame2Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.113", 0.113, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.113, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5860,10 +6881,9 @@ void frame2Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("218370.0", 218370.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(218370.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5902,10 +6922,9 @@ void gmcEmmod206Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("86.4", 86.4, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(86.4, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5921,10 +6940,9 @@ void gmcEmmod206Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("95.9", 95.9, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(95.9, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5940,10 +6958,9 @@ void gmcEmmod206Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("105.6", 105.6, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(105.6, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5959,10 +6976,9 @@ void gmcEmmod206Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.957", 0.957, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.957, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5978,10 +6994,9 @@ void gmcEmmod206Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1.055", 1.055, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1.055, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -5997,10 +7012,9 @@ void gmcEmmod206Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1.15", 1.15, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1.15, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6016,10 +7030,9 @@ void gmcEmmod206Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("224.0", 224.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(224.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6035,10 +7048,9 @@ void gmcEmmod206Test::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("65334.0", 65334.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(-202.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6054,10 +7066,9 @@ void gmcEmmod206Test::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("103880.0", 103880.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(103880.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6073,10 +7084,9 @@ void gmcEmmod206Test::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("150000.0", 150000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(150000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6092,10 +7102,9 @@ void gmcEmmod206Test::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("201590.0", 201590.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(201590.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6111,10 +7120,9 @@ void gmcEmmod206Test::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("250000.0", 250000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(250000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6130,10 +7138,9 @@ void gmcEmmod206Test::TestRecord12(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(12);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("300910.0", 300910.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(300910.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6149,10 +7156,9 @@ void gmcEmmod206Test::TestRecord13(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(13);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("350000.0", 350000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(350000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6168,10 +7174,9 @@ void gmcEmmod206Test::TestRecord14(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(14);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("402370.0", 402370.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(402370.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6187,10 +7192,9 @@ void gmcEmmod206Test::TestRecord15(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(15);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("450000.0", 450000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(450000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6206,10 +7210,9 @@ void gmcEmmod206Test::TestRecord16(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(16);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("224.0", 224.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(224.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6225,10 +7228,9 @@ void gmcEmmod206Test::TestRecord17(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(17);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6244,10 +7246,9 @@ void gmcEmmod206Test::TestRecord18(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(18);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6263,10 +7264,9 @@ void gmcEmmod206Test::TestRecord19(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(19);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("202.0", 202.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(202.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6305,10 +7305,9 @@ void GWFMTKcoderTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("182007.0", 182007.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(182007.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6324,10 +7323,9 @@ void GWFMTKcoderTest::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("269.0", 269.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(269.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6338,6 +7336,7 @@ void GWFMTKcoderTest::TestRecord1(void) {
   }
 };
 
+/*
 CPPUNIT_TEST_SUITE_REGISTRATION( invalidLengthTest );
 
 MBusRecord* invalidLengthTest::getRecord(unsigned int pos) {
@@ -6383,6 +7382,43 @@ void invalidLength2Test::tearDown() {
   frame = NULL;
 };
 
+void invalidLength2Test::TestRecord0(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(0);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void invalidLength2Test::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+*/
 
 CPPUNIT_TEST_SUITE_REGISTRATION( itronBm_MTest );
 
@@ -6412,10 +7448,9 @@ void itronBm_MTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("11490378.0", 11490378.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(11490378.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6431,10 +7466,9 @@ void itronBm_MTest::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("54.321", 54.321, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(54.321, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6445,6 +7479,24 @@ void itronBm_MTest::TestRecord1(void) {
   }
 };
 void itronBm_MTest::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  const string itronBm_M_record_2 { "2000-00-00" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2000-00-00", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(itronBm_M_record_2.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void itronBm_MTest::TestRecord3(void) {
   MBusRecord *record = NULL;
@@ -6452,10 +7504,9 @@ void itronBm_MTest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6466,6 +7517,24 @@ void itronBm_MTest::TestRecord3(void) {
   }
 };
 void itronBm_MTest::TestRecord4(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(4);
+  CPPUNIT_ASSERT( record != NULL );
+  const string itronBm_M_record_4 { "2012-01-24T13:29:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-01-24T13:29:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(itronBm_M_record_4.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void itronBm_MTest::TestRecord5(void) {
   MBusRecord *record = NULL;
@@ -6473,10 +7542,9 @@ void itronBm_MTest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6492,10 +7560,9 @@ void itronBm_MTest::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("2.0", 2.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(2.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6511,10 +7578,9 @@ void itronBm_MTest::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("6.0", 6.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(6.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6524,269 +7590,17 @@ void itronBm_MTest::TestRecord7(void) {
     vard = NULL;
   }
 };
-
-CPPUNIT_TEST_SUITE_REGISTRATION( itronCf51BemaTest );
-
-MBusRecord* itronCf51BemaTest::getRecord(unsigned int pos) {
- MBusDataRecord *ptr;
- if(vard == NULL) return NULL;
- ptr = vard->record;
- for(unsigned int i = 0; i < pos && ptr != NULL; i++)
-   ptr = ptr->next;
- if(ptr == NULL) return NULL;
- return ptr->getRecord();
-};
-
-void itronCf51BemaTest::setUp() {
-  frame = new MBusFrame();
-  frame->parse((unsigned char *)frame_data, frame_data_len);
-};
-
-void itronCf51BemaTest::tearDown() {
-  delete frame;
-  frame = NULL;
-};
-
-void itronCf51BemaTest::TestRecord0(void) {
+void itronBm_MTest::TestRecord8(void) {
   MBusRecord *record = NULL;
   vard = frame->getVariableData();
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
-  record = getRecord(0);
+  record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("14242391.0", 14242391.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void itronCf51BemaTest::TestRecord1(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(1);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("8270000000.0", 8270000000.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void itronCf51BemaTest::TestRecord2(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(2);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("51.7", 51.7, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void itronCf51BemaTest::TestRecord3(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(3);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void itronCf51BemaTest::TestRecord4(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(4);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.007", 0.007, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void itronCf51BemaTest::TestRecord5(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(5);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("41.1", 41.1, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void itronCf51BemaTest::TestRecord6(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(6);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("33.4", 33.4, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void itronCf51BemaTest::TestRecord7(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(7);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("7.75", 7.75, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void itronCf51BemaTest::TestRecord8(void) {
-};
-void itronCf51BemaTest::TestRecord9(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(9);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("29.0", 29.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void itronCf51BemaTest::TestRecord10(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(10);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("12.0", 12.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void itronCf51BemaTest::TestRecord11(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(11);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("28.0", 28.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void itronCf51BemaTest::TestRecord12(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(12);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void itronCf51BemaTest::TestRecord13(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(13);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  const string itronBm_M_record_8 { "00 00 8F 13" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("00 00 8F 13", 11, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(itronBm_M_record_8.c_str(), record->value->str_val.value, record->value->str_val.size));
   if(record != NULL) {
     delete record;
   }
@@ -6825,10 +7639,9 @@ void itronCf_51Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("11155185.0", 11155185.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(11155185.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6844,10 +7657,9 @@ void itronCf_51Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6863,10 +7675,9 @@ void itronCf_51Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6882,10 +7693,9 @@ void itronCf_51Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("99999900.0", 99999900.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(99999900.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6901,10 +7711,9 @@ void itronCf_51Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6920,10 +7729,9 @@ void itronCf_51Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("999.9", 999.9, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(999.9, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6939,10 +7747,9 @@ void itronCf_51Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("999.9", 999.9, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(999.9, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6958,10 +7765,9 @@ void itronCf_51Test::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("9999.99", 9999.99, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(9999.99, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6972,6 +7778,24 @@ void itronCf_51Test::TestRecord7(void) {
   }
 };
 void itronCf_51Test::TestRecord8(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(8);
+  CPPUNIT_ASSERT( record != NULL );
+  const string itronCf_51_record_8 { "2012-01-24T13:24:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-01-24T13:24:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(itronCf_51_record_8.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void itronCf_51Test::TestRecord9(void) {
   MBusRecord *record = NULL;
@@ -6979,10 +7803,9 @@ void itronCf_51Test::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("104.0", 104.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(8985600.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -6998,10 +7821,9 @@ void itronCf_51Test::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("11.0", 11.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(11.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7017,10 +7839,9 @@ void itronCf_51Test::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("26.0", 26.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(26.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7036,10 +7857,9 @@ void itronCf_51Test::TestRecord12(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(12);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("321.0", 321.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(321.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7055,10 +7875,9 @@ void itronCf_51Test::TestRecord13(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(13);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1.23", 1.23, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1.23, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7074,10 +7893,29 @@ void itronCf_51Test::TestRecord14(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(14);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void itronCf_51Test::TestRecord15(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(15);
+  CPPUNIT_ASSERT( record != NULL );
+  const string itronCf_51_record_15 { "03 20" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("03 20", 5, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(itronCf_51_record_15.c_str(), record->value->str_val.value, record->value->str_val.size));
   if(record != NULL) {
     delete record;
   }
@@ -7116,10 +7954,9 @@ void itronCf_55Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("11127667.0", 11127667.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(11127667.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7135,10 +7972,9 @@ void itronCf_55Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7154,10 +7990,9 @@ void itronCf_55Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7173,10 +8008,9 @@ void itronCf_55Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("99999900.0", 99999900.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(99999900.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7192,10 +8026,9 @@ void itronCf_55Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7211,10 +8044,9 @@ void itronCf_55Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("999.9", 999.9, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(999.9, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7230,10 +8062,9 @@ void itronCf_55Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("999.9", 999.9, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(999.9, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7249,10 +8080,9 @@ void itronCf_55Test::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("9999.99", 9999.99, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(9999.99, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7263,6 +8093,24 @@ void itronCf_55Test::TestRecord7(void) {
   }
 };
 void itronCf_55Test::TestRecord8(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(8);
+  CPPUNIT_ASSERT( record != NULL );
+  const string itronCf_55_record_8 { "2012-01-24T11:47:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-01-24T11:47:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(itronCf_55_record_8.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void itronCf_55Test::TestRecord9(void) {
   MBusRecord *record = NULL;
@@ -7270,10 +8118,9 @@ void itronCf_55Test::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("252.0", 252.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(21772800.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7289,10 +8136,9 @@ void itronCf_55Test::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("10.0", 10.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(10.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7308,10 +8154,29 @@ void itronCf_55Test::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("21.0", 21.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(21.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void itronCf_55Test::TestRecord12(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(12);
+  CPPUNIT_ASSERT( record != NULL );
+  const string itronCf_55_record_12 { "03 20" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("03 20", 5, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(itronCf_55_record_12.c_str(), record->value->str_val.value, record->value->str_val.size));
   if(record != NULL) {
     delete record;
   }
@@ -7350,10 +8215,9 @@ void itronCfEcho_2Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("11100091.0", 11100091.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(11100091.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7369,10 +8233,9 @@ void itronCfEcho_2Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7388,10 +8251,9 @@ void itronCfEcho_2Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7407,10 +8269,9 @@ void itronCfEcho_2Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("99999900.0", 99999900.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(99999900.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7426,10 +8287,9 @@ void itronCfEcho_2Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("999.999", 999.999, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(999.999, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7445,10 +8305,9 @@ void itronCfEcho_2Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("20.5", 20.5, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(20.5, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7464,10 +8323,9 @@ void itronCfEcho_2Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("20.6", 20.6, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(20.6, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7483,10 +8341,9 @@ void itronCfEcho_2Test::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.09", 0.09, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.09, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7497,6 +8354,24 @@ void itronCfEcho_2Test::TestRecord7(void) {
   }
 };
 void itronCfEcho_2Test::TestRecord8(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(8);
+  CPPUNIT_ASSERT( record != NULL );
+  const string itronCfEcho_2_record_8 { "2012-01-24T13:29:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-01-24T13:29:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(itronCfEcho_2_record_8.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void itronCfEcho_2Test::TestRecord9(void) {
   MBusRecord *record = NULL;
@@ -7504,10 +8379,9 @@ void itronCfEcho_2Test::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("385.0", 385.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(33264000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7523,10 +8397,9 @@ void itronCfEcho_2Test::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("19.0", 19.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(19.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7542,10 +8415,9 @@ void itronCfEcho_2Test::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("45.0", 45.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(45.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7555,7 +8427,27 @@ void itronCfEcho_2Test::TestRecord11(void) {
     vard = NULL;
   }
 };
+void itronCfEcho_2Test::TestRecord12(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
 
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(12);
+  CPPUNIT_ASSERT( record != NULL );
+  const string itronCfEcho_2_record_12 { "20 00" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("20 00", 5, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(itronCfEcho_2_record_12.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+/*
 CPPUNIT_TEST_SUITE_REGISTRATION( itronCybleMBusV1_4ColdWaterTest );
 
 MBusRecord* itronCybleMBusV1_4ColdWaterTest::getRecord(unsigned int pos) {
@@ -7584,10 +8476,9 @@ void itronCybleMBusV1_4ColdWaterTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("10020380.0", 10020380.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(10020380.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7598,8 +8489,42 @@ void itronCybleMBusV1_4ColdWaterTest::TestRecord0(void) {
   }
 };
 void itronCybleMBusV1_4ColdWaterTest::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  const string itronCybleMBusV1_4ColdWater_record_1 { "2011-10-25T15:39:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2011-10-25T15:39:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(itronCybleMBusV1_4ColdWater_record_1.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void itronCybleMBusV1_4ColdWaterTest::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(4050.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void itronCybleMBusV1_4ColdWaterTest::TestRecord3(void) {
   MBusRecord *record = NULL;
@@ -7607,10 +8532,9 @@ void itronCybleMBusV1_4ColdWaterTest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("4050.0", 4050.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(453.5, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7626,10 +8550,9 @@ void itronCybleMBusV1_4ColdWaterTest::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("453.5", 453.5, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7645,10 +8568,9 @@ void itronCybleMBusV1_4ColdWaterTest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(453.5, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7664,10 +8586,11 @@ void itronCybleMBusV1_4ColdWaterTest::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("453.5", 453.5, record->value->real_val, 0.000001);
+  const string itronCybleMBusV1_4ColdWater_record_6 { "00 04 1F" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("00 04 1F", 8, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(itronCybleMBusV1_4ColdWater_record_6.c_str(), record->value->str_val.value, record->value->str_val.size));
   if(record != NULL) {
     delete record;
   }
@@ -7706,10 +8629,9 @@ void itronCybleMBusV1_4GasTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("10020387.0", 10020387.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(10020387.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7720,8 +8642,42 @@ void itronCybleMBusV1_4GasTest::TestRecord0(void) {
   }
 };
 void itronCybleMBusV1_4GasTest::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  const string itronCybleMBusV1_4Gas_record_1 { "2011-10-25T15:43:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2011-10-25T15:43:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(itronCybleMBusV1_4Gas_record_1.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void itronCybleMBusV1_4GasTest::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(4050.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void itronCybleMBusV1_4GasTest::TestRecord3(void) {
   MBusRecord *record = NULL;
@@ -7729,10 +8685,9 @@ void itronCybleMBusV1_4GasTest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("4050.0", 4050.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.26, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7748,10 +8703,9 @@ void itronCybleMBusV1_4GasTest::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.26", 0.26, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7767,10 +8721,9 @@ void itronCybleMBusV1_4GasTest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.25, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7786,10 +8739,11 @@ void itronCybleMBusV1_4GasTest::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.25", 0.25, record->value->real_val, 0.000001);
+  const string itronCybleMBusV1_4Gas_record_6 { "00 02 1F" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("00 02 1F", 8, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(itronCybleMBusV1_4Gas_record_6.c_str(), record->value->str_val.value, record->value->str_val.size));
   if(record != NULL) {
     delete record;
   }
@@ -7799,7 +8753,7 @@ void itronCybleMBusV1_4GasTest::TestRecord6(void) {
     vard = NULL;
   }
 };
-
+*/
 CPPUNIT_TEST_SUITE_REGISTRATION( itronCybleMBusV1_4WaterTest );
 
 MBusRecord* itronCybleMBusV1_4WaterTest::getRecord(unsigned int pos) {
@@ -7828,10 +8782,9 @@ void itronCybleMBusV1_4WaterTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("12000071.0", 12000071.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(12000071.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7842,8 +8795,44 @@ void itronCybleMBusV1_4WaterTest::TestRecord0(void) {
   }
 };
 void itronCybleMBusV1_4WaterTest::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  const string itronCybleMBusV1_4Water_record_1 { "TEST CYBLE" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("TEST CYBLE", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(itronCybleMBusV1_4Water_record_1.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void itronCybleMBusV1_4WaterTest::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  const string itronCybleMBusV1_4Water_record_2 { "2012-01-24T13:43:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-01-24T13:43:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(itronCybleMBusV1_4Water_record_2.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void itronCybleMBusV1_4WaterTest::TestRecord3(void) {
   MBusRecord *record = NULL;
@@ -7851,10 +8840,9 @@ void itronCybleMBusV1_4WaterTest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("4338.0", 4338.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(4338.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7870,10 +8858,9 @@ void itronCybleMBusV1_4WaterTest::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("123.49", 123.49, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(123.49, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7889,10 +8876,9 @@ void itronCybleMBusV1_4WaterTest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.2", 0.2, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.2, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7908,10 +8894,29 @@ void itronCybleMBusV1_4WaterTest::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void itronCybleMBusV1_4WaterTest::TestRecord7(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(7);
+  CPPUNIT_ASSERT( record != NULL );
+  const string itronCybleMBusV1_4Water_record_7 { "10 01 1F" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("10 01 1F", 8, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(itronCybleMBusV1_4Water_record_7.c_str(), record->value->str_val.value, record->value->str_val.size));
   if(record != NULL) {
     delete record;
   }
@@ -7950,10 +8955,9 @@ void itronIntegralMkMaxxTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("11817314.0", 11817314.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(11817314.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7969,10 +8973,9 @@ void itronIntegralMkMaxxTest::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -7988,10 +8991,9 @@ void itronIntegralMkMaxxTest::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.02", 0.02, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.02, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8007,10 +9009,9 @@ void itronIntegralMkMaxxTest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8026,10 +9027,9 @@ void itronIntegralMkMaxxTest::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("21.2", 21.2, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(21.2, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8045,10 +9045,9 @@ void itronIntegralMkMaxxTest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("21.1", 21.1, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(21.1, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8064,10 +9063,9 @@ void itronIntegralMkMaxxTest::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.07", 0.07, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.07, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8083,10 +9081,9 @@ void itronIntegralMkMaxxTest::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8102,10 +9099,9 @@ void itronIntegralMkMaxxTest::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("397.0", 397.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(34300800.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8116,6 +9112,24 @@ void itronIntegralMkMaxxTest::TestRecord8(void) {
   }
 };
 void itronIntegralMkMaxxTest::TestRecord9(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(9);
+  CPPUNIT_ASSERT( record != NULL );
+  const string itronIntegralMkMaxx_record_9 { "2012-01-24T14:17:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-01-24T14:17:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(itronIntegralMkMaxx_record_9.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void itronIntegralMkMaxxTest::TestRecord10(void) {
   MBusRecord *record = NULL;
@@ -8123,10 +9137,9 @@ void itronIntegralMkMaxxTest::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1.23", 1.23, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1.23, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8142,10 +9155,9 @@ void itronIntegralMkMaxxTest::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3.21", 3.21, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3.21, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8161,10 +9173,9 @@ void itronIntegralMkMaxxTest::TestRecord12(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(12);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3.0", 3.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8180,10 +9191,9 @@ void itronIntegralMkMaxxTest::TestRecord13(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(13);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("18.0", 18.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(18.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8193,305 +9203,17 @@ void itronIntegralMkMaxxTest::TestRecord13(void) {
     vard = NULL;
   }
 };
-
-CPPUNIT_TEST_SUITE_REGISTRATION( kam_114F1Test );
-
-MBusRecord* kam_114F1Test::getRecord(unsigned int pos) {
- MBusDataRecord *ptr;
- if(vard == NULL) return NULL;
- ptr = vard->record;
- for(unsigned int i = 0; i < pos && ptr != NULL; i++)
-   ptr = ptr->next;
- if(ptr == NULL) return NULL;
- return ptr->getRecord();
-};
-
-void kam_114F1Test::setUp() {
-  frame = new MBusFrame();
-  frame->parse((unsigned char *)frame_data, frame_data_len);
-};
-
-void kam_114F1Test::tearDown() {
-  delete frame;
-  frame = NULL;
-};
-
-void kam_114F1Test::TestRecord0(void) {
+void itronIntegralMkMaxxTest::TestRecord14(void) {
   MBusRecord *record = NULL;
   vard = frame->getVariableData();
 
   CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(0);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("69104310.0", 69104310.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord1(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(1);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("4505160000.0", 4505160000.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord2(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(2);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("109006.2", 109006.2, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord3(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(3);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("40751.0", 40751.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord4(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(4);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("82.3", 82.3, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord5(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(5);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("28.13", 28.13, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord6(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(6);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("54.17", 54.17, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord7(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(7);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("54100.0", 54100.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord8(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(8);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("313700.0", 313700.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord9(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(9);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.864", 0.864, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord10(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(10);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("10.907", 10.907, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord11(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(11);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord12(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(12);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord13(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(13);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord14(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
 
   record = getRecord(14);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  const string itronIntegralMkMaxx_record_14 { "00 16" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("00 16", 5, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(itronIntegralMkMaxx_record_14.c_str(), record->value->str_val.value, record->value->str_val.size));
   if(record != NULL) {
     delete record;
   }
@@ -8500,200 +9222,6 @@ void kam_114F1Test::TestRecord14(void) {
     delete vard;
     vard = NULL;
   }
-};
-void kam_114F1Test::TestRecord15(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(15);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord16(void) {
-};
-void kam_114F1Test::TestRecord17(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(17);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("4043790000.0", 4043790000.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord18(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(18);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("98089.0", 98089.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord19(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(19);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("295400.0", 295400.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord20(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(20);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("11.256", 11.256, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord21(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(21);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord22(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(22);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord23(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(23);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord24(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(24);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord25(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(25);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void kam_114F1Test::TestRecord26(void) {
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION( kamstrup_382_005Test );
@@ -8724,10 +9252,9 @@ void kamstrup_382_005Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8743,10 +9270,9 @@ void kamstrup_382_005Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("9.0", 9.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(32400.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8762,10 +9288,9 @@ void kamstrup_382_005Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8781,10 +9306,9 @@ void kamstrup_382_005Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8800,10 +9324,9 @@ void kamstrup_382_005Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8819,10 +9342,29 @@ void kamstrup_382_005Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void kamstrup_382_005Test::TestRecord6(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(6);
+  CPPUNIT_ASSERT( record != NULL );
+  const string kamstrup_382_005_record_6 { "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 10" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 10", 47, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(kamstrup_382_005_record_6.c_str(), record->value->str_val.value, record->value->str_val.size));
   if(record != NULL) {
     delete record;
   }
@@ -8861,10 +9403,9 @@ void kamstrupMultical_601Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("6855817.0", 6855817.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(6855817.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8880,10 +9421,9 @@ void kamstrupMultical_601Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("37351000.0", 37351000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(37351000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8899,10 +9439,9 @@ void kamstrupMultical_601Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("561.08", 561.08, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(561.08, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8918,10 +9457,9 @@ void kamstrupMultical_601Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("985.0", 985.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3546000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8937,10 +9475,9 @@ void kamstrupMultical_601Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("101.69", 101.69, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(101.69, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8956,10 +9493,9 @@ void kamstrupMultical_601Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("46.16", 46.16, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(46.16, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8975,10 +9511,9 @@ void kamstrupMultical_601Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("55.53", 55.53, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(55.53, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -8994,10 +9529,9 @@ void kamstrupMultical_601Test::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("34700.0", 34700.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(34700.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9013,10 +9547,9 @@ void kamstrupMultical_601Test::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("44800.0", 44800.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(44800.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9032,10 +9565,9 @@ void kamstrupMultical_601Test::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.543", 0.543, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.543, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9051,10 +9583,9 @@ void kamstrupMultical_601Test::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.628", 0.628, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.628, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9070,10 +9601,9 @@ void kamstrupMultical_601Test::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9089,10 +9619,9 @@ void kamstrupMultical_601Test::TestRecord12(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(12);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9108,10 +9637,9 @@ void kamstrupMultical_601Test::TestRecord13(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(13);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9127,10 +9655,9 @@ void kamstrupMultical_601Test::TestRecord14(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(14);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9146,10 +9673,9 @@ void kamstrupMultical_601Test::TestRecord15(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(15);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9160,6 +9686,24 @@ void kamstrupMultical_601Test::TestRecord15(void) {
   }
 };
 void kamstrupMultical_601Test::TestRecord16(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(16);
+  CPPUNIT_ASSERT( record != NULL );
+  const string kamstrupMultical_601_record_16 { "2011-01-05T15:26:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2011-01-05T15:26:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(kamstrupMultical_601_record_16.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void kamstrupMultical_601Test::TestRecord17(void) {
   MBusRecord *record = NULL;
@@ -9167,10 +9711,9 @@ void kamstrupMultical_601Test::TestRecord17(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(17);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("33361000.0", 33361000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(33361000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9186,10 +9729,9 @@ void kamstrupMultical_601Test::TestRecord18(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(18);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("500.98", 500.98, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(500.98, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9205,10 +9747,9 @@ void kamstrupMultical_601Test::TestRecord19(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(19);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("55000.0", 55000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(55000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9224,10 +9765,9 @@ void kamstrupMultical_601Test::TestRecord20(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(20);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1.027", 1.027, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1.027, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9243,10 +9783,9 @@ void kamstrupMultical_601Test::TestRecord21(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(21);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9262,10 +9801,9 @@ void kamstrupMultical_601Test::TestRecord22(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(22);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9281,10 +9819,9 @@ void kamstrupMultical_601Test::TestRecord23(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(23);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9300,10 +9837,9 @@ void kamstrupMultical_601Test::TestRecord24(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(24);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9319,10 +9855,9 @@ void kamstrupMultical_601Test::TestRecord25(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(25);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9333,6 +9868,44 @@ void kamstrupMultical_601Test::TestRecord25(void) {
   }
 };
 void kamstrupMultical_601Test::TestRecord26(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(26);
+  CPPUNIT_ASSERT( record != NULL );
+  const string kamstrupMultical_601_record_26 { "2010-12-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2010-12-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(kamstrupMultical_601_record_26.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void kamstrupMultical_601Test::TestRecord27(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(27);
+  CPPUNIT_ASSERT( record != NULL );
+  const string kamstrupMultical_601_record_27 { "00 00 00 00 E7 E4 00 00 63 66 00 00 00 00 00 00 00 00 00 00 00 00 00 00 5B C9 A5 02 34 53 00 00 E0 B2 03 00 89 9C 68 00 00 00 00 00 01 00 01 07 07 09 01 03 00 00 00 00 00" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("00 00 00 00 E7 E4 00 00 63 66 00 00 00 00 00 00 00 00 00 00 00 00 00 00 5B C9 A5 02 34 53 00 00 E0 B2 03 00 89 9C 68 00 00 00 00 00 01 00 01 07 07 09 01 03 00 00 00 00 00", 170, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(kamstrupMultical_601_record_27.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION( landisGyrUltraheatT230Test );
@@ -9363,10 +9936,9 @@ void landisGyrUltraheatT230Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("4.0", 4.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(4.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9382,10 +9954,9 @@ void landisGyrUltraheatT230Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("8.0", 8.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(8.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9401,10 +9972,9 @@ void landisGyrUltraheatT230Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9420,10 +9990,9 @@ void landisGyrUltraheatT230Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9439,10 +10008,9 @@ void landisGyrUltraheatT230Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9458,10 +10026,9 @@ void landisGyrUltraheatT230Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9477,10 +10044,9 @@ void landisGyrUltraheatT230Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("19.5", 19.5, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(19.5, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9496,10 +10062,9 @@ void landisGyrUltraheatT230Test::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("19.7", 19.7, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(19.7, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9515,10 +10080,9 @@ void landisGyrUltraheatT230Test::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("-0.2", -0.2, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(150000.2, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9534,10 +10098,9 @@ void landisGyrUltraheatT230Test::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("66660205.0", 66660205.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(66660205.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9553,10 +10116,9 @@ void landisGyrUltraheatT230Test::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("7.0", 7.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(420.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9572,10 +10134,9 @@ void landisGyrUltraheatT230Test::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3769.0", 3769.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(13568400.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9591,10 +10152,9 @@ void landisGyrUltraheatT230Test::TestRecord12(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(12);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3769.0", 3769.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(13568400.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9610,10 +10170,9 @@ void landisGyrUltraheatT230Test::TestRecord13(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(13);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9629,10 +10188,9 @@ void landisGyrUltraheatT230Test::TestRecord14(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(14);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9648,10 +10206,9 @@ void landisGyrUltraheatT230Test::TestRecord15(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(15);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9667,10 +10224,9 @@ void landisGyrUltraheatT230Test::TestRecord16(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(16);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9686,10 +10242,9 @@ void landisGyrUltraheatT230Test::TestRecord17(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(17);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("30.7", 30.7, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(30.7, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9705,10 +10260,9 @@ void landisGyrUltraheatT230Test::TestRecord18(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(18);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("50.7", 50.7, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(50.7, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9724,10 +10278,9 @@ void landisGyrUltraheatT230Test::TestRecord19(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(19);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9743,10 +10296,9 @@ void landisGyrUltraheatT230Test::TestRecord20(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(20);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9762,10 +10314,9 @@ void landisGyrUltraheatT230Test::TestRecord21(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(21);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("41065374.6", 41065374.6, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(41065374.6, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9781,10 +10332,9 @@ void landisGyrUltraheatT230Test::TestRecord22(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(22);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("40953732.3", 40953732.3, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(40953732.3, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9800,10 +10350,9 @@ void landisGyrUltraheatT230Test::TestRecord23(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(23);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9819,10 +10368,9 @@ void landisGyrUltraheatT230Test::TestRecord24(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(24);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9838,10 +10386,9 @@ void landisGyrUltraheatT230Test::TestRecord25(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(25);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3469.0", 3469.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(12488400.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9857,10 +10404,9 @@ void landisGyrUltraheatT230Test::TestRecord26(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(26);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9876,10 +10422,9 @@ void landisGyrUltraheatT230Test::TestRecord27(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(27);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9895,10 +10440,9 @@ void landisGyrUltraheatT230Test::TestRecord28(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(28);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9914,10 +10458,9 @@ void landisGyrUltraheatT230Test::TestRecord29(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(29);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9933,10 +10476,9 @@ void landisGyrUltraheatT230Test::TestRecord30(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(30);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("30.7", 30.7, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(30.7, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9952,10 +10494,9 @@ void landisGyrUltraheatT230Test::TestRecord31(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(31);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("50.7", 50.7, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(50.7, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -9966,8 +10507,64 @@ void landisGyrUltraheatT230Test::TestRecord31(void) {
   }
 };
 void landisGyrUltraheatT230Test::TestRecord32(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(32);
+  CPPUNIT_ASSERT( record != NULL );
+  const string landisGyrUltraheatT230_record_32 { "2127-01-01T00:00:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2127-01-01T00:00:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(landisGyrUltraheatT230_record_32.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void landisGyrUltraheatT230Test::TestRecord33(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(33);
+  CPPUNIT_ASSERT( record != NULL );
+  const string landisGyrUltraheatT230_record_33 { "2012-01-13T12:04:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-01-13T12:04:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(landisGyrUltraheatT230_record_33.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void landisGyrUltraheatT230Test::TestRecord34(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(34);
+  CPPUNIT_ASSERT( record != NULL );
+  const string landisGyrUltraheatT230_record_34 { "09 07 00 66 01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("09 07 00 66 01", 14, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(landisGyrUltraheatT230_record_34.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION( LGBG350Test );
@@ -9998,10 +10595,9 @@ void LGBG350Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("10834.092", 10834.092, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(10834.092, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10017,10 +10613,11 @@ void LGBG350Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1.67873347584e+11", 1.67873347584e+11, record->value->real_val, 0.000001);
+  const string LGBG350_record_1 { "2016-07-22T08:00:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2016-07-22T08:00:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(LGBG350_record_1.c_str(), record->value->str_val.value, record->value->str_val.size));
   if(record != NULL) {
     delete record;
   }
@@ -10031,6 +10628,24 @@ void LGBG350Test::TestRecord1(void) {
   }
 };
 void LGBG350Test::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  const string LGBG350_record_2 { "G0017591208205814" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("G0017591208205814", 17, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(LGBG350_record_2.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void LGBG350Test::TestRecord3(void) {
   MBusRecord *record = NULL;
@@ -10038,10 +10653,9 @@ void LGBG350Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1.0", 1.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10057,10 +10671,9 @@ void LGBG350Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10076,10 +10689,9 @@ void LGBG350Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("15.0", 15.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(15.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10090,6 +10702,7 @@ void LGBG350Test::TestRecord5(void) {
   }
 };
 
+/*
 CPPUNIT_TEST_SUITE_REGISTRATION( manualFrame2Test );
 
 MBusRecord* manualFrame2Test::getRecord(unsigned int pos) {
@@ -10112,6 +10725,42 @@ void manualFrame2Test::tearDown() {
   frame = NULL;
 };
 
+void manualFrame2Test::TestRecord0(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(0);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void manualFrame2Test::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(135.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
 
 CPPUNIT_TEST_SUITE_REGISTRATION( manualFrame3Test );
 
@@ -10141,10 +10790,9 @@ void manualFrame3Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("12.565", 12.565, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(12.565, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10160,10 +10808,9 @@ void manualFrame3Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.113", 0.113, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.113, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10179,10 +10826,9 @@ void manualFrame3Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("218370.0", 218370.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(218370.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10214,26 +10860,7 @@ void manualFrame7Test::tearDown() {
   delete frame;
   frame = NULL;
 };
-
-void manualFrame7Test::TestRecord0(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(0);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1020304.0", 1020304.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
+*/
 
 CPPUNIT_TEST_SUITE_REGISTRATION( metronaPolluthermTest );
 
@@ -10263,10 +10890,9 @@ void metronaPolluthermTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10282,10 +10908,9 @@ void metronaPolluthermTest::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10301,10 +10926,9 @@ void metronaPolluthermTest::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10320,10 +10944,9 @@ void metronaPolluthermTest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10339,10 +10962,9 @@ void metronaPolluthermTest::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10358,10 +10980,9 @@ void metronaPolluthermTest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10377,10 +10998,9 @@ void metronaPolluthermTest::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10396,10 +11016,9 @@ void metronaPolluthermTest::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("44950146.0", 44950146.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(44950146.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10415,10 +11034,9 @@ void metronaPolluthermTest::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("44950146.0", 44950146.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(44950146.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10457,10 +11075,9 @@ void metronaUltraheatXsTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("4.0", 4.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(4.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10476,10 +11093,9 @@ void metronaUltraheatXsTest::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("4.0", 4.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(4.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10495,10 +11111,9 @@ void metronaUltraheatXsTest::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("19969000.0", 19969000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(19969000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10514,10 +11129,9 @@ void metronaUltraheatXsTest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("26492.18", 26492.18, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(26492.18, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10533,10 +11147,9 @@ void metronaUltraheatXsTest::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10552,10 +11165,9 @@ void metronaUltraheatXsTest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10571,10 +11183,9 @@ void metronaUltraheatXsTest::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10590,10 +11201,9 @@ void metronaUltraheatXsTest::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10609,10 +11219,9 @@ void metronaUltraheatXsTest::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10628,10 +11237,9 @@ void metronaUltraheatXsTest::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("26492.18", 26492.18, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(26492.18, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10647,10 +11255,9 @@ void metronaUltraheatXsTest::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("19969000.0", 19969000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(19969000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10666,10 +11273,9 @@ void metronaUltraheatXsTest::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("65110054.0", 65110054.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(65110054.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10685,10 +11291,9 @@ void metronaUltraheatXsTest::TestRecord12(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(12);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("60.0", 60.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3600.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10704,10 +11309,9 @@ void metronaUltraheatXsTest::TestRecord13(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(13);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("31600.0", 31600.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(31600.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10723,10 +11327,9 @@ void metronaUltraheatXsTest::TestRecord14(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(14);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("31600.0", 31600.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(31600.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10742,10 +11345,9 @@ void metronaUltraheatXsTest::TestRecord15(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(15);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("8.82", 8.82, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(8.82, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10761,10 +11363,9 @@ void metronaUltraheatXsTest::TestRecord16(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(16);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("44.0", 44.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(44.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10780,10 +11381,9 @@ void metronaUltraheatXsTest::TestRecord17(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(17);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("40.0", 40.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(40.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10799,10 +11399,9 @@ void metronaUltraheatXsTest::TestRecord18(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(18);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("70067.0", 70067.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(252241200.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10818,10 +11417,9 @@ void metronaUltraheatXsTest::TestRecord19(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(19);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("51609.0", 51609.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(185792400.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10837,10 +11435,9 @@ void metronaUltraheatXsTest::TestRecord20(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(20);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("47817.0", 47817.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(172141200.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10851,6 +11448,24 @@ void metronaUltraheatXsTest::TestRecord20(void) {
   }
 };
 void metronaUltraheatXsTest::TestRecord21(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(21);
+  CPPUNIT_ASSERT( record != NULL );
+  const string metronaUltraheatXs_record_21 { "2000-01-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2000-01-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(metronaUltraheatXs_record_21.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void metronaUltraheatXsTest::TestRecord22(void) {
   MBusRecord *record = NULL;
@@ -10858,10 +11473,9 @@ void metronaUltraheatXsTest::TestRecord22(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(22);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10877,10 +11491,9 @@ void metronaUltraheatXsTest::TestRecord23(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(23);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10896,10 +11509,9 @@ void metronaUltraheatXsTest::TestRecord24(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(24);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10915,10 +11527,9 @@ void metronaUltraheatXsTest::TestRecord25(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(25);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10934,10 +11545,9 @@ void metronaUltraheatXsTest::TestRecord26(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(26);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10953,10 +11563,9 @@ void metronaUltraheatXsTest::TestRecord27(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(27);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10972,10 +11581,9 @@ void metronaUltraheatXsTest::TestRecord28(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(28);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("36.0", 36.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(36.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -10991,10 +11599,9 @@ void metronaUltraheatXsTest::TestRecord29(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(29);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("40.0", 40.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(40.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11010,10 +11617,9 @@ void metronaUltraheatXsTest::TestRecord30(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(30);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11029,10 +11635,9 @@ void metronaUltraheatXsTest::TestRecord31(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(31);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11048,10 +11653,9 @@ void metronaUltraheatXsTest::TestRecord32(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(32);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("51465.0", 51465.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(185274000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11067,10 +11671,9 @@ void metronaUltraheatXsTest::TestRecord33(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(33);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("19969000.0", 19969000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(19969000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11086,10 +11689,9 @@ void metronaUltraheatXsTest::TestRecord34(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(34);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11105,10 +11707,9 @@ void metronaUltraheatXsTest::TestRecord35(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(35);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11124,10 +11725,9 @@ void metronaUltraheatXsTest::TestRecord36(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(36);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11143,10 +11743,9 @@ void metronaUltraheatXsTest::TestRecord37(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(37);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("26492.18", 26492.18, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(26492.18, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11157,6 +11756,44 @@ void metronaUltraheatXsTest::TestRecord37(void) {
   }
 };
 void metronaUltraheatXsTest::TestRecord38(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(38);
+  CPPUNIT_ASSERT( record != NULL );
+  const string metronaUltraheatXs_record_38 { "2012-06-07T00:38:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-06-07T00:38:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(metronaUltraheatXs_record_38.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void metronaUltraheatXsTest::TestRecord39(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(39);
+  CPPUNIT_ASSERT( record != NULL );
+  const string metronaUltraheatXs_record_39 { "03 02 00 00 23" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("03 02 00 00 23", 14, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(metronaUltraheatXs_record_39.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION( minolMinocalC2Test );
@@ -11187,10 +11824,9 @@ void minolMinocalC2Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3000.0", 3000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11206,10 +11842,9 @@ void minolMinocalC2Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11220,6 +11855,24 @@ void minolMinocalC2Test::TestRecord1(void) {
   }
 };
 void minolMinocalC2Test::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  const string minolMinocalC2_record_2 { "2013-01-01T00:00:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2013-01-01T00:00:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(minolMinocalC2_record_2.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void minolMinocalC2Test::TestRecord3(void) {
   MBusRecord *record = NULL;
@@ -11227,10 +11880,9 @@ void minolMinocalC2Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3000.0", 3000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11246,10 +11898,9 @@ void minolMinocalC2Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11265,10 +11916,9 @@ void minolMinocalC2Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.073", 0.073, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.073, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11284,10 +11934,9 @@ void minolMinocalC2Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11303,10 +11952,9 @@ void minolMinocalC2Test::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.043", 0.043, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.043, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11317,6 +11965,24 @@ void minolMinocalC2Test::TestRecord7(void) {
   }
 };
 void minolMinocalC2Test::TestRecord8(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(8);
+  CPPUNIT_ASSERT( record != NULL );
+  const string minolMinocalC2_record_8 { "2011-09-01T08:30:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2011-09-01T08:30:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(minolMinocalC2_record_8.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void minolMinocalC2Test::TestRecord9(void) {
   MBusRecord *record = NULL;
@@ -11324,10 +11990,9 @@ void minolMinocalC2Test::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11343,10 +12008,9 @@ void minolMinocalC2Test::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("2000.0", 2000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(2000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11357,6 +12021,24 @@ void minolMinocalC2Test::TestRecord10(void) {
   }
 };
 void minolMinocalC2Test::TestRecord11(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(11);
+  CPPUNIT_ASSERT( record != NULL );
+  const string minolMinocalC2_record_11 { "2011-09-01T08:30:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2011-09-01T08:30:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(minolMinocalC2_record_11.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void minolMinocalC2Test::TestRecord12(void) {
   MBusRecord *record = NULL;
@@ -11364,10 +12046,9 @@ void minolMinocalC2Test::TestRecord12(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(12);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("20.09", 20.09, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(20.09, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11383,10 +12064,9 @@ void minolMinocalC2Test::TestRecord13(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(13);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("19.27", 19.27, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(19.27, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11397,8 +12077,44 @@ void minolMinocalC2Test::TestRecord13(void) {
   }
 };
 void minolMinocalC2Test::TestRecord14(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(14);
+  CPPUNIT_ASSERT( record != NULL );
+  const string minolMinocalC2_record_14 { "2012-01-13T11:53:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-01-13T11:53:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(minolMinocalC2_record_14.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void minolMinocalC2Test::TestRecord15(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(15);
+  CPPUNIT_ASSERT( record != NULL );
+  const string minolMinocalC2_record_15 { "2012-01-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-01-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(minolMinocalC2_record_15.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void minolMinocalC2Test::TestRecord16(void) {
   MBusRecord *record = NULL;
@@ -11406,10 +12122,9 @@ void minolMinocalC2Test::TestRecord16(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(16);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3000.0", 3000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11420,6 +12135,24 @@ void minolMinocalC2Test::TestRecord16(void) {
   }
 };
 void minolMinocalC2Test::TestRecord17(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(17);
+  CPPUNIT_ASSERT( record != NULL );
+  const string minolMinocalC2_record_17 { "2011-12-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2011-12-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(minolMinocalC2_record_17.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void minolMinocalC2Test::TestRecord18(void) {
   MBusRecord *record = NULL;
@@ -11427,10 +12160,9 @@ void minolMinocalC2Test::TestRecord18(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(18);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3000.0", 3000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11441,6 +12173,24 @@ void minolMinocalC2Test::TestRecord18(void) {
   }
 };
 void minolMinocalC2Test::TestRecord19(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(19);
+  CPPUNIT_ASSERT( record != NULL );
+  const string minolMinocalC2_record_19 { "2011-11-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2011-11-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(minolMinocalC2_record_19.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void minolMinocalC2Test::TestRecord20(void) {
   MBusRecord *record = NULL;
@@ -11448,10 +12198,9 @@ void minolMinocalC2Test::TestRecord20(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(20);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3000.0", 3000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11462,6 +12211,24 @@ void minolMinocalC2Test::TestRecord20(void) {
   }
 };
 void minolMinocalC2Test::TestRecord21(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(21);
+  CPPUNIT_ASSERT( record != NULL );
+  const string minolMinocalC2_record_21 { "2011-10-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2011-10-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(minolMinocalC2_record_21.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void minolMinocalC2Test::TestRecord22(void) {
   MBusRecord *record = NULL;
@@ -11469,10 +12236,9 @@ void minolMinocalC2Test::TestRecord22(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(22);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3000.0", 3000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11483,6 +12249,24 @@ void minolMinocalC2Test::TestRecord22(void) {
   }
 };
 void minolMinocalC2Test::TestRecord23(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(23);
+  CPPUNIT_ASSERT( record != NULL );
+  const string minolMinocalC2_record_23 { "2011-09-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2011-09-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(minolMinocalC2_record_23.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void minolMinocalC2Test::TestRecord24(void) {
   MBusRecord *record = NULL;
@@ -11490,10 +12274,9 @@ void minolMinocalC2Test::TestRecord24(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(24);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11504,6 +12287,24 @@ void minolMinocalC2Test::TestRecord24(void) {
   }
 };
 void minolMinocalC2Test::TestRecord25(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(25);
+  CPPUNIT_ASSERT( record != NULL );
+  const string minolMinocalC2_record_25 { "2011-08-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2011-08-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(minolMinocalC2_record_25.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void minolMinocalC2Test::TestRecord26(void) {
   MBusRecord *record = NULL;
@@ -11511,10 +12312,9 @@ void minolMinocalC2Test::TestRecord26(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(26);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11525,6 +12325,24 @@ void minolMinocalC2Test::TestRecord26(void) {
   }
 };
 void minolMinocalC2Test::TestRecord27(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(27);
+  CPPUNIT_ASSERT( record != NULL );
+  const string minolMinocalC2_record_27 { "2011-07-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2011-07-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(minolMinocalC2_record_27.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void minolMinocalC2Test::TestRecord28(void) {
   MBusRecord *record = NULL;
@@ -11532,10 +12350,9 @@ void minolMinocalC2Test::TestRecord28(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(28);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11546,6 +12363,24 @@ void minolMinocalC2Test::TestRecord28(void) {
   }
 };
 void minolMinocalC2Test::TestRecord29(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(29);
+  CPPUNIT_ASSERT( record != NULL );
+  const string minolMinocalC2_record_29 { "2011-06-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2011-06-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(minolMinocalC2_record_29.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void minolMinocalC2Test::TestRecord30(void) {
   MBusRecord *record = NULL;
@@ -11553,10 +12388,9 @@ void minolMinocalC2Test::TestRecord30(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(30);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11567,6 +12401,24 @@ void minolMinocalC2Test::TestRecord30(void) {
   }
 };
 void minolMinocalC2Test::TestRecord31(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(31);
+  CPPUNIT_ASSERT( record != NULL );
+  const string minolMinocalC2_record_31 { "2012-01-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-01-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(minolMinocalC2_record_31.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void minolMinocalC2Test::TestRecord32(void) {
   MBusRecord *record = NULL;
@@ -11574,10 +12426,9 @@ void minolMinocalC2Test::TestRecord32(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(32);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.001", 0.001, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.001, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11593,10 +12444,9 @@ void minolMinocalC2Test::TestRecord33(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(33);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11635,10 +12485,9 @@ void minolMinocalWr3Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11654,10 +12503,9 @@ void minolMinocalWr3Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.01", 0.01, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.01, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11673,10 +12521,9 @@ void minolMinocalWr3Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11692,10 +12539,9 @@ void minolMinocalWr3Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11711,10 +12557,9 @@ void minolMinocalWr3Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11730,10 +12575,9 @@ void minolMinocalWr3Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11749,10 +12593,9 @@ void minolMinocalWr3Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11763,6 +12606,24 @@ void minolMinocalWr3Test::TestRecord6(void) {
   }
 };
 void minolMinocalWr3Test::TestRecord7(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(7);
+  CPPUNIT_ASSERT( record != NULL );
+  const string minolMinocalWr3_record_7 { "2012-01-01T00:00:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-01-01T00:00:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(minolMinocalWr3_record_7.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void minolMinocalWr3Test::TestRecord8(void) {
   MBusRecord *record = NULL;
@@ -11770,10 +12631,9 @@ void minolMinocalWr3Test::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11784,6 +12644,24 @@ void minolMinocalWr3Test::TestRecord8(void) {
   }
 };
 void minolMinocalWr3Test::TestRecord9(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(9);
+  CPPUNIT_ASSERT( record != NULL );
+  const string minolMinocalWr3_record_9 { "2012-01-13T11:30:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-01-13T11:30:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(minolMinocalWr3_record_9.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void minolMinocalWr3Test::TestRecord10(void) {
   MBusRecord *record = NULL;
@@ -11791,10 +12669,9 @@ void minolMinocalWr3Test::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.01", 0.01, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.01, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11805,6 +12682,24 @@ void minolMinocalWr3Test::TestRecord10(void) {
   }
 };
 void minolMinocalWr3Test::TestRecord11(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(11);
+  CPPUNIT_ASSERT( record != NULL );
+  const string minolMinocalWr3_record_11 { "2011-03-24T07:30:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2011-03-24T07:30:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(minolMinocalWr3_record_11.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void minolMinocalWr3Test::TestRecord12(void) {
   MBusRecord *record = NULL;
@@ -11812,10 +12707,9 @@ void minolMinocalWr3Test::TestRecord12(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(12);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11831,10 +12725,9 @@ void minolMinocalWr3Test::TestRecord13(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(13);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("7.0", 7.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(7.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11850,10 +12743,9 @@ void minolMinocalWr3Test::TestRecord14(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(14);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.001", 0.001, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.001, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11869,10 +12761,9 @@ void minolMinocalWr3Test::TestRecord15(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(15);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.001", 0.001, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.001, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11888,10 +12779,9 @@ void minolMinocalWr3Test::TestRecord16(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(16);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11907,10 +12797,9 @@ void minolMinocalWr3Test::TestRecord17(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(17);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.001", 0.001, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.001, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11926,10 +12815,9 @@ void minolMinocalWr3Test::TestRecord18(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(18);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("7.0", 7.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(7.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11945,10 +12833,9 @@ void minolMinocalWr3Test::TestRecord19(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(19);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.001", 0.001, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.001, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11964,10 +12851,9 @@ void minolMinocalWr3Test::TestRecord20(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(20);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("4.0", 4.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(4.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -11978,8 +12864,44 @@ void minolMinocalWr3Test::TestRecord20(void) {
   }
 };
 void minolMinocalWr3Test::TestRecord21(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(21);
+  CPPUNIT_ASSERT( record != NULL );
+  const string minolMinocalWr3_record_21 { "2012-01-13T12:01:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-01-13T12:01:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(minolMinocalWr3_record_21.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void minolMinocalWr3Test::TestRecord22(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(22);
+  CPPUNIT_ASSERT( record != NULL );
+  const string minolMinocalWr3_record_22 { "2012-01-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-01-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(minolMinocalWr3_record_22.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void minolMinocalWr3Test::TestRecord23(void) {
   MBusRecord *record = NULL;
@@ -11987,10 +12909,9 @@ void minolMinocalWr3Test::TestRecord23(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(23);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12006,10 +12927,9 @@ void minolMinocalWr3Test::TestRecord24(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(24);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.001", 0.001, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.001, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12025,10 +12945,9 @@ void minolMinocalWr3Test::TestRecord25(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(25);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.001", 0.001, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.001, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12039,6 +12958,24 @@ void minolMinocalWr3Test::TestRecord25(void) {
   }
 };
 void minolMinocalWr3Test::TestRecord26(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(26);
+  CPPUNIT_ASSERT( record != NULL );
+  const string minolMinocalWr3_record_26 { "2012-01-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-01-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(minolMinocalWr3_record_26.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void minolMinocalWr3Test::TestRecord27(void) {
   MBusRecord *record = NULL;
@@ -12046,10 +12983,9 @@ void minolMinocalWr3Test::TestRecord27(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(27);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12065,10 +13001,9 @@ void minolMinocalWr3Test::TestRecord28(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(28);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12107,10 +13042,9 @@ void nzrDhz_5_63Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1274.0", 1274.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1274.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12126,10 +13060,9 @@ void nzrDhz_5_63Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1274.0", 1274.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1274.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12145,10 +13078,9 @@ void nzrDhz_5_63Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("237.2", 237.2, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(237.2, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12164,10 +13096,9 @@ void nzrDhz_5_63Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12183,10 +13114,9 @@ void nzrDhz_5_63Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12202,10 +13132,29 @@ void nzrDhz_5_63Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("30100608.0", 30100608.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(30100608.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void nzrDhz_5_63Test::TestRecord6(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(6);
+  CPPUNIT_ASSERT( record != NULL );
+  const string nzrDhz_5_63_record_6 { "0E" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("0E", 2, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(nzrDhz_5_63_record_6.c_str(), record->value->str_val.value, record->value->str_val.size));
   if(record != NULL) {
     delete record;
   }
@@ -12244,10 +13193,9 @@ void omsFrame1Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("28504.27", 28504.27, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(28504.27, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12258,6 +13206,24 @@ void omsFrame1Test::TestRecord0(void) {
   }
 };
 void omsFrame1Test::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  const string omsFrame1_record_1 { "2008-05-31T23:50:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2008-05-31T23:50:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(omsFrame1_record_1.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void omsFrame1Test::TestRecord2(void) {
   MBusRecord *record = NULL;
@@ -12265,10 +13231,9 @@ void omsFrame1Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12307,10 +13272,9 @@ void omsFrame2Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("2850.427", 2850.427, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(2850.427, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12326,10 +13290,9 @@ void omsFrame2Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.127", 0.127, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.127, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12345,10 +13308,9 @@ void omsFrame2Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1445.419", 1445.419, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1445.419, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12359,6 +13321,24 @@ void omsFrame2Test::TestRecord2(void) {
   }
 };
 void omsFrame2Test::TestRecord3(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(3);
+  CPPUNIT_ASSERT( record != NULL );
+  const string omsFrame2_record_3 { "2007-12-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2007-12-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(omsFrame2_record_3.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void omsFrame2Test::TestRecord4(void) {
   MBusRecord *record = NULL;
@@ -12366,10 +13346,9 @@ void omsFrame2Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12408,10 +13387,9 @@ void omsFrame3Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("2850427000.0", 2850427000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(2850427000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12427,10 +13405,9 @@ void omsFrame3Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("703.476", 703.476, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(703.476, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12446,10 +13423,9 @@ void omsFrame3Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1445419000.0", 1445419000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1445419000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12460,6 +13436,24 @@ void omsFrame3Test::TestRecord2(void) {
   }
 };
 void omsFrame3Test::TestRecord3(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(3);
+  CPPUNIT_ASSERT( record != NULL );
+  const string omsFrame3_record_3 { "2007-12-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2007-12-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(omsFrame3_record_3.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void omsFrame3Test::TestRecord4(void) {
   MBusRecord *record = NULL;
@@ -12467,10 +13461,9 @@ void omsFrame3Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.127", 0.127, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.127, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12486,10 +13479,9 @@ void omsFrame3Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("329.7", 329.7, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(329.7, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12505,10 +13497,9 @@ void omsFrame3Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("44.3", 44.3, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(44.3, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12524,10 +13515,9 @@ void omsFrame3Test::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("25.1", 25.1, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(25.1, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12543,10 +13533,9 @@ void omsFrame3Test::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12557,6 +13546,7 @@ void omsFrame3Test::TestRecord8(void) {
   }
 };
 
+/*
 CPPUNIT_TEST_SUITE_REGISTRATION( prematureEndOfData1Test );
 
 MBusRecord* prematureEndOfData1Test::getRecord(unsigned int pos) {
@@ -12585,10 +13575,9 @@ void prematureEndOfData1Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("12.565", 12.565, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(12.565, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12604,29 +13593,9 @@ void prematureEndOfData1Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.113", 0.113, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void prematureEndOfData1Test::TestRecord2(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(2);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("17270.0", 17270.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.113, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12665,10 +13634,9 @@ void prematureEndOfData2Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("12.565", 12.565, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(12.565, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12684,29 +13652,9 @@ void prematureEndOfData2Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.113", 0.113, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void prematureEndOfData2Test::TestRecord2(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(2);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1618370.0", 1618370.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.113, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12745,10 +13693,9 @@ void prematureEndOfDif1Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("12.565", 12.565, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(12.565, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12764,29 +13711,9 @@ void prematureEndOfDif1Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.113", 0.113, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void prematureEndOfDif1Test::TestRecord2(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(2);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.113, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12819,6 +13746,42 @@ void prematureEndOfDif2Test::tearDown() {
   frame = NULL;
 };
 
+void prematureEndOfDif2Test::TestRecord0(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(0);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(12.565, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void prematureEndOfDif2Test::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.113, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
 
 CPPUNIT_TEST_SUITE_REGISTRATION( prematureEndOfVarVif1Test );
 
@@ -12842,6 +13805,60 @@ void prematureEndOfVarVif1Test::tearDown() {
   frame = NULL;
 };
 
+void prematureEndOfVarVif1Test::TestRecord0(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(0);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void prematureEndOfVarVif1Test::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(45.64, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void prematureEndOfVarVif1Test::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(45.52, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
 
 CPPUNIT_TEST_SUITE_REGISTRATION( prematureEndOfVif1Test );
 
@@ -12871,10 +13888,9 @@ void prematureEndOfVif1Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("12.565", 12.565, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(12.565, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12890,10 +13906,9 @@ void prematureEndOfVif1Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.113", 0.113, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.113, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12903,25 +13918,7 @@ void prematureEndOfVif1Test::TestRecord1(void) {
     vard = NULL;
   }
 };
-void prematureEndOfVif1Test::TestRecord2(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(2);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
+*/
 
 CPPUNIT_TEST_SUITE_REGISTRATION( ramModularisTest );
 
@@ -12951,10 +13948,9 @@ void ramModularisTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("10.116", 10.116, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(10.116, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12965,8 +13961,44 @@ void ramModularisTest::TestRecord0(void) {
   }
 };
 void ramModularisTest::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ramModularis_record_1 { "2013-10-18T21:40:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2013-10-18T21:40:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ramModularis_record_1.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ramModularisTest::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ramModularis_record_2 { "2013-09-28" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2013-09-28", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ramModularis_record_2.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ramModularisTest::TestRecord3(void) {
   MBusRecord *record = NULL;
@@ -12974,10 +14006,9 @@ void ramModularisTest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("8.393", 8.393, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(8.393, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -12988,6 +14019,24 @@ void ramModularisTest::TestRecord3(void) {
   }
 };
 void ramModularisTest::TestRecord4(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(4);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ramModularis_record_4 { "2014-09-28" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2014-09-28", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ramModularis_record_4.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ramModularisTest::TestRecord5(void) {
   MBusRecord *record = NULL;
@@ -12995,10 +14044,9 @@ void ramModularisTest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("25776.0", 25776.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(25776.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13009,6 +14057,24 @@ void ramModularisTest::TestRecord5(void) {
   }
 };
 void ramModularisTest::TestRecord6(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(6);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ramModularis_record_6 { "2013-09-30" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2013-09-30", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ramModularis_record_6.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ramModularisTest::TestRecord7(void) {
   MBusRecord *record = NULL;
@@ -13016,10 +14082,9 @@ void ramModularisTest::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("8.527", 8.527, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(8.527, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13030,6 +14095,24 @@ void ramModularisTest::TestRecord7(void) {
   }
 };
 void ramModularisTest::TestRecord8(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(8);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ramModularis_record_8 { "2012-10-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-10-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ramModularis_record_8.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ramModularisTest::TestRecord9(void) {
   MBusRecord *record = NULL;
@@ -13037,10 +14120,9 @@ void ramModularisTest::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("99999.995", 99999.995, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(99999.995, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13051,6 +14133,24 @@ void ramModularisTest::TestRecord9(void) {
   }
 };
 void ramModularisTest::TestRecord10(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(10);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ramModularis_record_10 { "2012-11-30" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-11-30", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ramModularis_record_10.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ramModularisTest::TestRecord11(void) {
   MBusRecord *record = NULL;
@@ -13058,10 +14158,9 @@ void ramModularisTest::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("99999.993", 99999.993, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(99999.993, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13072,6 +14171,24 @@ void ramModularisTest::TestRecord11(void) {
   }
 };
 void ramModularisTest::TestRecord12(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(12);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ramModularis_record_12 { "2012-12-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2012-12-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ramModularis_record_12.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ramModularisTest::TestRecord13(void) {
   MBusRecord *record = NULL;
@@ -13079,10 +14196,9 @@ void ramModularisTest::TestRecord13(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(13);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.782", 0.782, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.782, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13093,6 +14209,24 @@ void ramModularisTest::TestRecord13(void) {
   }
 };
 void ramModularisTest::TestRecord14(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(14);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ramModularis_record_14 { "2013-01-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2013-01-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ramModularis_record_14.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ramModularisTest::TestRecord15(void) {
   MBusRecord *record = NULL;
@@ -13100,10 +14234,9 @@ void ramModularisTest::TestRecord15(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(15);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1.929", 1.929, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1.929, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13114,6 +14247,24 @@ void ramModularisTest::TestRecord15(void) {
   }
 };
 void ramModularisTest::TestRecord16(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(16);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ramModularis_record_16 { "2013-02-28" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2013-02-28", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ramModularis_record_16.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ramModularisTest::TestRecord17(void) {
   MBusRecord *record = NULL;
@@ -13121,10 +14272,9 @@ void ramModularisTest::TestRecord17(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(17);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3.092", 3.092, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3.092, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13135,6 +14285,24 @@ void ramModularisTest::TestRecord17(void) {
   }
 };
 void ramModularisTest::TestRecord18(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(18);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ramModularis_record_18 { "2013-03-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2013-03-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ramModularis_record_18.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ramModularisTest::TestRecord19(void) {
   MBusRecord *record = NULL;
@@ -13142,10 +14310,9 @@ void ramModularisTest::TestRecord19(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(19);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("4.661", 4.661, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(4.661, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13156,6 +14323,24 @@ void ramModularisTest::TestRecord19(void) {
   }
 };
 void ramModularisTest::TestRecord20(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(20);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ramModularis_record_20 { "2013-04-30" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2013-04-30", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ramModularis_record_20.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ramModularisTest::TestRecord21(void) {
   MBusRecord *record = NULL;
@@ -13163,10 +14348,9 @@ void ramModularisTest::TestRecord21(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(21);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("4.767", 4.767, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(4.767, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13177,6 +14361,24 @@ void ramModularisTest::TestRecord21(void) {
   }
 };
 void ramModularisTest::TestRecord22(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(22);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ramModularis_record_22 { "2013-05-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2013-05-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ramModularis_record_22.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ramModularisTest::TestRecord23(void) {
   MBusRecord *record = NULL;
@@ -13184,10 +14386,9 @@ void ramModularisTest::TestRecord23(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(23);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("5.124", 5.124, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(5.124, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13198,6 +14399,24 @@ void ramModularisTest::TestRecord23(void) {
   }
 };
 void ramModularisTest::TestRecord24(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(24);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ramModularis_record_24 { "2013-06-30" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2013-06-30", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ramModularis_record_24.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ramModularisTest::TestRecord25(void) {
   MBusRecord *record = NULL;
@@ -13205,10 +14424,9 @@ void ramModularisTest::TestRecord25(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(25);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("5.176", 5.176, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(5.176, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13219,6 +14437,24 @@ void ramModularisTest::TestRecord25(void) {
   }
 };
 void ramModularisTest::TestRecord26(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(26);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ramModularis_record_26 { "2013-07-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2013-07-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ramModularis_record_26.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ramModularisTest::TestRecord27(void) {
   MBusRecord *record = NULL;
@@ -13226,10 +14462,9 @@ void ramModularisTest::TestRecord27(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(27);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("5.246", 5.246, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(5.246, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13240,6 +14475,24 @@ void ramModularisTest::TestRecord27(void) {
   }
 };
 void ramModularisTest::TestRecord28(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(28);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ramModularis_record_28 { "2013-08-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2013-08-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ramModularis_record_28.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ramModularisTest::TestRecord29(void) {
   MBusRecord *record = NULL;
@@ -13247,10 +14500,29 @@ void ramModularisTest::TestRecord29(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(29);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("5.668", 5.668, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(5.668, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void ramModularisTest::TestRecord30(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(30);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ramModularis_record_30 { "01 00 00" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("01 00 00", 8, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ramModularis_record_30.c_str(), record->value->str_val.value, record->value->str_val.size));
   if(record != NULL) {
     delete record;
   }
@@ -13289,10 +14561,9 @@ void RELRelayPadpuls2Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("28760.81", 28760.81, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(28760.81, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13303,8 +14574,44 @@ void RELRelayPadpuls2Test::TestRecord0(void) {
   }
 };
 void RELRelayPadpuls2Test::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  const string RELRelayPadpuls2_record_1 { "1900-01-00T00:00:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("1900-01-00T00:00:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(RELRelayPadpuls2_record_1.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void RELRelayPadpuls2Test::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  const string RELRelayPadpuls2_record_2 { "2014-12-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2014-12-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(RELRelayPadpuls2_record_2.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void RELRelayPadpuls2Test::TestRecord3(void) {
   MBusRecord *record = NULL;
@@ -13312,10 +14619,9 @@ void RELRelayPadpuls2Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("25973.82", 25973.82, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(25973.82, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13326,6 +14632,44 @@ void RELRelayPadpuls2Test::TestRecord3(void) {
   }
 };
 void RELRelayPadpuls2Test::TestRecord4(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(4);
+  CPPUNIT_ASSERT( record != NULL );
+  const string RELRelayPadpuls2_record_4 { "2015-12-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2015-12-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(RELRelayPadpuls2_record_4.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void RELRelayPadpuls2Test::TestRecord5(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(5);
+  CPPUNIT_ASSERT( record != NULL );
+  const string RELRelayPadpuls2_record_5 { "C0 01 01 0C" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("C0 01 01 0C", 11, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(RELRelayPadpuls2_record_5.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION( relPadpuls2Test );
@@ -13356,10 +14700,9 @@ void relPadpuls2Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13370,8 +14713,44 @@ void relPadpuls2Test::TestRecord0(void) {
   }
 };
 void relPadpuls2Test::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  const string relPadpuls2_record_1 { "2001-09-20T13:16:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2001-09-20T13:16:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(relPadpuls2_record_1.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void relPadpuls2Test::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  const string relPadpuls2_record_2 { "2000-12-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2000-12-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(relPadpuls2_record_2.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void relPadpuls2Test::TestRecord3(void) {
   MBusRecord *record = NULL;
@@ -13379,10 +14758,9 @@ void relPadpuls2Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13393,6 +14771,44 @@ void relPadpuls2Test::TestRecord3(void) {
   }
 };
 void relPadpuls2Test::TestRecord4(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(4);
+  CPPUNIT_ASSERT( record != NULL );
+  const string relPadpuls2_record_4 { "2001-12-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2001-12-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(relPadpuls2_record_4.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void relPadpuls2Test::TestRecord5(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(5);
+  CPPUNIT_ASSERT( record != NULL );
+  const string relPadpuls2_record_5 { "43 01 01 00" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("43 01 01 00", 11, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(relPadpuls2_record_5.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION( relPadpuls3Test );
@@ -13423,10 +14839,9 @@ void relPadpuls3Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1987.0", 1987.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1987.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13437,8 +14852,44 @@ void relPadpuls3Test::TestRecord0(void) {
   }
 };
 void relPadpuls3Test::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  const string relPadpuls3_record_1 { "2000-12-31T10:41:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2000-12-31T10:41:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(relPadpuls3_record_1.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void relPadpuls3Test::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  const string relPadpuls3_record_2 { "2000-12-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2000-12-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(relPadpuls3_record_2.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void relPadpuls3Test::TestRecord3(void) {
   MBusRecord *record = NULL;
@@ -13446,10 +14897,9 @@ void relPadpuls3Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1302.0", 1302.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1302.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13460,40 +14910,16 @@ void relPadpuls3Test::TestRecord3(void) {
   }
 };
 void relPadpuls3Test::TestRecord4(void) {
-};
-
-CPPUNIT_TEST_SUITE_REGISTRATION( rspUdExampleTest );
-
-MBusRecord* rspUdExampleTest::getRecord(unsigned int pos) {
- MBusDataRecord *ptr;
- if(vard == NULL) return NULL;
- ptr = vard->record;
- for(unsigned int i = 0; i < pos && ptr != NULL; i++)
-   ptr = ptr->next;
- if(ptr == NULL) return NULL;
- return ptr->getRecord();
-};
-
-void rspUdExampleTest::setUp() {
-  frame = new MBusFrame();
-  frame->parse((unsigned char *)frame_data, frame_data_len);
-};
-
-void rspUdExampleTest::tearDown() {
-  delete frame;
-  frame = NULL;
-};
-
-void rspUdExampleTest::TestRecord0(void) {
   MBusRecord *record = NULL;
   vard = frame->getVariableData();
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
-  record = getRecord(0);
+  record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("12.565", 12.565, record->value->real_val, 0.000001);
+  const string relPadpuls3_record_4 { "2001-12-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2001-12-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(relPadpuls3_record_4.c_str(), record->value->str_val.value, record->value->str_val.size));
   if(record != NULL) {
     delete record;
   }
@@ -13503,35 +14929,17 @@ void rspUdExampleTest::TestRecord0(void) {
     vard = NULL;
   }
 };
-void rspUdExampleTest::TestRecord1(void) {
+void relPadpuls3Test::TestRecord5(void) {
   MBusRecord *record = NULL;
   vard = frame->getVariableData();
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
-  record = getRecord(1);
+  record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.113", 0.113, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void rspUdExampleTest::TestRecord2(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(2);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("218370.0", 218370.0, record->value->real_val, 0.000001);
+  const string relPadpuls3_record_5 { "C0 01 01 0C" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("C0 01 01 0C", 11, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(relPadpuls3_record_5.c_str(), record->value->str_val.value, record->value->str_val.size));
   if(record != NULL) {
     delete record;
   }
@@ -13570,10 +14978,9 @@ void SBCSaiaBurgessALE3Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("2930.0", 2930.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(2930.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13589,10 +14996,9 @@ void SBCSaiaBurgessALE3Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("2930.0", 2930.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(2930.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13608,10 +15014,9 @@ void SBCSaiaBurgessALE3Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("60.0", 60.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(60.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13627,10 +15032,9 @@ void SBCSaiaBurgessALE3Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("60.0", 60.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(60.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13646,10 +15050,9 @@ void SBCSaiaBurgessALE3Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("223.0", 223.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(223.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13665,10 +15068,9 @@ void SBCSaiaBurgessALE3Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13684,10 +15086,9 @@ void SBCSaiaBurgessALE3Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13703,10 +15104,9 @@ void SBCSaiaBurgessALE3Test::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13722,10 +15122,9 @@ void SBCSaiaBurgessALE3Test::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13741,10 +15140,9 @@ void SBCSaiaBurgessALE3Test::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13760,10 +15158,9 @@ void SBCSaiaBurgessALE3Test::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13779,10 +15176,9 @@ void SBCSaiaBurgessALE3Test::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13798,10 +15194,9 @@ void SBCSaiaBurgessALE3Test::TestRecord12(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(12);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13817,10 +15212,9 @@ void SBCSaiaBurgessALE3Test::TestRecord13(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(13);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13836,10 +15230,9 @@ void SBCSaiaBurgessALE3Test::TestRecord14(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(14);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13855,10 +15248,9 @@ void SBCSaiaBurgessALE3Test::TestRecord15(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(15);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13869,6 +15261,22 @@ void SBCSaiaBurgessALE3Test::TestRecord15(void) {
   }
 };
 void SBCSaiaBurgessALE3Test::TestRecord16(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(16);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void SBCSaiaBurgessALE3Test::TestRecord17(void) {
   MBusRecord *record = NULL;
@@ -13876,10 +15284,9 @@ void SBCSaiaBurgessALE3Test::TestRecord17(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(17);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13895,10 +15302,9 @@ void SBCSaiaBurgessALE3Test::TestRecord18(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(18);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13909,8 +15315,25 @@ void SBCSaiaBurgessALE3Test::TestRecord18(void) {
   }
 };
 void SBCSaiaBurgessALE3Test::TestRecord19(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(19);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 
+/*
 CPPUNIT_TEST_SUITE_REGISTRATION( senPollusonic_2Test );
 
 MBusRecord* senPollusonic_2Test::getRecord(unsigned int pos) {
@@ -13933,7 +15356,43 @@ void senPollusonic_2Test::tearDown() {
   frame = NULL;
 };
 
+void senPollusonic_2Test::TestRecord0(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
 
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(0);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(6531.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void senPollusonic_2Test::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(69.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+*/
 CPPUNIT_TEST_SUITE_REGISTRATION( SENPollustatTest );
 
 MBusRecord* SENPollustatTest::getRecord(unsigned int pos) {
@@ -13957,8 +15416,44 @@ void SENPollustatTest::tearDown() {
 };
 
 void SENPollustatTest::TestRecord0(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(0);
+  CPPUNIT_ASSERT( record != NULL );
+  const string SENPollustat_record_0 { "2015-04-07T14:59:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2015-04-07T14:59:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(SENPollustat_record_0.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void SENPollustatTest::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  const string SENPollustat_record_1 { "2000-01-01T00:00:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2000-01-01T00:00:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(SENPollustat_record_1.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void SENPollustatTest::TestRecord2(void) {
   MBusRecord *record = NULL;
@@ -13966,10 +15461,9 @@ void SENPollustatTest::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("67108864.0", 67108864.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(67108864.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -13985,10 +15479,9 @@ void SENPollustatTest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("15803026.0", 15803026.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(15803026.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14004,10 +15497,9 @@ void SENPollustatTest::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("15145636.0", 15145636.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(15145636.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14023,10 +15515,9 @@ void SENPollustatTest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("39831000.0", 39831000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(39831000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14042,10 +15533,9 @@ void SENPollustatTest::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("6162.878", 6162.878, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(6162.878, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14061,10 +15551,9 @@ void SENPollustatTest::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("-170.721784234", -170.721784234, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(-170.721784, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14080,10 +15569,9 @@ void SENPollustatTest::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3.2300388813", 3.2300388813, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3.230039, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14099,10 +15587,9 @@ void SENPollustatTest::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("31.1473236084", 31.1473236084, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(31.147324, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14118,10 +15605,9 @@ void SENPollustatTest::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("31.1930999756", 31.1930999756, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(31.1931, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14137,10 +15623,9 @@ void SENPollustatTest::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("-0.0457763671875", -0.0457763671875, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(-0.045776, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14156,10 +15641,9 @@ void SENPollustatTest::TestRecord12(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(12);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("11582321.0", 11582321.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(11582321.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14175,10 +15659,9 @@ void SENPollustatTest::TestRecord13(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(13);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("756.0", 756.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(756.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14194,10 +15677,9 @@ void SENPollustatTest::TestRecord14(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(14);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("11788.0", 11788.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(11788.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14208,8 +15690,24 @@ void SENPollustatTest::TestRecord14(void) {
   }
 };
 void SENPollustatTest::TestRecord15(void) {
-};
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
 
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(15);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(-19184.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+/*
 CPPUNIT_TEST_SUITE_REGISTRATION( senPolluthermTest );
 
 MBusRecord* senPolluthermTest::getRecord(unsigned int pos) {
@@ -14232,6 +15730,151 @@ void senPolluthermTest::tearDown() {
   frame = NULL;
 };
 
+void senPolluthermTest::TestRecord0(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(0);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(8640000.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void senPolluthermTest::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(7998.92, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void senPolluthermTest::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(54580.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void senPolluthermTest::TestRecord3(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(3);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(75.5, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void senPolluthermTest::TestRecord4(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(4);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(59.4, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void senPolluthermTest::TestRecord5(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(5);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(16.076, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void senPolluthermTest::TestRecord6(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(6);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(21050076.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void senPolluthermTest::TestRecord7(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(7);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(21050076.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+*/
 
 CPPUNIT_TEST_SUITE_REGISTRATION( SENSensusPolluStatETest );
 
@@ -14261,10 +15904,9 @@ void SENSensusPolluStatETest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14280,10 +15922,9 @@ void SENSensusPolluStatETest::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14299,10 +15940,9 @@ void SENSensusPolluStatETest::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14318,10 +15958,9 @@ void SENSensusPolluStatETest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14337,10 +15976,9 @@ void SENSensusPolluStatETest::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("20.1", 20.1, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(20.1, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14356,10 +15994,9 @@ void SENSensusPolluStatETest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("20.2", 20.2, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(20.2, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14375,10 +16012,9 @@ void SENSensusPolluStatETest::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14394,10 +16030,9 @@ void SENSensusPolluStatETest::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("21265095.0", 21265095.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(21265095.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14413,10 +16048,9 @@ void SENSensusPolluStatETest::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("21265095.0", 21265095.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(21265095.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14455,10 +16089,9 @@ void SENSensusPolluThermTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14474,10 +16107,9 @@ void SENSensusPolluThermTest::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14493,10 +16125,9 @@ void SENSensusPolluThermTest::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14512,10 +16143,9 @@ void SENSensusPolluThermTest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14531,10 +16161,9 @@ void SENSensusPolluThermTest::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14550,10 +16179,9 @@ void SENSensusPolluThermTest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14569,10 +16197,9 @@ void SENSensusPolluThermTest::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14588,10 +16215,9 @@ void SENSensusPolluThermTest::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("24351689.0", 24351689.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(24351689.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14607,130 +16233,9 @@ void SENSensusPolluThermTest::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("24351689.0", 24351689.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-
-CPPUNIT_TEST_SUITE_REGISTRATION( siemensRvd235Test );
-
-MBusRecord* siemensRvd235Test::getRecord(unsigned int pos) {
- MBusDataRecord *ptr;
- if(vard == NULL) return NULL;
- ptr = vard->record;
- for(unsigned int i = 0; i < pos && ptr != NULL; i++)
-   ptr = ptr->next;
- if(ptr == NULL) return NULL;
- return ptr->getRecord();
-};
-
-void siemensRvd235Test::setUp() {
-  frame = new MBusFrame();
-  frame->parse((unsigned char *)frame_data, frame_data_len);
-};
-
-void siemensRvd235Test::tearDown() {
-  delete frame;
-  frame = NULL;
-};
-
-void siemensRvd235Test::TestRecord0(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(0);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("47120.0", 47120.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void siemensRvd235Test::TestRecord1(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(1);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1.93280672764e+11", 1.93280672764e+11, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void siemensRvd235Test::TestRecord2(void) {
-};
-void siemensRvd235Test::TestRecord3(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(3);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1.0", 1.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void siemensRvd235Test::TestRecord4(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(4);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void siemensRvd235Test::TestRecord5(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(5);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(24351689.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14769,10 +16274,9 @@ void siemensWaterTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.101", 0.101, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.101, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14788,10 +16292,9 @@ void siemensWaterTest::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("20952.0", 20952.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(75427200.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14802,8 +16305,44 @@ void siemensWaterTest::TestRecord1(void) {
   }
 };
 void siemensWaterTest::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  const string siemensWater_record_2 { "2011-09-14T08:56:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2011-09-14T08:56:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(siemensWater_record_2.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void siemensWaterTest::TestRecord3(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(3);
+  CPPUNIT_ASSERT( record != NULL );
+  const string siemensWater_record_3 { "2000-00-00" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2000-00-00", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(siemensWater_record_3.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void siemensWaterTest::TestRecord4(void) {
   MBusRecord *record = NULL;
@@ -14811,10 +16350,9 @@ void siemensWaterTest::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("8021382.0", 8021382.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(8021382.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14830,10 +16368,9 @@ void siemensWaterTest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("2.17325351732e+12", 2.17325351732e+12, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(2173253517322, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14844,6 +16381,24 @@ void siemensWaterTest::TestRecord5(void) {
   }
 };
 void siemensWaterTest::TestRecord6(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(6);
+  CPPUNIT_ASSERT( record != NULL );
+  const string siemensWater_record_6 { "WFH21" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("WFH21", 5, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(siemensWater_record_6.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void siemensWaterTest::TestRecord7(void) {
   MBusRecord *record = NULL;
@@ -14851,10 +16406,9 @@ void siemensWaterTest::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14870,10 +16424,29 @@ void siemensWaterTest::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void siemensWaterTest::TestRecord9(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(9);
+  CPPUNIT_ASSERT( record != NULL );
+  const string siemensWater_record_9 { "37 FD 17 00 00 00 00 00 00 00 00 02 7A 0D 00 02 78 0D 00" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("37 FD 17 00 00 00 00 00 00 00 00 02 7A 0D 00 02 78 0D 00", 56, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(siemensWater_record_9.c_str(), record->value->str_val.value, record->value->str_val.size));
   if(record != NULL) {
     delete record;
   }
@@ -14912,10 +16485,9 @@ void siemensWfh21Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14931,10 +16503,9 @@ void siemensWfh21Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("44086.0", 44086.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(158709600.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14945,8 +16516,44 @@ void siemensWfh21Test::TestRecord1(void) {
   }
 };
 void siemensWfh21Test::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  const string siemensWfh21_record_2 { "2011-12-01T10:36:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2011-12-01T10:36:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(siemensWfh21_record_2.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void siemensWfh21Test::TestRecord3(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(3);
+  CPPUNIT_ASSERT( record != NULL );
+  const string siemensWfh21_record_3 { "2000-00-00" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2000-00-00", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(siemensWfh21_record_3.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void siemensWfh21Test::TestRecord4(void) {
   MBusRecord *record = NULL;
@@ -14954,10 +16561,9 @@ void siemensWfh21Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("8006491.0", 8006491.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(8006491.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14973,10 +16579,9 @@ void siemensWfh21Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("2.17325351732e+12", 2.17325351732e+12, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(2173253517322, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -14987,6 +16592,24 @@ void siemensWfh21Test::TestRecord5(void) {
   }
 };
 void siemensWfh21Test::TestRecord6(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(6);
+  CPPUNIT_ASSERT( record != NULL );
+  const string siemensWfh21_record_6 { "WFH21" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("WFH21", 5, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(siemensWfh21_record_6.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void siemensWfh21Test::TestRecord7(void) {
   MBusRecord *record = NULL;
@@ -14994,10 +16617,9 @@ void siemensWfh21Test::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15013,10 +16635,9 @@ void siemensWfh21Test::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15027,6 +16648,44 @@ void siemensWfh21Test::TestRecord8(void) {
   }
 };
 void siemensWfh21Test::TestRecord9(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(9);
+  CPPUNIT_ASSERT( record != NULL );
+  const string siemensWfh21_record_9 { "2010-12-31" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2010-12-31", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(siemensWfh21_record_9.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void siemensWfh21Test::TestRecord10(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(10);
+  CPPUNIT_ASSERT( record != NULL );
+  const string siemensWfh21_record_10 { "37 FD 17 00 00 00 00 00 00 00 00 02 7A 25 00 02 78 25 00" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("37 FD 17 00 00 00 00 00 00 00 00 02 7A 25 00 02 78 25 00", 56, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(siemensWfh21_record_10.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION( SLBCFCompactIntegralMKMaXXTest );
@@ -15057,10 +16716,9 @@ void SLBCFCompactIntegralMKMaXXTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("11817314.0", 11817314.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(11817314.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15076,10 +16734,9 @@ void SLBCFCompactIntegralMKMaXXTest::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15095,10 +16752,9 @@ void SLBCFCompactIntegralMKMaXXTest::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.02", 0.02, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.02, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15114,10 +16770,9 @@ void SLBCFCompactIntegralMKMaXXTest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15133,10 +16788,9 @@ void SLBCFCompactIntegralMKMaXXTest::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("21.8", 21.8, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(21.8, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15152,10 +16806,9 @@ void SLBCFCompactIntegralMKMaXXTest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("22.0", 22.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(22.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15171,10 +16824,9 @@ void SLBCFCompactIntegralMKMaXXTest::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("-0.18", -0.18, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(15000.18, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15190,10 +16842,9 @@ void SLBCFCompactIntegralMKMaXXTest::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15209,10 +16860,9 @@ void SLBCFCompactIntegralMKMaXXTest::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1176.0", 1176.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(101606400.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15223,6 +16873,24 @@ void SLBCFCompactIntegralMKMaXXTest::TestRecord8(void) {
   }
 };
 void SLBCFCompactIntegralMKMaXXTest::TestRecord9(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(9);
+  CPPUNIT_ASSERT( record != NULL );
+  const string SLBCFCompactIntegralMKMaXX_record_9 { "2014-03-13T14:02:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2014-03-13T14:02:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(SLBCFCompactIntegralMKMaXX_record_9.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void SLBCFCompactIntegralMKMaXXTest::TestRecord10(void) {
   MBusRecord *record = NULL;
@@ -15230,10 +16898,9 @@ void SLBCFCompactIntegralMKMaXXTest::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1.23", 1.23, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(1.23, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15249,10 +16916,9 @@ void SLBCFCompactIntegralMKMaXXTest::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3.21", 3.21, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3.21, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15268,10 +16934,9 @@ void SLBCFCompactIntegralMKMaXXTest::TestRecord12(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(12);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3.0", 3.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15287,10 +16952,29 @@ void SLBCFCompactIntegralMKMaXXTest::TestRecord13(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(13);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("18.0", 18.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(18.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void SLBCFCompactIntegralMKMaXXTest::TestRecord14(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(14);
+  CPPUNIT_ASSERT( record != NULL );
+  const string SLBCFCompactIntegralMKMaXX_record_14 { "00 16" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("00 16", 5, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(SLBCFCompactIntegralMKMaXX_record_14.c_str(), record->value->str_val.value, record->value->str_val.size));
   if(record != NULL) {
     delete record;
   }
@@ -15329,10 +17013,9 @@ void sontexSupercal_531Telegram1Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15348,10 +17031,9 @@ void sontexSupercal_531Telegram1Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15367,10 +17049,9 @@ void sontexSupercal_531Telegram1Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15386,10 +17067,9 @@ void sontexSupercal_531Telegram1Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15405,10 +17085,9 @@ void sontexSupercal_531Telegram1Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15424,10 +17103,9 @@ void sontexSupercal_531Telegram1Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15443,10 +17121,9 @@ void sontexSupercal_531Telegram1Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15462,10 +17139,9 @@ void sontexSupercal_531Telegram1Test::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15481,10 +17157,9 @@ void sontexSupercal_531Telegram1Test::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -15500,769 +17175,9 @@ void sontexSupercal_531Telegram1Test::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-
-CPPUNIT_TEST_SUITE_REGISTRATION( svm_114F1Test );
-
-MBusRecord* svm_114F1Test::getRecord(unsigned int pos) {
- MBusDataRecord *ptr;
- if(vard == NULL) return NULL;
- ptr = vard->record;
- for(unsigned int i = 0; i < pos && ptr != NULL; i++)
-   ptr = ptr->next;
- if(ptr == NULL) return NULL;
- return ptr->getRecord();
-};
-
-void svm_114F1Test::setUp() {
-  frame = new MBusFrame();
-  frame->parse((unsigned char *)frame_data, frame_data_len);
-};
-
-void svm_114F1Test::tearDown() {
-  delete frame;
-  frame = NULL;
-};
-
-void svm_114F1Test::TestRecord0(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(0);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("374560000.0", 374560000.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_114F1Test::TestRecord1(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(1);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("5318.57", 5318.57, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_114F1Test::TestRecord2(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(2);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("5318.51", 5318.51, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_114F1Test::TestRecord3(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(3);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("87.0", 87.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_114F1Test::TestRecord4(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(4);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("21.0", 21.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_114F1Test::TestRecord5(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(5);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("66.4", 66.4, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_114F1Test::TestRecord6(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(6);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3453.0", 3453.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_114F1Test::TestRecord7(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(7);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3453.0", 3453.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_114F1Test::TestRecord8(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(8);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("2.157", 2.157, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_114F1Test::TestRecord9(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(9);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("165300.0", 165300.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_114F1Test::TestRecord10(void) {
-};
-void svm_114F1Test::TestRecord11(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(11);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_114F1Test::TestRecord12(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(12);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-
-CPPUNIT_TEST_SUITE_REGISTRATION( svm_114F2Test );
-
-MBusRecord* svm_114F2Test::getRecord(unsigned int pos) {
- MBusDataRecord *ptr;
- if(vard == NULL) return NULL;
- ptr = vard->record;
- for(unsigned int i = 0; i < pos && ptr != NULL; i++)
-   ptr = ptr->next;
- if(ptr == NULL) return NULL;
- return ptr->getRecord();
-};
-
-void svm_114F2Test::setUp() {
-  frame = new MBusFrame();
-  frame->parse((unsigned char *)frame_data, frame_data_len);
-};
-
-void svm_114F2Test::tearDown() {
-  delete frame;
-  frame = NULL;
-};
-
-void svm_114F2Test::TestRecord0(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(0);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("1159745000.0", 1159745000.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_114F2Test::TestRecord1(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(1);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("18955.25", 18955.25, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_114F2Test::TestRecord2(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(2);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("18955.15", 18955.15, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_114F2Test::TestRecord3(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(3);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("84.0", 84.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_114F2Test::TestRecord4(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(4);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("31.0", 31.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_114F2Test::TestRecord5(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(5);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("52.7", 52.7, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_114F2Test::TestRecord6(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(6);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("45602.0", 45602.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_114F2Test::TestRecord7(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(7);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("45602.0", 45602.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_114F2Test::TestRecord8(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(8);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.198", 0.198, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_114F2Test::TestRecord9(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(9);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("11730.0", 11730.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_114F2Test::TestRecord10(void) {
-};
-void svm_114F2Test::TestRecord11(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(11);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_114F2Test::TestRecord12(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(12);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-
-CPPUNIT_TEST_SUITE_REGISTRATION( svm_121F1Test );
-
-MBusRecord* svm_121F1Test::getRecord(unsigned int pos) {
- MBusDataRecord *ptr;
- if(vard == NULL) return NULL;
- ptr = vard->record;
- for(unsigned int i = 0; i < pos && ptr != NULL; i++)
-   ptr = ptr->next;
- if(ptr == NULL) return NULL;
- return ptr->getRecord();
-};
-
-void svm_121F1Test::setUp() {
-  frame = new MBusFrame();
-  frame->parse((unsigned char *)frame_data, frame_data_len);
-};
-
-void svm_121F1Test::tearDown() {
-  delete frame;
-  frame = NULL;
-};
-
-void svm_121F1Test::TestRecord0(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(0);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3615076000.0", 3615076000.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_121F1Test::TestRecord1(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(1);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("56238.88", 56238.88, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_121F1Test::TestRecord2(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(2);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("56238.84", 56238.84, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_121F1Test::TestRecord3(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(3);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("71.0", 71.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_121F1Test::TestRecord4(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(4);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("30.0", 30.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_121F1Test::TestRecord5(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(5);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("41.2", 41.2, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_121F1Test::TestRecord6(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(6);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("21933.0", 21933.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_121F1Test::TestRecord7(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(7);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("21931.0", 21931.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_121F1Test::TestRecord8(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(8);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("2.028", 2.028, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_121F1Test::TestRecord9(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(9);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("96130.0", 96130.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_121F1Test::TestRecord10(void) {
-};
-void svm_121F1Test::TestRecord11(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(11);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void svm_121F1Test::TestRecord12(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(12);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16301,10 +17216,9 @@ void svmF22Telegram1Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("28014000.0", 28014000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(28014000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16320,10 +17234,9 @@ void svmF22Telegram1Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("640.581", 640.581, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(640.581, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16339,10 +17252,9 @@ void svmF22Telegram1Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("640.581", 640.581, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(640.581, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16358,10 +17270,9 @@ void svmF22Telegram1Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("243.0", 243.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(243.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16377,10 +17288,9 @@ void svmF22Telegram1Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("243.0", 243.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(243.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16396,10 +17306,9 @@ void svmF22Telegram1Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16415,10 +17324,9 @@ void svmF22Telegram1Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("6370.0", 6370.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(22932000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16434,10 +17342,9 @@ void svmF22Telegram1Test::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("6363.0", 6363.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(22906800.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16453,10 +17360,9 @@ void svmF22Telegram1Test::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16472,10 +17378,9 @@ void svmF22Telegram1Test::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16486,6 +17391,24 @@ void svmF22Telegram1Test::TestRecord9(void) {
   }
 };
 void svmF22Telegram1Test::TestRecord10(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(10);
+  CPPUNIT_ASSERT( record != NULL );
+  const string svmF22Telegram1_record_10 { "2021-02-08T21:12:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2021-02-08T21:12:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(svmF22Telegram1_record_10.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void svmF22Telegram1Test::TestRecord11(void) {
   MBusRecord *record = NULL;
@@ -16493,10 +17416,9 @@ void svmF22Telegram1Test::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16512,10 +17434,9 @@ void svmF22Telegram1Test::TestRecord12(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(12);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16525,29 +17446,6 @@ void svmF22Telegram1Test::TestRecord12(void) {
     vard = NULL;
   }
 };
-
-CPPUNIT_TEST_SUITE_REGISTRATION( svmF22Telegram2Test );
-
-MBusRecord* svmF22Telegram2Test::getRecord(unsigned int pos) {
- MBusDataRecord *ptr;
- if(vard == NULL) return NULL;
- ptr = vard->record;
- for(unsigned int i = 0; i < pos && ptr != NULL; i++)
-   ptr = ptr->next;
- if(ptr == NULL) return NULL;
- return ptr->getRecord();
-};
-
-void svmF22Telegram2Test::setUp() {
-  frame = new MBusFrame();
-  frame->parse((unsigned char *)frame_data, frame_data_len);
-};
-
-void svmF22Telegram2Test::tearDown() {
-  delete frame;
-  frame = NULL;
-};
-
 
 CPPUNIT_TEST_SUITE_REGISTRATION( tchTelegramm1Test );
 
@@ -16577,10 +17475,9 @@ void tchTelegramm1Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16591,6 +17488,24 @@ void tchTelegramm1Test::TestRecord0(void) {
   }
 };
 void tchTelegramm1Test::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  const string tchTelegramm1_record_1 { "2000-09-29T13:50:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2000-09-29T13:50:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(tchTelegramm1_record_1.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void tchTelegramm1Test::TestRecord2(void) {
   MBusRecord *record = NULL;
@@ -16598,10 +17513,9 @@ void tchTelegramm1Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16612,6 +17526,24 @@ void tchTelegramm1Test::TestRecord2(void) {
   }
 };
 void tchTelegramm1Test::TestRecord3(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(3);
+  CPPUNIT_ASSERT( record != NULL );
+  const string tchTelegramm1_record_3 { "2000-05-29" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2000-05-29", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(tchTelegramm1_record_3.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void tchTelegramm1Test::TestRecord4(void) {
   MBusRecord *record = NULL;
@@ -16619,10 +17551,9 @@ void tchTelegramm1Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16638,10 +17569,9 @@ void tchTelegramm1Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("23.4", 23.4, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(23.4, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16657,10 +17587,9 @@ void tchTelegramm1Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("22.4", 22.4, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(22.4, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16676,10 +17605,9 @@ void tchTelegramm1Test::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16695,10 +17623,9 @@ void tchTelegramm1Test::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.064", 0.064, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.064, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16737,10 +17664,9 @@ void THICma10Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("2.0", 2.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(2.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16756,10 +17682,9 @@ void THICma10Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("4660.0", 4660.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(46.6, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16775,10 +17700,9 @@ void THICma10Test::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3782.0", 3782.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(37.82, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16794,10 +17718,9 @@ void THICma10Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("5122.0", 5122.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(51.22, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16813,10 +17736,9 @@ void THICma10Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("22.62", 22.62, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(22.62, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16832,10 +17754,9 @@ void THICma10Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("22.5", 22.5, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(22.5, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16851,10 +17772,9 @@ void THICma10Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("23.26", 23.26, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(23.26, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16870,10 +17790,9 @@ void THICma10Test::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16889,10 +17808,9 @@ void THICma10Test::TestRecord8(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(8);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16908,10 +17826,9 @@ void THICma10Test::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16927,10 +17844,9 @@ void THICma10Test::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("2.0", 2.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(2.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16946,10 +17862,9 @@ void THICma10Test::TestRecord11(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(11);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("772.0", 772.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(772.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -16960,6 +17875,7 @@ void THICma10Test::TestRecord11(void) {
   }
 };
 
+/*
 CPPUNIT_TEST_SUITE_REGISTRATION( tooLongVarVifTest );
 
 MBusRecord* tooLongVarVifTest::getRecord(unsigned int pos) {
@@ -16982,6 +17898,60 @@ void tooLongVarVifTest::tearDown() {
   frame = NULL;
 };
 
+void tooLongVarVifTest::TestRecord0(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(0);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void tooLongVarVifTest::TestRecord1(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(1);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(45.64, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
+void tooLongVarVifTest::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(45.52, record->value->real_val, 0.000001);
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
+};
 
 CPPUNIT_TEST_SUITE_REGISTRATION( tooManyDifeTest );
 
@@ -17011,10 +17981,9 @@ void tooManyDifeTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("12.565", 12.565, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(12.565, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17030,29 +17999,9 @@ void tooManyDifeTest::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.113", 0.113, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void tooManyDifeTest::TestRecord2(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(2);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("218370.0", 218370.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.113, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17091,10 +18040,9 @@ void tooManyVifeTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("12.565", 12.565, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(12.565, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17110,29 +18058,9 @@ void tooManyVifeTest::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.113", 0.113, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
-void tooManyVifeTest::TestRecord2(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(2);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("218370.0", 218370.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.113, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17164,6 +18092,7 @@ void tooShortHeaderTest::tearDown() {
   delete frame;
   frame = NULL;
 };
+*/
 
 
 CPPUNIT_TEST_SUITE_REGISTRATION( WEPIndoorTest );
@@ -17194,10 +18123,9 @@ void WEPIndoorTest::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("64000449.0", 64000449.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(64000449.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17213,10 +18141,9 @@ void WEPIndoorTest::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("10.0", 10.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(600.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17232,10 +18159,9 @@ void WEPIndoorTest::TestRecord2(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(2);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("30.0", 30.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(30.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17251,10 +18177,9 @@ void WEPIndoorTest::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("22.0", 22.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(22.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17270,10 +18195,9 @@ void WEPIndoorTest::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("53.1", 53.1, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(531.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17289,10 +18213,9 @@ void WEPIndoorTest::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17325,25 +18248,6 @@ void wmbusConvertedTest::tearDown() {
   frame = NULL;
 };
 
-void wmbusConvertedTest::TestRecord0(void) {
-  MBusRecord *record = NULL;
-  vard = frame->getVariableData();
-
-  CPPUNIT_ASSERT( vard != NULL );
-
-
-  record = getRecord(0);
-  CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("5000.0", 5000.0, record->value->real_val, 0.000001);
-  if(record != NULL) {
-    delete record;
-  }
-
-  if(vard != NULL) {
-    delete vard;
-    vard = NULL;
-  }
-};
 
 CPPUNIT_TEST_SUITE_REGISTRATION( ZRMMinolMinocalC2Test );
 
@@ -17373,10 +18277,9 @@ void ZRMMinolMinocalC2Test::TestRecord0(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(0);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3000.0", 3000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17392,10 +18295,9 @@ void ZRMMinolMinocalC2Test::TestRecord1(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(1);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17406,6 +18308,24 @@ void ZRMMinolMinocalC2Test::TestRecord1(void) {
   }
 };
 void ZRMMinolMinocalC2Test::TestRecord2(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(2);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ZRMMinolMinocalC2_record_2 { "2015-01-01T00:00:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2015-01-01T00:00:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ZRMMinolMinocalC2_record_2.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ZRMMinolMinocalC2Test::TestRecord3(void) {
   MBusRecord *record = NULL;
@@ -17413,10 +18333,9 @@ void ZRMMinolMinocalC2Test::TestRecord3(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(3);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3000.0", 3000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17432,10 +18351,9 @@ void ZRMMinolMinocalC2Test::TestRecord4(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(4);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3000.0", 3000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17451,10 +18369,9 @@ void ZRMMinolMinocalC2Test::TestRecord5(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(5);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.074", 0.074, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.074, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17470,10 +18387,9 @@ void ZRMMinolMinocalC2Test::TestRecord6(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(6);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17489,10 +18405,9 @@ void ZRMMinolMinocalC2Test::TestRecord7(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(7);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.043", 0.043, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.043, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17503,6 +18418,24 @@ void ZRMMinolMinocalC2Test::TestRecord7(void) {
   }
 };
 void ZRMMinolMinocalC2Test::TestRecord8(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(8);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ZRMMinolMinocalC2_record_8 { "2011-09-01T08:30:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2011-09-01T08:30:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ZRMMinolMinocalC2_record_8.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ZRMMinolMinocalC2Test::TestRecord9(void) {
   MBusRecord *record = NULL;
@@ -17510,10 +18443,9 @@ void ZRMMinolMinocalC2Test::TestRecord9(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(9);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17529,10 +18461,9 @@ void ZRMMinolMinocalC2Test::TestRecord10(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(10);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("2000.0", 2000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(2000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17543,6 +18474,24 @@ void ZRMMinolMinocalC2Test::TestRecord10(void) {
   }
 };
 void ZRMMinolMinocalC2Test::TestRecord11(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(11);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ZRMMinolMinocalC2_record_11 { "2011-09-01T08:30:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2011-09-01T08:30:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ZRMMinolMinocalC2_record_11.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ZRMMinolMinocalC2Test::TestRecord12(void) {
   MBusRecord *record = NULL;
@@ -17550,10 +18499,9 @@ void ZRMMinolMinocalC2Test::TestRecord12(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(12);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("20.71", 20.71, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(20.71, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17569,10 +18517,9 @@ void ZRMMinolMinocalC2Test::TestRecord13(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(13);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("20.38", 20.38, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(20.38, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17583,8 +18530,44 @@ void ZRMMinolMinocalC2Test::TestRecord13(void) {
   }
 };
 void ZRMMinolMinocalC2Test::TestRecord14(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(14);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ZRMMinolMinocalC2_record_14 { "2014-03-13T12:45:00Z" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2014-03-13T12:45:00Z", 20, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ZRMMinolMinocalC2_record_14.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ZRMMinolMinocalC2Test::TestRecord15(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(15);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ZRMMinolMinocalC2_record_15 { "2014-03-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2014-03-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ZRMMinolMinocalC2_record_15.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ZRMMinolMinocalC2Test::TestRecord16(void) {
   MBusRecord *record = NULL;
@@ -17592,10 +18575,9 @@ void ZRMMinolMinocalC2Test::TestRecord16(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(16);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3000.0", 3000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17606,6 +18588,24 @@ void ZRMMinolMinocalC2Test::TestRecord16(void) {
   }
 };
 void ZRMMinolMinocalC2Test::TestRecord17(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(17);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ZRMMinolMinocalC2_record_17 { "2014-02-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2014-02-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ZRMMinolMinocalC2_record_17.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ZRMMinolMinocalC2Test::TestRecord18(void) {
   MBusRecord *record = NULL;
@@ -17613,10 +18613,9 @@ void ZRMMinolMinocalC2Test::TestRecord18(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(18);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3000.0", 3000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17627,6 +18626,24 @@ void ZRMMinolMinocalC2Test::TestRecord18(void) {
   }
 };
 void ZRMMinolMinocalC2Test::TestRecord19(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(19);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ZRMMinolMinocalC2_record_19 { "2014-01-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2014-01-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ZRMMinolMinocalC2_record_19.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ZRMMinolMinocalC2Test::TestRecord20(void) {
   MBusRecord *record = NULL;
@@ -17634,10 +18651,9 @@ void ZRMMinolMinocalC2Test::TestRecord20(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(20);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3000.0", 3000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17648,6 +18664,24 @@ void ZRMMinolMinocalC2Test::TestRecord20(void) {
   }
 };
 void ZRMMinolMinocalC2Test::TestRecord21(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(21);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ZRMMinolMinocalC2_record_21 { "2013-12-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2013-12-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ZRMMinolMinocalC2_record_21.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ZRMMinolMinocalC2Test::TestRecord22(void) {
   MBusRecord *record = NULL;
@@ -17655,10 +18689,9 @@ void ZRMMinolMinocalC2Test::TestRecord22(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(22);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3000.0", 3000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17669,6 +18702,24 @@ void ZRMMinolMinocalC2Test::TestRecord22(void) {
   }
 };
 void ZRMMinolMinocalC2Test::TestRecord23(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(23);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ZRMMinolMinocalC2_record_23 { "2013-11-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2013-11-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ZRMMinolMinocalC2_record_23.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ZRMMinolMinocalC2Test::TestRecord24(void) {
   MBusRecord *record = NULL;
@@ -17676,10 +18727,9 @@ void ZRMMinolMinocalC2Test::TestRecord24(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(24);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3000.0", 3000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17690,6 +18740,24 @@ void ZRMMinolMinocalC2Test::TestRecord24(void) {
   }
 };
 void ZRMMinolMinocalC2Test::TestRecord25(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(25);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ZRMMinolMinocalC2_record_25 { "2013-10-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2013-10-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ZRMMinolMinocalC2_record_25.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ZRMMinolMinocalC2Test::TestRecord26(void) {
   MBusRecord *record = NULL;
@@ -17697,10 +18765,9 @@ void ZRMMinolMinocalC2Test::TestRecord26(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(26);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3000.0", 3000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17711,6 +18778,24 @@ void ZRMMinolMinocalC2Test::TestRecord26(void) {
   }
 };
 void ZRMMinolMinocalC2Test::TestRecord27(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(27);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ZRMMinolMinocalC2_record_27 { "2013-09-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2013-09-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ZRMMinolMinocalC2_record_27.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ZRMMinolMinocalC2Test::TestRecord28(void) {
   MBusRecord *record = NULL;
@@ -17718,10 +18803,9 @@ void ZRMMinolMinocalC2Test::TestRecord28(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(28);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3000.0", 3000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17732,6 +18816,24 @@ void ZRMMinolMinocalC2Test::TestRecord28(void) {
   }
 };
 void ZRMMinolMinocalC2Test::TestRecord29(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(29);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ZRMMinolMinocalC2_record_29 { "2013-08-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2013-08-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ZRMMinolMinocalC2_record_29.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ZRMMinolMinocalC2Test::TestRecord30(void) {
   MBusRecord *record = NULL;
@@ -17739,10 +18841,9 @@ void ZRMMinolMinocalC2Test::TestRecord30(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(30);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("3000.0", 3000.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(3000.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17753,6 +18854,24 @@ void ZRMMinolMinocalC2Test::TestRecord30(void) {
   }
 };
 void ZRMMinolMinocalC2Test::TestRecord31(void) {
+  MBusRecord *record = NULL;
+  vard = frame->getVariableData();
+
+  CPPUNIT_ASSERT( vard != NULL );
+
+  record = getRecord(31);
+  CPPUNIT_ASSERT( record != NULL );
+  const string ZRMMinolMinocalC2_record_31 { "2014-03-01" };
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("2014-03-01", 10, record->value->str_val.size);
+  CPPUNIT_ASSERT(!strncmp(ZRMMinolMinocalC2_record_31.c_str(), record->value->str_val.value, record->value->str_val.size));
+  if(record != NULL) {
+    delete record;
+  }
+
+  if(vard != NULL) {
+    delete vard;
+    vard = NULL;
+  }
 };
 void ZRMMinolMinocalC2Test::TestRecord32(void) {
   MBusRecord *record = NULL;
@@ -17760,10 +18879,9 @@ void ZRMMinolMinocalC2Test::TestRecord32(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(32);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }
@@ -17779,10 +18897,9 @@ void ZRMMinolMinocalC2Test::TestRecord33(void) {
 
   CPPUNIT_ASSERT( vard != NULL );
 
-
   record = getRecord(33);
   CPPUNIT_ASSERT( record != NULL );
-  CPPUNIT_ASSERT_DOUBLES_EQUAL_MESSAGE("0.0", 0.0, record->value->real_val, 0.000001);
+  CPPUNIT_ASSERT_DOUBLES_EQUAL(0.0, record->value->real_val, 0.000001);
   if(record != NULL) {
     delete record;
   }

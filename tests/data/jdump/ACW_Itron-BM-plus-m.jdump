@@ -1,0 +1,12 @@
+Secondary address: {manufacturer ID: ACW, device ID: 11490378, device version: 14, device type: COLD_WATER_METER, as bytes: 7803491177040E16}
+Short Header: {Access No.: 10, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0C, VIB:78 -> descr:FABRICATION_NO, function:INST_VAL, value:11490378
+DIB:04, VIB:13 -> descr:VOLUME, function:INST_VAL, scaled value:54.321, unit:CUBIC_METRE, m³
+DIB:42, VIB:6C -> descr:DATE, function:INST_VAL, storage:1, value:Tue Nov 30 00:00:00 CET 1999
+DIB:44, VIB:13 -> descr:VOLUME, function:INST_VAL, storage:1, scaled value:0.0, unit:CUBIC_METRE, m³
+DIB:04, VIB:6D -> descr:DATE_TIME, function:INST_VAL, value:Thu Mar 13 11:11:00 CET 2014
+DIB:02, VIB:27 -> descr:OPERATING_TIME, function:INST_VAL, value:0, unit:DAY, d
+DIB:09, VIB:FD0E -> descr:FIRMWARE_VERSION, function:INST_VAL, value:02
+DIB:09, VIB:FD0F -> descr:OTHER_SOFTWARE_VERSION, function:INST_VAL, value:06
+Manufacturer specific bytes:
+00017513

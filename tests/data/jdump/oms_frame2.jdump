@@ -1,0 +1,7 @@
+Secondary address: {manufacturer ID: HYD, device ID: 92752244, device version: 41, device type: WATER_METER, as bytes: 4422759224232907}
+Short Header: {Access No.: 31, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0C, VIB:13 -> descr:VOLUME, function:INST_VAL, scaled value:2850.427, unit:CUBIC_METRE, m³
+DIB:0B, VIB:3B -> descr:VOLUME_FLOW, function:INST_VAL, scaled value:0.127, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:4C, VIB:13 -> descr:VOLUME, function:INST_VAL, storage:1, scaled value:1445.419, unit:CUBIC_METRE, m³
+DIB:42, VIB:6C -> descr:DATE, function:INST_VAL, storage:1, value:Mon Dec 31 00:00:00 CET 2007
+DIB:02, VIB:FD17 -> descr:ERROR_FLAGS, function:INST_VAL, value:0

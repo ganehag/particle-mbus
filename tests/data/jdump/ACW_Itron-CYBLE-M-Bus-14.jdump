@@ -1,0 +1,11 @@
+Secondary address: {manufacturer ID: ACW, device ID: 09011523, device version: 20, device type: WATER_METER, as bytes: 2315010977041407}
+Short Header: {Access No.: 37, status: 0, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0C, VIB:78 -> descr:FABRICATION_NO, function:INST_VAL, value:09011523
+DIB:0D, VIB:7C084449202E74737563 -> descr:USER_DEFINED :cust. ID, function:INST_VAL, value:09LA076755
+DIB:04, VIB:6D -> descr:DATE_TIME, function:INST_VAL, value:Thu Mar 13 14:26:00 CET 2014
+DIB:02, VIB:7C09656D6974202E746162 -> descr:USER_DEFINED :bat. time, function:INST_VAL, value:2516
+DIB:04, VIB:13 -> descr:VOLUME, function:INST_VAL, scaled value:0.031, unit:CUBIC_METRE, m³
+DIB:04, VIB:937F -> descr:VOLUME, function:INST_VAL, scaled value:0.0, unit:CUBIC_METRE, m³
+DIB:44, VIB:13 -> descr:VOLUME, function:INST_VAL, storage:1, scaled value:0.031, unit:CUBIC_METRE, m³
+Manufacturer specific bytes:
+00011F

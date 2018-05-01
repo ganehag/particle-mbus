@@ -1,0 +1,12 @@
+Secondary address: {manufacturer ID: SPX, device ID: 44950146, device version: 52, device type: HEAT_METER, as bytes: 46019544184E3404}
+Short Header: {Access No.: 84, status: 16, encryption mode: NONE, number of encrypted blocks: 0}
+DIB:0C, VIB:07 -> descr:ENERGY, function:INST_VAL, scaled value:0.0, unit:WATT_HOUR, Wh
+DIB:0C, VIB:14 -> descr:VOLUME, function:INST_VAL, scaled value:0.0, unit:CUBIC_METRE, m³
+DIB:0C, VIB:3C -> descr:VOLUME_FLOW, function:INST_VAL, scaled value:0.0, unit:CUBIC_METRE_PER_HOUR, m³/h
+DIB:0C, VIB:2C -> descr:POWER, function:INST_VAL, scaled value:0.0, unit:WATT, W
+DIB:0A, VIB:5A -> descr:FLOW_TEMPERATURE, function:INST_VAL, scaled value:0.0, unit:DEGREE_CELSIUS, °C
+DIB:0A, VIB:5E -> descr:RETURN_TEMPERATURE, function:INST_VAL, scaled value:0.0, unit:DEGREE_CELSIUS, °C
+DIB:0B, VIB:60 -> descr:TEMPERATURE_DIFFERENCE, function:INST_VAL, scaled value:0.0, unit:KELVIN, S
+DIB:0C, VIB:78 -> descr:FABRICATION_NO, function:INST_VAL, value:44950146
+DIB:0C, VIB:FD10 -> descr:CUSTOMER_LOCATION, function:INST_VAL, value:44950146
+More records follow ...
