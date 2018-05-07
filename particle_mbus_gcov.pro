@@ -3,7 +3,6 @@ SOURCES += tests/linux/test1.cpp tests/linux/frame_test.cpp src/MBus.cpp src/MBu
     src/MBusDataRecord.cpp src/MBusValueInformationBlock.cpp \
     src/MBusDataVariable.cpp src/MBusVifTable.cpp
 
-# QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror -Isrc -Itests/linux/include -Itests/linux
 QMAKE_CXXFLAGS += -Wall -Wextra -Werror -Isrc -Itests/linux/include -Itests/linux
 
 # gcov
