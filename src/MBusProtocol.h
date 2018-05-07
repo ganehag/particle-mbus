@@ -254,4 +254,4 @@ class MBusFrame;
 class MBusFrameData;
 class MBusValueInformationBlock;
 
-#endif /* MBusDefines.h */
+#endif /* MBusProtocol.h */

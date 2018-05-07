@@ -3,7 +3,7 @@
 
 #include <stdlib.h>
 
-#include "MBusDefines.h"
+#include "MBusProtocol.h"
 
 class MBusDataInformationBlock {
 public:

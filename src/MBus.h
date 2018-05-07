@@ -1,7 +1,7 @@
 #ifndef __MBUS_H__
 #define __MBUS_H__
 
-#include "MBusDefines.h"
+#include "MBusProtocol.h"
 #include "MBusFrame.h"
 #include "MBusRecord.h"
 

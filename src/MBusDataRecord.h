@@ -2,7 +2,7 @@
 #define __MBUS_DATA_RECORD_H__
 
 #include "MBusDataInformationBlock.h"
-#include "MBusDefines.h"
+#include "MBusProtocol.h"
 #include "MBusRecord.h"
 #include "MBusValueInformationBlock.h"
 

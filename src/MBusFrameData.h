@@ -1,7 +1,7 @@
 #ifndef __MBUS_FRAME_DATA_H__
 #define __MBUS_FRAME_DATA_H__
 
-#include "MBusDefines.h"
+#include "MBusProtocol.h"
 
 #include "MBusFrame.h"
 

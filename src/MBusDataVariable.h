@@ -1,7 +1,7 @@
 #ifndef __MBUS_DATA_VARIABLE_H__
 #define __MBUS_DATA_VARIABLE_H__
 
-#include "MBusDefines.h"
+#include "MBusProtocol.h"
 
 #include "MBusDataRecord.h"
 #include "MBusFrame.h"
