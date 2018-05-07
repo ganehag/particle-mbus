@@ -45,20 +45,7 @@ int MBus::initSlaves(MBusHandle *handle) {
   return 1;
 };
 
-// Can't compile on linux:  undefined reference to `vtable for MBusHandle'
-#ifdef PLATFORM_ID
 
-MBusHandle::MBusHandle() {
-  max_data_retry = 3;
-  max_search_retry = 1;
-  purge_first_frame = MBUS_FRAME_PURGE_M2S;
-};
-
-MBusHandle::~MBusHandle(){
-
-};
-
-#endif
 
 int
 MBusHandle::sendRequestFrame(int address) {
@@ -150,7 +137,7 @@ MBusHandle::requestSendRecv(int address, MBusFrame *reply,
   next_frame = reply;
 
   while (more_frames) {
-    if (retry > this->max_data_retry) {
+    if (retry > this->maxDataRetry) {
       // Give up
       retval = 1;
       break;
@@ -246,7 +233,7 @@ MBusHandle::probeSecondaryAddress(const char *mask, char *matching_addr) {
         return MBUS_PROBE_ERROR;
     }
 
-    for (int i = 0; i <= this->max_search_retry; i++) {
+    for (int i = 0; i <= this->maxSearchRetry; i++) {
         ret = this->selectSecondaryAddress(mask);
 
         if (ret == MBUS_PROBE_SINGLE) {

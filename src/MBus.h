@@ -51,12 +51,14 @@
 
 class MBusHandle {
 public:
-  int max_data_retry;
-  int max_search_retry;
-  char purge_first_frame;
+  int maxDataRetry;
+  int maxSearchRetry;
+  char purgeFirstFrame;
 
-  MBusHandle();
-  ~MBusHandle();
+  MBusHandle() : maxDataRetry(3),
+                 maxSearchRetry(1),
+                 purgeFirstFrame(MBUS_FRAME_PURGE_M2S) {};
+  ~MBusHandle() {};
 
   virtual int open();
   virtual int close();
