@@ -254,4 +254,10 @@ class MBusFrame;
 class MBusFrameData;
 class MBusValueInformationBlock;
 
+class MBusProtocol {
+public:
+    static int decodeBCD(unsigned char *, size_t, long long *);
+    static int decodeLong(unsigned char *, size_t , long *);
+};
+
 #endif /* MBusProtocol.h */

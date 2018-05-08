@@ -63,29 +63,7 @@ int MBusDataRecord::decodeInt(size_t int_data_size, int *value) {
 };
 
 int MBusDataRecord::decodeLong(size_t int_data_size, long *value) {
-  size_t i;
-  int neg;
-  *value = 0;
-
-  if (!this->data || (int_data_size < 1)) {
-    return -1;
-  }
-
-  neg = this->data[int_data_size - 1] & 0x80;
-
-  for (i = int_data_size; i > 0; i--) {
-    if (neg) {
-      *value = (*value << 8) + (this->data[i - 1] ^ 0xFF);
-    } else {
-      *value = (*value << 8) + this->data[i - 1];
-    }
-  }
-
-  if (neg) {
-    *value = *value * -1 - 1;
-  }
-
-  return 0;
+  return MBusProtocol::decodeLong(this->data, int_data_size, value);
 };
 
 int MBusDataRecord::decodeLongLong(size_t int_data_size, long long *value) {
@@ -168,17 +146,9 @@ float MBusDataRecord::decodeFloat() {
 
 long long MBusDataRecord::decodeBCD(size_t bcd_data_size) {
   long long val = 0;
-  size_t i;
-
-  if (this->data) {
-    for (i = bcd_data_size; i > 0; i--) {
-      val = (val * 10) + ((this->data[i - 1] >> 4) & 0xF);
-      val = (val * 10) + (this->data[i - 1] & 0xF);
-    }
-
+  if(MBusProtocol::decodeBCD(this->data, bcd_data_size, &val) == 0) {
     return val;
   }
-
   return -1;
 };
 

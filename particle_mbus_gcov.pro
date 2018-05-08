@@ -1,7 +1,7 @@
 SOURCES += tests/linux/test1.cpp tests/linux/frame_test.cpp src/MBus.cpp src/MBusFrame.cpp src/MBusDataFixed.cpp \
     src/MBusFrameData.cpp src/MBusDataInformationBlock.cpp src/MBusRecord.cpp \
     src/MBusDataRecord.cpp src/MBusValueInformationBlock.cpp \
-    src/MBusDataVariable.cpp src/MBusVifTable.cpp
+    src/MBusDataVariable.cpp src/MBusVifTable.cpp src/MBusProtocol.cpp
 
 QMAKE_CXXFLAGS += -Wall -Wextra -Werror -Isrc -Itests/linux/include -Itests/linux
 

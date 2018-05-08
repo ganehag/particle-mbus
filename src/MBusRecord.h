@@ -36,6 +36,12 @@ public:
 
   MBusRecord();
   ~MBusRecord();
+
+  int setValue(double value);
+  int setValue(char *str, unsigned int size);
+
+  double getValue();
+  char *getString();
 };
 
 #endif /* MBusRecord.h */

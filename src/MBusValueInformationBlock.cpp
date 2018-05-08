@@ -5,10 +5,8 @@
 #include <math.h>
 #include <string.h>
 
-MBusValueInformationBlock::MBusValueInformationBlock() {
-  vif = 0;
+MBusValueInformationBlock::MBusValueInformationBlock() : vif(0), nvife(0) {
   memset(vife, 0, sizeof(vife));
-  nvife = 0;
   memset(custom_vif, 0, sizeof(custom_vif));
 };
 

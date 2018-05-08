@@ -18,7 +18,16 @@ MBusDataVariableHeader::MBusDataVariableHeader() {
 MBusDataVariableHeader::~MBusDataVariableHeader() {}
 
 unsigned long MBusDataVariableHeader::decodeID() {
-  unsigned long val = 0;
+  long long val = 0;
+
+  if(MBusProtocol::decodeBCD(this->id_bcd, 4, &val) == 0) {
+    return (unsigned long)val;
+  }
+
+  return 0;
+
+  /*
+  
   size_t i;
 
   if (this->id_bcd) {
@@ -31,20 +40,25 @@ unsigned long MBusDataVariableHeader::decodeID() {
   }
 
   return -1;
+  */
 }
 
-MBusDataVariable::MBusDataVariable() {
+MBusDataVariable::MBusDataVariable() : record(NULL), nrecords(0), data(NULL), data_len(0), more_records_follow(0) {
   header = new MBusDataVariableHeader();
+  /*
   record = NULL;
   nrecords = 0;
   data = NULL;
   data_len = 0;
   more_records_follow = 0;
+  */
 
   // are these needed/used?
+  /*
   mdh = 0;
   mfg_data = NULL;
   mfg_data_len = 0;
+  */
 };
 
 MBusDataVariable::~MBusDataVariable() {

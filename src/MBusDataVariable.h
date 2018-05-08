@@ -34,19 +34,19 @@ public:
 class MBusDataVariable {
 public:
   MBusDataVariableHeader *header;
-
   MBusDataRecord *record;
+  
   size_t nrecords;
-
   unsigned char *data;
   size_t data_len;
-
   unsigned char more_records_follow;
 
   // are these needed/used?
+  /*
   unsigned char mdh;
   unsigned char *mfg_data;
   size_t mfg_data_len;
+  */
 
   MBusDataVariable();
   ~MBusDataVariable();

@@ -53,8 +53,30 @@ MBusFrame::MBusFrame(int type) {
 };
 
 MBusFrame::~MBusFrame(){
-
+  if(this->next != NULL) {
+    delete this->next;
+  }
 };
+
+int MBusFrame::getType() {
+  return this->type;
+}
+
+bool MBusFrame::isVariable() {
+  if (this->control_information != MBUS_CONTROL_INFO_RESP_VARIABLE && 
+    this->control_information != MBUS_CONTROL_INFO_RESP_VARIABLE_MSB) {
+    return false;
+  }
+  return true;
+}
+
+bool MBusFrame::isFixed() {
+if (this->control_information != MBUS_CONTROL_INFO_RESP_FIXED && 
+    this->control_information != MBUS_CONTROL_INFO_RESP_FIXED_MSB) {
+    return false;
+  }
+  return true;
+}
 
 unsigned char MBusFrame::getChecksum() {
   size_t i;
@@ -129,16 +151,16 @@ size_t MBusFrame::getLength() {
   return 0;
 };
 
-int MBusFrame::parse(unsigned char *data, size_t data_size) {
+int MBusFrame::parse(unsigned char *data, size_t size) {
   size_t i, len;
 
-  if (data != NULL && data_size > 0) {
+  if (data != NULL && size > 0) {
     this->next = NULL;
 
     MBUS_DEBUG("%s: Attempting to parse binary data [size = %zu]\n",
-               __PRETTY_FUNCTION__, data_size);
+               __PRETTY_FUNCTION__, size);
 
-    for (i = 0; i < data_size; i++) {
+    for (i = 0; i < size; i++) {
       MBUS_DEBUG("%.2X ", data[i] & 0xFF);
     }
 
@@ -154,12 +176,12 @@ int MBusFrame::parse(unsigned char *data, size_t data_size) {
 
     case MBUS_FRAME_SHORT_START:
 
-      if (data_size < MBUS_FRAME_BASE_SIZE_SHORT) {
+      if (size < MBUS_FRAME_BASE_SIZE_SHORT) {
         // OK, got a valid short packet start, but we need more data
-        return MBUS_FRAME_BASE_SIZE_SHORT - data_size;
+        return MBUS_FRAME_BASE_SIZE_SHORT - size;
       }
 
-      if (data_size != MBUS_FRAME_BASE_SIZE_SHORT) {
+      if (size != MBUS_FRAME_BASE_SIZE_SHORT) {
         // snprintf(error_str, sizeof(error_str), "Too much data in frame.");
 
         // too much data... ?
@@ -185,10 +207,10 @@ int MBusFrame::parse(unsigned char *data, size_t data_size) {
 
     case MBUS_FRAME_LONG_START: // (also CONTROL)
 
-      if (data_size < 3) {
+      if (size < 3) {
         // OK, got a valid long/control packet start, but we need
         // more data to determine the length
-        return 3 - data_size;
+        return 3 - size;
       }
 
       // init frame data structure
@@ -215,12 +237,12 @@ int MBusFrame::parse(unsigned char *data, size_t data_size) {
       // check length of packet:
       len = this->length1;
 
-      if (data_size < (size_t)(MBUS_FRAME_FIXED_SIZE_LONG + len)) {
+      if (size < (size_t)(MBUS_FRAME_FIXED_SIZE_LONG + len)) {
         // OK, but we need more data
-        return MBUS_FRAME_FIXED_SIZE_LONG + len - data_size;
+        return MBUS_FRAME_FIXED_SIZE_LONG + len - size;
       }
 
-      if (data_size > (size_t)(MBUS_FRAME_FIXED_SIZE_LONG + len)) {
+      if (size > (size_t)(MBUS_FRAME_FIXED_SIZE_LONG + len)) {
         // snprintf(error_str, sizeof(error_str), "Too much data in frame.");
 
         // too much data... ?
@@ -238,8 +260,8 @@ int MBusFrame::parse(unsigned char *data, size_t data_size) {
         this->data[i] = data[7 + i];
       }
 
-      this->checksum = data[data_size - 2]; // data[6 + this->data_size + 1]
-      this->stop = data[data_size - 1];     // data[6 + this->data_size + 2]
+      this->checksum = data[size - 2]; // data[6 + this->size + 1]
+      this->stop = data[size - 1];     // data[6 + this->size + 2]
 
       if (this->data_size == 0) {
         this->type = MBUS_FRAME_TYPE_CONTROL;
@@ -264,7 +286,7 @@ int MBusFrame::parse(unsigned char *data, size_t data_size) {
     }
   }
 
-  MBUS_ERROR("Got null pointer to frame, data or zero data_size.");
+  MBUS_ERROR("Got null pointer to frame, data or zero size.");
 
   return -1;
 }
@@ -304,14 +326,14 @@ MBusDataVariable *MBusFrame::getVariableData() {
   MBusFrameData *data = NULL;
   MBusDataVariable *data_var = NULL;
 
-  if ((data = new MBusFrameData()) == NULL) {
-    return NULL;
-  }
-
   // FIXME
   if (this->control_information != MBUS_CONTROL_INFO_RESP_VARIABLE && 
     this->control_information != MBUS_CONTROL_INFO_RESP_VARIABLE_MSB) {
     MBUS_ERROR("Non-variable data response (has no records?).\n");
+    return NULL;
+  }
+
+  if ((data = new MBusFrameData()) == NULL) {
     return NULL;
   }
 
@@ -326,7 +348,40 @@ MBusDataVariable *MBusFrame::getVariableData() {
 
   return data_var; // Return the root (delete, needs to be managed on the other
                    // side)
-}
+};
+
+MBusRecord *MBusFrame::getFixedRecord(int pos) {
+  double value = 0;
+  MBusRecord *record = NULL;
+  MBusDataFixed *fixed = NULL;
+
+  if ((fixed = new MBusDataFixed()) == NULL) {
+    return NULL;
+  }
+
+  if ((record = new MBusRecord()) == NULL) {
+    delete fixed;
+    return NULL;
+  }
+
+  // Parse data from Frame into MBusDrameData
+  if (fixed->parse(this) == -1) {
+    return NULL;
+  }
+
+  record->function_medium = fixed->getMedium();
+  record->unit = NULL;
+
+  if (0 != fixed->normalize(fixed->getMediumUnit(pos), fixed->getValue(pos), &(record->unit), &(value), &(record->quantity))) {
+      MBUS_ERROR("Problem with MBusFrame::getFixedRecord.\n");
+      delete record;
+      return NULL;
+  }
+
+  record->setValue(value);
+
+  return record;
+};
 
 int MBusFrame::verify() {
   unsigned char checksum;
@@ -406,7 +461,7 @@ int MBusFrame::verify() {
   return 0;
 };
 
-int MBusFrame::pack(unsigned char *data, size_t data_size) {
+int MBusFrame::pack(unsigned char *data, size_t size) {
   size_t i, offset = 0;
 
   if (data) {
@@ -421,7 +476,7 @@ int MBusFrame::pack(unsigned char *data, size_t data_size) {
     switch (this->type) {
     case MBUS_FRAME_TYPE_ACK:
 
-      if (data_size < MBUS_FRAME_ACK_BASE_SIZE) {
+      if (size < MBUS_FRAME_ACK_BASE_SIZE) {
         return -4;
       }
 
@@ -431,7 +486,7 @@ int MBusFrame::pack(unsigned char *data, size_t data_size) {
 
     case MBUS_FRAME_TYPE_SHORT:
 
-      if (data_size < MBUS_FRAME_SHORT_BASE_SIZE) {
+      if (size < MBUS_FRAME_SHORT_BASE_SIZE) {
         return -4;
       }
 
@@ -445,7 +500,7 @@ int MBusFrame::pack(unsigned char *data, size_t data_size) {
 
     case MBUS_FRAME_TYPE_CONTROL:
 
-      if (data_size < MBUS_FRAME_CONTROL_BASE_SIZE) {
+      if (size < MBUS_FRAME_CONTROL_BASE_SIZE) {
         return -4;
       }
 
@@ -465,7 +520,7 @@ int MBusFrame::pack(unsigned char *data, size_t data_size) {
 
     case MBUS_FRAME_TYPE_LONG:
 
-      if (data_size < this->data_size + MBUS_FRAME_LONG_BASE_SIZE) {
+      if (size < this->data_size + MBUS_FRAME_LONG_BASE_SIZE) {
         return -4;
       }
 

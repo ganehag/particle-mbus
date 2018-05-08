@@ -2,6 +2,7 @@
 #define __MBUS_FRAME_H__
 
 #include "MBusProtocol.h"
+#include "MBusRecord.h"
 #include "MBusFrameData.h"
 
 #include <stdlib.h>
@@ -26,7 +27,8 @@ public:
   int type;
   time_t timestamp;
 
-  MBusFrame *next; // pointer to next mbus_frame for multi-telegram replies
+  // pointer to next MBusFrame for multi-telegram replies
+  MBusFrame *next;
 
   MBusFrame(int frame_type);
   MBusFrame() : MBusFrame(0){};
@@ -38,8 +40,8 @@ public:
   unsigned char getChecksum();
   size_t getLength();
 
-  int parse(unsigned char *data, size_t data_size);
-  int pack(unsigned char *data, size_t data_size);
+  int parse(unsigned char *data, size_t size);
+  int pack(unsigned char *data, size_t size);
 
   int verify();
   int internalPack(MBusFrameData *frame_data);
@@ -49,10 +51,15 @@ public:
   //
   // M-Bus frame data struct access/write functions
   //
+  bool isVariable();
+  bool isFixed();
+
   int getType();
   int getDirection();
 
   MBusDataVariable *getVariableData();
+
+  MBusRecord *getFixedRecord(int pos);
 
   // DEBUG
   int print();

@@ -53,3 +53,33 @@ MBusRecord::~MBusRecord() {
     delete this->value;
   }
 };
+
+int MBusRecord::setValue(double val) {
+  this->value->real_val = val;
+  this->isNumeric = true;
+
+  return 0;
+};
+
+int MBusRecord::setValue(char *str, unsigned int size) {
+  this->value->str_val.set(str, size);
+  this->isNumeric = false;
+
+  return 0;
+};
+
+double MBusRecord::getValue() {
+  if(this->isNumeric) {
+    return this->value->real_val;
+  }
+
+  return -1;
+};
+
+char *MBusRecord::getString() {
+  if(this->isNumeric == false) {
+    return this->value->str_val.value;
+  }
+
+  return NULL;
+};
